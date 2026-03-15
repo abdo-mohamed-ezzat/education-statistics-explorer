@@ -6,7 +6,7 @@ The project transforms large open datasets into clear visual insights that help 
 
 This project is part of a **Frontend Mentorship program** where the developer practices real-world data analysis, visualization, and clean architecture.
 
-
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/0d33543c-632f-4c8b-8861-6defe7275ef5" />
 
 ---
 

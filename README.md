@@ -6,6 +6,8 @@ The project transforms large open datasets into clear visual insights that help 
 
 This project is part of a **Frontend Mentorship program** where the developer practices real-world data analysis, visualization, and clean architecture.
 
+
+
 ---
 
 # Project Goal

@@ -1,0 +1,18 @@
+# Root-level gitignore for Education-Statistics-Explorer
+# This covers any node_modules or generated files outside the Angular project subfolder
+
+# Node
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.idea/

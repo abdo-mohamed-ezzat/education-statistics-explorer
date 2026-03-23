@@ -1,0 +1,8192 @@
+[
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 20662,
+    "teacherCount": 3474,
+    "schoolCount": 235,
+    "administratorCount": 879
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 20504,
+    "teacherCount": 2936,
+    "schoolCount": 243,
+    "administratorCount": 232
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9088,
+    "teacherCount": 1337,
+    "schoolCount": 75,
+    "administratorCount": 232
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9516,
+    "teacherCount": 1174,
+    "schoolCount": 62,
+    "administratorCount": 80
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9386,
+    "teacherCount": 1584,
+    "schoolCount": 137,
+    "administratorCount": 296
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9485,
+    "teacherCount": 1266,
+    "schoolCount": 117,
+    "administratorCount": 95
+  },
+  {
+    "year": 2016,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5867,
+    "teacherCount": 597,
+    "schoolCount": 89,
+    "administratorCount": 229
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 34364,
+    "teacherCount": 3363,
+    "schoolCount": 157,
+    "administratorCount": 1244
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 33829,
+    "teacherCount": 3191,
+    "schoolCount": 168,
+    "administratorCount": 275
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 12878,
+    "teacherCount": 1558,
+    "schoolCount": 77,
+    "administratorCount": 409
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13980,
+    "teacherCount": 1286,
+    "schoolCount": 72,
+    "administratorCount": 101
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14590,
+    "teacherCount": 1625,
+    "schoolCount": 99,
+    "administratorCount": 543
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 14360,
+    "teacherCount": 1411,
+    "schoolCount": 112,
+    "administratorCount": 111
+  },
+  {
+    "year": 2016,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6120,
+    "teacherCount": 476,
+    "schoolCount": 73,
+    "administratorCount": 315
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 20468,
+    "teacherCount": 1809,
+    "schoolCount": 112,
+    "administratorCount": 360
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 20274,
+    "teacherCount": 1888,
+    "schoolCount": 109,
+    "administratorCount": 82
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8037,
+    "teacherCount": 946,
+    "schoolCount": 45,
+    "administratorCount": 155
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9060,
+    "teacherCount": 819,
+    "schoolCount": 50,
+    "administratorCount": 40
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 8657,
+    "teacherCount": 903,
+    "schoolCount": 60,
+    "administratorCount": 200
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9060,
+    "teacherCount": 893,
+    "schoolCount": 64,
+    "administratorCount": 42
+  },
+  {
+    "year": 2016,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 3752,
+    "teacherCount": 271,
+    "schoolCount": 39,
+    "administratorCount": 89
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 386286,
+    "teacherCount": 35543,
+    "schoolCount": 1586,
+    "administratorCount": 11637
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 360954,
+    "teacherCount": 28172,
+    "schoolCount": 1494,
+    "administratorCount": 2985
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 150080,
+    "teacherCount": 15641,
+    "schoolCount": 676,
+    "administratorCount": 5334
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 169308,
+    "teacherCount": 13178,
+    "schoolCount": 582,
+    "administratorCount": 933
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 160112,
+    "teacherCount": 15295,
+    "schoolCount": 940,
+    "administratorCount": 6430
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 173714,
+    "teacherCount": 13831,
+    "schoolCount": 909,
+    "administratorCount": 1200
+  },
+  {
+    "year": 2016,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 77612,
+    "teacherCount": 7897,
+    "schoolCount": 905,
+    "administratorCount": 2748
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 217935,
+    "teacherCount": 15206,
+    "schoolCount": 683,
+    "administratorCount": 4672
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 212317,
+    "teacherCount": 16442,
+    "schoolCount": 661,
+    "administratorCount": 1128
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 86190,
+    "teacherCount": 8779,
+    "schoolCount": 308,
+    "administratorCount": 2470
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 92741,
+    "teacherCount": 8547,
+    "schoolCount": 324,
+    "administratorCount": 558
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 91271,
+    "teacherCount": 8348,
+    "schoolCount": 414,
+    "administratorCount": 2542
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 97902,
+    "teacherCount": 8471,
+    "schoolCount": 453,
+    "administratorCount": 610
+  },
+  {
+    "year": 2016,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 54937,
+    "teacherCount": 4598,
+    "schoolCount": 419,
+    "administratorCount": 1065
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 68998,
+    "teacherCount": 8481,
+    "schoolCount": 509,
+    "administratorCount": 2280
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 69225,
+    "teacherCount": 6671,
+    "schoolCount": 463,
+    "administratorCount": 955
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 31581,
+    "teacherCount": 4311,
+    "schoolCount": 203,
+    "administratorCount": 946
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32960,
+    "teacherCount": 3157,
+    "schoolCount": 155,
+    "administratorCount": 365
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 32420,
+    "teacherCount": 4194,
+    "schoolCount": 290,
+    "administratorCount": 1103
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 32935,
+    "teacherCount": 3326,
+    "schoolCount": 257,
+    "administratorCount": 428
+  },
+  {
+    "year": 2016,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 14178,
+    "teacherCount": 1422,
+    "schoolCount": 197,
+    "administratorCount": 457
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 109117,
+    "teacherCount": 9520,
+    "schoolCount": 496,
+    "administratorCount": 2627
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 108480,
+    "teacherCount": 8481,
+    "schoolCount": 494,
+    "administratorCount": 837
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 47871,
+    "teacherCount": 4617,
+    "schoolCount": 200,
+    "administratorCount": 1115
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 48626,
+    "teacherCount": 4107,
+    "schoolCount": 174,
+    "administratorCount": 269
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 50927,
+    "teacherCount": 4981,
+    "schoolCount": 307,
+    "administratorCount": 1211
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 51979,
+    "teacherCount": 4719,
+    "schoolCount": 321,
+    "administratorCount": 367
+  },
+  {
+    "year": 2016,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 17873,
+    "teacherCount": 1690,
+    "schoolCount": 214,
+    "administratorCount": 650
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 51862,
+    "teacherCount": 4527,
+    "schoolCount": 227,
+    "administratorCount": 1826
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 53070,
+    "teacherCount": 4200,
+    "schoolCount": 229,
+    "administratorCount": 130
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 20280,
+    "teacherCount": 2052,
+    "schoolCount": 99,
+    "administratorCount": 688
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 24764,
+    "teacherCount": 1724,
+    "schoolCount": 86,
+    "administratorCount": 67
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 22886,
+    "teacherCount": 2128,
+    "schoolCount": 142,
+    "administratorCount": 851
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24527,
+    "teacherCount": 2059,
+    "schoolCount": 144,
+    "administratorCount": 75
+  },
+  {
+    "year": 2016,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 8426,
+    "teacherCount": 656,
+    "schoolCount": 82,
+    "administratorCount": 399
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 83182,
+    "teacherCount": 7885,
+    "schoolCount": 458,
+    "administratorCount": 2838
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 86847,
+    "teacherCount": 6796,
+    "schoolCount": 490,
+    "administratorCount": 548
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 30622,
+    "teacherCount": 2885,
+    "schoolCount": 141,
+    "administratorCount": 698
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 35460,
+    "teacherCount": 3019,
+    "schoolCount": 154,
+    "administratorCount": 162
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 35127,
+    "teacherCount": 3563,
+    "schoolCount": 262,
+    "administratorCount": 1012
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 37719,
+    "teacherCount": 3782,
+    "schoolCount": 302,
+    "administratorCount": 209
+  },
+  {
+    "year": 2016,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 13127,
+    "teacherCount": 1126,
+    "schoolCount": 158,
+    "administratorCount": 727
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 36965,
+    "teacherCount": 4239,
+    "schoolCount": 283,
+    "administratorCount": 1527
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 37376,
+    "teacherCount": 3865,
+    "schoolCount": 321,
+    "administratorCount": 579
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 15472,
+    "teacherCount": 2066,
+    "schoolCount": 104,
+    "administratorCount": 436
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 17882,
+    "teacherCount": 1887,
+    "schoolCount": 105,
+    "administratorCount": 146
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16542,
+    "teacherCount": 2210,
+    "schoolCount": 148,
+    "administratorCount": 584
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17706,
+    "teacherCount": 2050,
+    "schoolCount": 168,
+    "administratorCount": 188
+  },
+  {
+    "year": 2016,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6413,
+    "teacherCount": 592,
+    "schoolCount": 88,
+    "administratorCount": 398
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 115631,
+    "teacherCount": 13868,
+    "schoolCount": 838,
+    "administratorCount": 4816
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 114182,
+    "teacherCount": 11703,
+    "schoolCount": 850,
+    "administratorCount": 1167
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 47486,
+    "teacherCount": 5597,
+    "schoolCount": 286,
+    "administratorCount": 1458
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 50897,
+    "teacherCount": 5225,
+    "schoolCount": 277,
+    "administratorCount": 350
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 50623,
+    "teacherCount": 5810,
+    "schoolCount": 448,
+    "administratorCount": 1661
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 53410,
+    "teacherCount": 5598,
+    "schoolCount": 474,
+    "administratorCount": 422
+  },
+  {
+    "year": 2016,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 20433,
+    "teacherCount": 1875,
+    "schoolCount": 325,
+    "administratorCount": 901
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 373665,
+    "teacherCount": 29965,
+    "schoolCount": 1397,
+    "administratorCount": 7459
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 339626,
+    "teacherCount": 25146,
+    "schoolCount": 1250,
+    "administratorCount": 2533
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 146716,
+    "teacherCount": 13778,
+    "schoolCount": 587,
+    "administratorCount": 3789
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 157620,
+    "teacherCount": 12955,
+    "schoolCount": 533,
+    "administratorCount": 1008
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 159156,
+    "teacherCount": 13824,
+    "schoolCount": 837,
+    "administratorCount": 4008
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 169236,
+    "teacherCount": 12957,
+    "schoolCount": 826,
+    "administratorCount": 1161
+  },
+  {
+    "year": 2016,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 61967,
+    "teacherCount": 5900,
+    "schoolCount": 634,
+    "administratorCount": 1208
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 32434,
+    "teacherCount": 3012,
+    "schoolCount": 154,
+    "administratorCount": 938
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 34151,
+    "teacherCount": 2587,
+    "schoolCount": 158,
+    "administratorCount": 214
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 12042,
+    "teacherCount": 1028,
+    "schoolCount": 54,
+    "administratorCount": 384
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13777,
+    "teacherCount": 1069,
+    "schoolCount": 53,
+    "administratorCount": 107
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 13568,
+    "teacherCount": 1159,
+    "schoolCount": 78,
+    "administratorCount": 418
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 14732,
+    "teacherCount": 1182,
+    "schoolCount": 98,
+    "administratorCount": 103
+  },
+  {
+    "year": 2016,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 2787,
+    "teacherCount": 335,
+    "schoolCount": 62,
+    "administratorCount": 116
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 20988,
+    "teacherCount": 3173,
+    "schoolCount": 233,
+    "administratorCount": 896
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 20926,
+    "teacherCount": 2904,
+    "schoolCount": 245,
+    "administratorCount": 226
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9030,
+    "teacherCount": 1263,
+    "schoolCount": 76,
+    "administratorCount": 216
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9126,
+    "teacherCount": 1147,
+    "schoolCount": 61,
+    "administratorCount": 77
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9376,
+    "teacherCount": 1480,
+    "schoolCount": 137,
+    "administratorCount": 292
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9543,
+    "teacherCount": 1299,
+    "schoolCount": 118,
+    "administratorCount": 77
+  },
+  {
+    "year": 2017,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5735,
+    "teacherCount": 402,
+    "schoolCount": 103,
+    "administratorCount": 242
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 36432,
+    "teacherCount": 3138,
+    "schoolCount": 159,
+    "administratorCount": 1241
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 35905,
+    "teacherCount": 3360,
+    "schoolCount": 170,
+    "administratorCount": 302
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13221,
+    "teacherCount": 1462,
+    "schoolCount": 76,
+    "administratorCount": 370
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13871,
+    "teacherCount": 1202,
+    "schoolCount": 74,
+    "administratorCount": 118
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14704,
+    "teacherCount": 1585,
+    "schoolCount": 101,
+    "administratorCount": 509
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 14820,
+    "teacherCount": 1321,
+    "schoolCount": 113,
+    "administratorCount": 108
+  },
+  {
+    "year": 2017,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6882,
+    "teacherCount": 420,
+    "schoolCount": 78,
+    "administratorCount": 368
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 21755,
+    "teacherCount": 1662,
+    "schoolCount": 113,
+    "administratorCount": 376
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 21373,
+    "teacherCount": 2114,
+    "schoolCount": 112,
+    "administratorCount": 78
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8059,
+    "teacherCount": 882,
+    "schoolCount": 46,
+    "administratorCount": 149
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 8905,
+    "teacherCount": 722,
+    "schoolCount": 51,
+    "administratorCount": 33
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 8766,
+    "teacherCount": 881,
+    "schoolCount": 63,
+    "administratorCount": 192
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9054,
+    "teacherCount": 824,
+    "schoolCount": 67,
+    "administratorCount": 39
+  },
+  {
+    "year": 2017,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 3811,
+    "teacherCount": 202,
+    "schoolCount": 41,
+    "administratorCount": 92
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 406718,
+    "teacherCount": 34382,
+    "schoolCount": 1622,
+    "administratorCount": 11702
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 376197,
+    "teacherCount": 27243,
+    "schoolCount": 1510,
+    "administratorCount": 2877
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 154125,
+    "teacherCount": 15128,
+    "schoolCount": 682,
+    "administratorCount": 5078
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 167410,
+    "teacherCount": 12971,
+    "schoolCount": 590,
+    "administratorCount": 882
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 164061,
+    "teacherCount": 14995,
+    "schoolCount": 967,
+    "administratorCount": 6215
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 176195,
+    "teacherCount": 13652,
+    "schoolCount": 923,
+    "administratorCount": 1139
+  },
+  {
+    "year": 2017,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 86765,
+    "teacherCount": 8931,
+    "schoolCount": 978,
+    "administratorCount": 2906
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 227948,
+    "teacherCount": 14879,
+    "schoolCount": 699,
+    "administratorCount": 4807
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 222486,
+    "teacherCount": 16221,
+    "schoolCount": 664,
+    "administratorCount": 1071
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 85703,
+    "teacherCount": 8674,
+    "schoolCount": 305,
+    "administratorCount": 2328
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 90361,
+    "teacherCount": 8148,
+    "schoolCount": 321,
+    "administratorCount": 473
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 92754,
+    "teacherCount": 8100,
+    "schoolCount": 424,
+    "administratorCount": 2503
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 99125,
+    "teacherCount": 8185,
+    "schoolCount": 459,
+    "administratorCount": 580
+  },
+  {
+    "year": 2017,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 56492,
+    "teacherCount": 4920,
+    "schoolCount": 454,
+    "administratorCount": 1166
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 71896,
+    "teacherCount": 8113,
+    "schoolCount": 514,
+    "administratorCount": 2308
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 72098,
+    "teacherCount": 7028,
+    "schoolCount": 464,
+    "administratorCount": 924
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32122,
+    "teacherCount": 4248,
+    "schoolCount": 204,
+    "administratorCount": 877
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32943,
+    "teacherCount": 3094,
+    "schoolCount": 155,
+    "administratorCount": 367
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 32597,
+    "teacherCount": 4165,
+    "schoolCount": 296,
+    "administratorCount": 1063
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 32889,
+    "teacherCount": 3430,
+    "schoolCount": 260,
+    "administratorCount": 399
+  },
+  {
+    "year": 2017,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 14655,
+    "teacherCount": 1274,
+    "schoolCount": 226,
+    "administratorCount": 568
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 113765,
+    "teacherCount": 10076,
+    "schoolCount": 519,
+    "administratorCount": 2640
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 111494,
+    "teacherCount": 8702,
+    "schoolCount": 506,
+    "administratorCount": 744
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 48679,
+    "teacherCount": 4823,
+    "schoolCount": 202,
+    "administratorCount": 1057
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 48443,
+    "teacherCount": 4462,
+    "schoolCount": 178,
+    "administratorCount": 250
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 51114,
+    "teacherCount": 5053,
+    "schoolCount": 313,
+    "administratorCount": 1218
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 52088,
+    "teacherCount": 4985,
+    "schoolCount": 323,
+    "administratorCount": 322
+  },
+  {
+    "year": 2017,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 22202,
+    "teacherCount": 2164,
+    "schoolCount": 266,
+    "administratorCount": 706
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 53220,
+    "teacherCount": 4162,
+    "schoolCount": 235,
+    "administratorCount": 1842
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 54954,
+    "teacherCount": 4037,
+    "schoolCount": 240,
+    "administratorCount": 122
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 21004,
+    "teacherCount": 2064,
+    "schoolCount": 102,
+    "administratorCount": 631
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23866,
+    "teacherCount": 1650,
+    "schoolCount": 86,
+    "administratorCount": 64
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23171,
+    "teacherCount": 2030,
+    "schoolCount": 147,
+    "administratorCount": 833
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24908,
+    "teacherCount": 1871,
+    "schoolCount": 148,
+    "administratorCount": 66
+  },
+  {
+    "year": 2017,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9264,
+    "teacherCount": 583,
+    "schoolCount": 97,
+    "administratorCount": 436
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 87737,
+    "teacherCount": 7597,
+    "schoolCount": 464,
+    "administratorCount": 2789
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 89327,
+    "teacherCount": 6621,
+    "schoolCount": 493,
+    "administratorCount": 554
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32064,
+    "teacherCount": 2821,
+    "schoolCount": 140,
+    "administratorCount": 674
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 35347,
+    "teacherCount": 3146,
+    "schoolCount": 157,
+    "administratorCount": 148
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 36086,
+    "teacherCount": 3485,
+    "schoolCount": 267,
+    "administratorCount": 961
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 38825,
+    "teacherCount": 3797,
+    "schoolCount": 305,
+    "administratorCount": 195
+  },
+  {
+    "year": 2017,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 16355,
+    "teacherCount": 1309,
+    "schoolCount": 194,
+    "administratorCount": 789
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 38885,
+    "teacherCount": 4133,
+    "schoolCount": 289,
+    "administratorCount": 1525
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 39012,
+    "teacherCount": 4206,
+    "schoolCount": 322,
+    "administratorCount": 585
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 15739,
+    "teacherCount": 2027,
+    "schoolCount": 104,
+    "administratorCount": 389
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 17629,
+    "teacherCount": 1861,
+    "schoolCount": 105,
+    "administratorCount": 145
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16758,
+    "teacherCount": 2034,
+    "schoolCount": 151,
+    "administratorCount": 537
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17964,
+    "teacherCount": 2177,
+    "schoolCount": 168,
+    "administratorCount": 185
+  },
+  {
+    "year": 2017,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7134,
+    "teacherCount": 496,
+    "schoolCount": 101,
+    "administratorCount": 444
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 119656,
+    "teacherCount": 12755,
+    "schoolCount": 840,
+    "administratorCount": 4817
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 118543,
+    "teacherCount": 11402,
+    "schoolCount": 851,
+    "administratorCount": 1177
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 48059,
+    "teacherCount": 5738,
+    "schoolCount": 285,
+    "administratorCount": 1415
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 50612,
+    "teacherCount": 5044,
+    "schoolCount": 277,
+    "administratorCount": 317
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 51488,
+    "teacherCount": 5815,
+    "schoolCount": 450,
+    "administratorCount": 1638
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 54213,
+    "teacherCount": 5415,
+    "schoolCount": 480,
+    "administratorCount": 417
+  },
+  {
+    "year": 2017,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 20300,
+    "teacherCount": 1313,
+    "schoolCount": 335,
+    "administratorCount": 968
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 385963,
+    "teacherCount": 30224,
+    "schoolCount": 1380,
+    "administratorCount": 7424
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 379843,
+    "teacherCount": 26207,
+    "schoolCount": 1281,
+    "administratorCount": 2433
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 149907,
+    "teacherCount": 14553,
+    "schoolCount": 588,
+    "administratorCount": 3647
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 159210,
+    "teacherCount": 13359,
+    "schoolCount": 536,
+    "administratorCount": 952
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 161616,
+    "teacherCount": 14669,
+    "schoolCount": 849,
+    "administratorCount": 3989
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 173294,
+    "teacherCount": 13671,
+    "schoolCount": 834,
+    "administratorCount": 1043
+  },
+  {
+    "year": 2017,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 69554,
+    "teacherCount": 6750,
+    "schoolCount": 703,
+    "administratorCount": 1393
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 34417,
+    "teacherCount": 2703,
+    "schoolCount": 160,
+    "administratorCount": 945
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 35431,
+    "teacherCount": 2157,
+    "schoolCount": 161,
+    "administratorCount": 194
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 12139,
+    "teacherCount": 833,
+    "schoolCount": 56,
+    "administratorCount": 399
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13953,
+    "teacherCount": 947,
+    "schoolCount": 54,
+    "administratorCount": 102
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14140,
+    "teacherCount": 949,
+    "schoolCount": 80,
+    "administratorCount": 420
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 14960,
+    "teacherCount": 1033,
+    "schoolCount": 101,
+    "administratorCount": 99
+  },
+  {
+    "year": 2017,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 3433,
+    "teacherCount": 223,
+    "schoolCount": 77,
+    "administratorCount": 112
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 21068,
+    "teacherCount": 3066,
+    "schoolCount": 232,
+    "administratorCount": 915
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 21052,
+    "teacherCount": 2968,
+    "schoolCount": 244,
+    "administratorCount": 239
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9113,
+    "teacherCount": 1269,
+    "schoolCount": 78,
+    "administratorCount": 236
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9040,
+    "teacherCount": 1146,
+    "schoolCount": 61,
+    "administratorCount": 84
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9319,
+    "teacherCount": 1492,
+    "schoolCount": 137,
+    "administratorCount": 293
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9382,
+    "teacherCount": 1262,
+    "schoolCount": 118,
+    "administratorCount": 79
+  },
+  {
+    "year": 2018,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5174,
+    "teacherCount": 373,
+    "schoolCount": 111,
+    "administratorCount": 258
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 38075,
+    "teacherCount": 3107,
+    "schoolCount": 160,
+    "administratorCount": 1304
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 37184,
+    "teacherCount": 3606,
+    "schoolCount": 169,
+    "administratorCount": 333
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13684,
+    "teacherCount": 1438,
+    "schoolCount": 76,
+    "administratorCount": 362
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13896,
+    "teacherCount": 1093,
+    "schoolCount": 77,
+    "administratorCount": 120
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14745,
+    "teacherCount": 1592,
+    "schoolCount": 102,
+    "administratorCount": 505
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 14916,
+    "teacherCount": 1249,
+    "schoolCount": 112,
+    "administratorCount": 119
+  },
+  {
+    "year": 2018,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6864,
+    "teacherCount": 449,
+    "schoolCount": 79,
+    "administratorCount": 375
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 22382,
+    "teacherCount": 1609,
+    "schoolCount": 112,
+    "administratorCount": 375
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 22110,
+    "teacherCount": 2116,
+    "schoolCount": 114,
+    "administratorCount": 85
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8242,
+    "teacherCount": 829,
+    "schoolCount": 46,
+    "administratorCount": 147
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9086,
+    "teacherCount": 710,
+    "schoolCount": 53,
+    "administratorCount": 36
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 8847,
+    "teacherCount": 879,
+    "schoolCount": 63,
+    "administratorCount": 197
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 8857,
+    "teacherCount": 773,
+    "schoolCount": 69,
+    "administratorCount": 38
+  },
+  {
+    "year": 2018,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 3760,
+    "teacherCount": 223,
+    "schoolCount": 40,
+    "administratorCount": 94
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 405791,
+    "teacherCount": 33439,
+    "schoolCount": 1635,
+    "administratorCount": 12096
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 372228,
+    "teacherCount": 26002,
+    "schoolCount": 1519,
+    "administratorCount": 2999
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 156320,
+    "teacherCount": 14685,
+    "schoolCount": 692,
+    "administratorCount": 5161
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 168223,
+    "teacherCount": 12703,
+    "schoolCount": 599,
+    "administratorCount": 891
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 162718,
+    "teacherCount": 14697,
+    "schoolCount": 972,
+    "administratorCount": 6255
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 173776,
+    "teacherCount": 13473,
+    "schoolCount": 932,
+    "administratorCount": 1185
+  },
+  {
+    "year": 2018,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 84182,
+    "teacherCount": 8441,
+    "schoolCount": 987,
+    "administratorCount": 3124
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 231089,
+    "teacherCount": 14218,
+    "schoolCount": 704,
+    "administratorCount": 4930
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 225257,
+    "teacherCount": 15131,
+    "schoolCount": 669,
+    "administratorCount": 1099
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 87567,
+    "teacherCount": 8219,
+    "schoolCount": 305,
+    "administratorCount": 2305
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 91535,
+    "teacherCount": 7873,
+    "schoolCount": 327,
+    "administratorCount": 485
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 92258,
+    "teacherCount": 7687,
+    "schoolCount": 425,
+    "administratorCount": 2497
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 98506,
+    "teacherCount": 7887,
+    "schoolCount": 464,
+    "administratorCount": 585
+  },
+  {
+    "year": 2018,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 53489,
+    "teacherCount": 4926,
+    "schoolCount": 467,
+    "administratorCount": 1192
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 72808,
+    "teacherCount": 8141,
+    "schoolCount": 515,
+    "administratorCount": 2374
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 72775,
+    "teacherCount": 6978,
+    "schoolCount": 467,
+    "administratorCount": 939
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32569,
+    "teacherCount": 4218,
+    "schoolCount": 208,
+    "administratorCount": 873
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32937,
+    "teacherCount": 3070,
+    "schoolCount": 157,
+    "administratorCount": 366
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 32079,
+    "teacherCount": 4043,
+    "schoolCount": 295,
+    "administratorCount": 1053
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 32339,
+    "teacherCount": 3459,
+    "schoolCount": 260,
+    "administratorCount": 418
+  },
+  {
+    "year": 2018,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 14179,
+    "teacherCount": 1262,
+    "schoolCount": 223,
+    "administratorCount": 609
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 114985,
+    "teacherCount": 9973,
+    "schoolCount": 515,
+    "administratorCount": 2707
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 111768,
+    "teacherCount": 8627,
+    "schoolCount": 500,
+    "administratorCount": 760
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49716,
+    "teacherCount": 4756,
+    "schoolCount": 209,
+    "administratorCount": 1051
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 49660,
+    "teacherCount": 4378,
+    "schoolCount": 179,
+    "administratorCount": 274
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 50425,
+    "teacherCount": 4885,
+    "schoolCount": 315,
+    "administratorCount": 1233
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 50425,
+    "teacherCount": 4954,
+    "schoolCount": 325,
+    "administratorCount": 323
+  },
+  {
+    "year": 2018,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 22483,
+    "teacherCount": 2085,
+    "schoolCount": 280,
+    "administratorCount": 782
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 53879,
+    "teacherCount": 4063,
+    "schoolCount": 242,
+    "administratorCount": 1863
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 55223,
+    "teacherCount": 4022,
+    "schoolCount": 244,
+    "administratorCount": 123
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 21450,
+    "teacherCount": 2047,
+    "schoolCount": 103,
+    "administratorCount": 627
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23978,
+    "teacherCount": 1702,
+    "schoolCount": 87,
+    "administratorCount": 71
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23280,
+    "teacherCount": 2000,
+    "schoolCount": 150,
+    "administratorCount": 815
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24213,
+    "teacherCount": 1818,
+    "schoolCount": 153,
+    "administratorCount": 69
+  },
+  {
+    "year": 2018,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 10158,
+    "teacherCount": 637,
+    "schoolCount": 109,
+    "administratorCount": 466
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 88998,
+    "teacherCount": 7327,
+    "schoolCount": 462,
+    "administratorCount": 2789
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 90105,
+    "teacherCount": 6611,
+    "schoolCount": 496,
+    "administratorCount": 571
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32932,
+    "teacherCount": 2660,
+    "schoolCount": 141,
+    "administratorCount": 681
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 36046,
+    "teacherCount": 3083,
+    "schoolCount": 162,
+    "administratorCount": 153
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 36229,
+    "teacherCount": 3334,
+    "schoolCount": 267,
+    "administratorCount": 949
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 38658,
+    "teacherCount": 3683,
+    "schoolCount": 306,
+    "administratorCount": 199
+  },
+  {
+    "year": 2018,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 17422,
+    "teacherCount": 1405,
+    "schoolCount": 212,
+    "administratorCount": 862
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 39727,
+    "teacherCount": 4330,
+    "schoolCount": 293,
+    "administratorCount": 1548
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 39983,
+    "teacherCount": 4686,
+    "schoolCount": 325,
+    "administratorCount": 593
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 16220,
+    "teacherCount": 1808,
+    "schoolCount": 104,
+    "administratorCount": 375
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 17790,
+    "teacherCount": 1860,
+    "schoolCount": 107,
+    "administratorCount": 142
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16507,
+    "teacherCount": 2010,
+    "schoolCount": 152,
+    "administratorCount": 514
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17601,
+    "teacherCount": 2141,
+    "schoolCount": 170,
+    "administratorCount": 184
+  },
+  {
+    "year": 2018,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7491,
+    "teacherCount": 574,
+    "schoolCount": 123,
+    "administratorCount": 484
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 121603,
+    "teacherCount": 12316,
+    "schoolCount": 841,
+    "administratorCount": 4947
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 119783,
+    "teacherCount": 11436,
+    "schoolCount": 849,
+    "administratorCount": 1184
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49663,
+    "teacherCount": 5655,
+    "schoolCount": 289,
+    "administratorCount": 1422
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 51940,
+    "teacherCount": 4929,
+    "schoolCount": 281,
+    "administratorCount": 338
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 52010,
+    "teacherCount": 5718,
+    "schoolCount": 456,
+    "administratorCount": 1660
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 53782,
+    "teacherCount": 5328,
+    "schoolCount": 482,
+    "administratorCount": 419
+  },
+  {
+    "year": 2018,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 20653,
+    "teacherCount": 1478,
+    "schoolCount": 369,
+    "administratorCount": 1021
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 382156,
+    "teacherCount": 29040,
+    "schoolCount": 1375,
+    "administratorCount": 7615
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 379243,
+    "teacherCount": 25953,
+    "schoolCount": 1264,
+    "administratorCount": 2511
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 153665,
+    "teacherCount": 14147,
+    "schoolCount": 591,
+    "administratorCount": 3613
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 162395,
+    "teacherCount": 12996,
+    "schoolCount": 542,
+    "administratorCount": 1005
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 160291,
+    "teacherCount": 14177,
+    "schoolCount": 859,
+    "administratorCount": 4030
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 173091,
+    "teacherCount": 13550,
+    "schoolCount": 840,
+    "administratorCount": 1080
+  },
+  {
+    "year": 2018,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 67383,
+    "teacherCount": 6452,
+    "schoolCount": 722,
+    "administratorCount": 1547
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 36543,
+    "teacherCount": 2650,
+    "schoolCount": 160,
+    "administratorCount": 939
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 36970,
+    "teacherCount": 1885,
+    "schoolCount": 160,
+    "administratorCount": 207
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13095,
+    "teacherCount": 897,
+    "schoolCount": 57,
+    "administratorCount": 405
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 14142,
+    "teacherCount": 1039,
+    "schoolCount": 55,
+    "administratorCount": 102
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14388,
+    "teacherCount": 983,
+    "schoolCount": 81,
+    "administratorCount": 417
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15030,
+    "teacherCount": 905,
+    "schoolCount": 101,
+    "administratorCount": 101
+  },
+  {
+    "year": 2018,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 4317,
+    "teacherCount": 236,
+    "schoolCount": 78,
+    "administratorCount": 121
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 20826,
+    "teacherCount": 3027,
+    "schoolCount": 219,
+    "administratorCount": 895
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 20750,
+    "teacherCount": 2839,
+    "schoolCount": 230,
+    "administratorCount": 261
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9020,
+    "teacherCount": 1274,
+    "schoolCount": 76,
+    "administratorCount": 237
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 8728,
+    "teacherCount": 1126,
+    "schoolCount": 59,
+    "administratorCount": 89
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9201,
+    "teacherCount": 1482,
+    "schoolCount": 132,
+    "administratorCount": 274
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9243,
+    "teacherCount": 1251,
+    "schoolCount": 115,
+    "administratorCount": 87
+  },
+  {
+    "year": 2019,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5630,
+    "teacherCount": 390,
+    "schoolCount": 122,
+    "administratorCount": 270
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 39050,
+    "teacherCount": 3089,
+    "schoolCount": 162,
+    "administratorCount": 1340
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 38207,
+    "teacherCount": 3549,
+    "schoolCount": 166,
+    "administratorCount": 369
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13549,
+    "teacherCount": 1498,
+    "schoolCount": 79,
+    "administratorCount": 351
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13793,
+    "teacherCount": 1222,
+    "schoolCount": 76,
+    "administratorCount": 134
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 15149,
+    "teacherCount": 1579,
+    "schoolCount": 104,
+    "administratorCount": 484
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15082,
+    "teacherCount": 1293,
+    "schoolCount": 108,
+    "administratorCount": 129
+  },
+  {
+    "year": 2019,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7754,
+    "teacherCount": 525,
+    "schoolCount": 90,
+    "administratorCount": 398
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 22587,
+    "teacherCount": 1620,
+    "schoolCount": 111,
+    "administratorCount": 374
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 22627,
+    "teacherCount": 2137,
+    "schoolCount": 115,
+    "administratorCount": 90
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8311,
+    "teacherCount": 810,
+    "schoolCount": 46,
+    "administratorCount": 140
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9088,
+    "teacherCount": 838,
+    "schoolCount": 51,
+    "administratorCount": 43
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9010,
+    "teacherCount": 873,
+    "schoolCount": 62,
+    "administratorCount": 199
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 8980,
+    "teacherCount": 823,
+    "schoolCount": 69,
+    "administratorCount": 38
+  },
+  {
+    "year": 2019,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 4218,
+    "teacherCount": 276,
+    "schoolCount": 42,
+    "administratorCount": 99
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 391639,
+    "teacherCount": 32072,
+    "schoolCount": 1592,
+    "administratorCount": 12236
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 358631,
+    "teacherCount": 24954,
+    "schoolCount": 1481,
+    "administratorCount": 2988
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 153883,
+    "teacherCount": 14591,
+    "schoolCount": 700,
+    "administratorCount": 5000
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 161095,
+    "teacherCount": 12611,
+    "schoolCount": 602,
+    "administratorCount": 899
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 160688,
+    "teacherCount": 14413,
+    "schoolCount": 960,
+    "administratorCount": 6102
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 170849,
+    "teacherCount": 13360,
+    "schoolCount": 933,
+    "administratorCount": 1186
+  },
+  {
+    "year": 2019,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 92277,
+    "teacherCount": 8524,
+    "schoolCount": 1018,
+    "administratorCount": 3271
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 231444,
+    "teacherCount": 14165,
+    "schoolCount": 712,
+    "administratorCount": 4954
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 224863,
+    "teacherCount": 14903,
+    "schoolCount": 672,
+    "administratorCount": 1116
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 87420,
+    "teacherCount": 7992,
+    "schoolCount": 314,
+    "administratorCount": 2234
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 90776,
+    "teacherCount": 7707,
+    "schoolCount": 337,
+    "administratorCount": 484
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 93004,
+    "teacherCount": 7493,
+    "schoolCount": 432,
+    "administratorCount": 2441
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 99863,
+    "teacherCount": 7671,
+    "schoolCount": 467,
+    "administratorCount": 584
+  },
+  {
+    "year": 2019,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 55204,
+    "teacherCount": 4854,
+    "schoolCount": 495,
+    "administratorCount": 1277
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 71942,
+    "teacherCount": 7835,
+    "schoolCount": 491,
+    "administratorCount": 2321
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 72605,
+    "teacherCount": 6957,
+    "schoolCount": 460,
+    "administratorCount": 917
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32001,
+    "teacherCount": 4182,
+    "schoolCount": 205,
+    "administratorCount": 850
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32273,
+    "teacherCount": 3078,
+    "schoolCount": 156,
+    "administratorCount": 357
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 31941,
+    "teacherCount": 3913,
+    "schoolCount": 281,
+    "administratorCount": 1012
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 32569,
+    "teacherCount": 3360,
+    "schoolCount": 261,
+    "administratorCount": 421
+  },
+  {
+    "year": 2019,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 16269,
+    "teacherCount": 1322,
+    "schoolCount": 251,
+    "administratorCount": 664
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 112904,
+    "teacherCount": 9809,
+    "schoolCount": 515,
+    "administratorCount": 2749
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 109565,
+    "teacherCount": 8521,
+    "schoolCount": 480,
+    "administratorCount": 746
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 48922,
+    "teacherCount": 4724,
+    "schoolCount": 209,
+    "administratorCount": 992
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 47551,
+    "teacherCount": 4281,
+    "schoolCount": 177,
+    "administratorCount": 249
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 49608,
+    "teacherCount": 4822,
+    "schoolCount": 307,
+    "administratorCount": 1185
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 50235,
+    "teacherCount": 4836,
+    "schoolCount": 318,
+    "administratorCount": 305
+  },
+  {
+    "year": 2019,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 25226,
+    "teacherCount": 2106,
+    "schoolCount": 296,
+    "administratorCount": 805
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 53543,
+    "teacherCount": 4016,
+    "schoolCount": 242,
+    "administratorCount": 1850
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 53710,
+    "teacherCount": 3834,
+    "schoolCount": 233,
+    "administratorCount": 120
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 21961,
+    "teacherCount": 2069,
+    "schoolCount": 104,
+    "administratorCount": 600
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23318,
+    "teacherCount": 1773,
+    "schoolCount": 87,
+    "administratorCount": 69
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23079,
+    "teacherCount": 2055,
+    "schoolCount": 152,
+    "administratorCount": 776
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 23999,
+    "teacherCount": 1918,
+    "schoolCount": 152,
+    "administratorCount": 63
+  },
+  {
+    "year": 2019,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 11246,
+    "teacherCount": 752,
+    "schoolCount": 110,
+    "administratorCount": 488
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 89614,
+    "teacherCount": 7273,
+    "schoolCount": 465,
+    "administratorCount": 2776
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 89241,
+    "teacherCount": 6220,
+    "schoolCount": 485,
+    "administratorCount": 609
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 33480,
+    "teacherCount": 2629,
+    "schoolCount": 140,
+    "administratorCount": 663
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 35650,
+    "teacherCount": 2986,
+    "schoolCount": 161,
+    "administratorCount": 162
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 36942,
+    "teacherCount": 3277,
+    "schoolCount": 266,
+    "administratorCount": 913
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 39192,
+    "teacherCount": 3605,
+    "schoolCount": 303,
+    "administratorCount": 206
+  },
+  {
+    "year": 2019,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 20529,
+    "teacherCount": 1517,
+    "schoolCount": 239,
+    "administratorCount": 899
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 40747,
+    "teacherCount": 4358,
+    "schoolCount": 283,
+    "administratorCount": 1521
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 39864,
+    "teacherCount": 4604,
+    "schoolCount": 303,
+    "administratorCount": 627
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 16115,
+    "teacherCount": 1925,
+    "schoolCount": 105,
+    "administratorCount": 356
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 17476,
+    "teacherCount": 1906,
+    "schoolCount": 104,
+    "administratorCount": 152
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16748,
+    "teacherCount": 2034,
+    "schoolCount": 151,
+    "administratorCount": 471
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17738,
+    "teacherCount": 2075,
+    "schoolCount": 164,
+    "administratorCount": 177
+  },
+  {
+    "year": 2019,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 8833,
+    "teacherCount": 604,
+    "schoolCount": 127,
+    "administratorCount": 566
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 121202,
+    "teacherCount": 12237,
+    "schoolCount": 813,
+    "administratorCount": 4963
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 119096,
+    "teacherCount": 10988,
+    "schoolCount": 816,
+    "administratorCount": 1232
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49813,
+    "teacherCount": 5874,
+    "schoolCount": 288,
+    "administratorCount": 1387
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 51547,
+    "teacherCount": 5022,
+    "schoolCount": 279,
+    "administratorCount": 363
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 52997,
+    "teacherCount": 5728,
+    "schoolCount": 448,
+    "administratorCount": 1635
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 54120,
+    "teacherCount": 5335,
+    "schoolCount": 480,
+    "administratorCount": 429
+  },
+  {
+    "year": 2019,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 22876,
+    "teacherCount": 1595,
+    "schoolCount": 414,
+    "administratorCount": 1128
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 367692,
+    "teacherCount": 27990,
+    "schoolCount": 1362,
+    "administratorCount": 7928
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 366364,
+    "teacherCount": 25161,
+    "schoolCount": 1231,
+    "administratorCount": 2493
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 150323,
+    "teacherCount": 13923,
+    "schoolCount": 590,
+    "administratorCount": 3354
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 156855,
+    "teacherCount": 13052,
+    "schoolCount": 543,
+    "administratorCount": 979
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 157362,
+    "teacherCount": 13891,
+    "schoolCount": 837,
+    "administratorCount": 3844
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 169064,
+    "teacherCount": 13351,
+    "schoolCount": 828,
+    "administratorCount": 1080
+  },
+  {
+    "year": 2019,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 69213,
+    "teacherCount": 6320,
+    "schoolCount": 755,
+    "administratorCount": 1664
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 37018,
+    "teacherCount": 2778,
+    "schoolCount": 153,
+    "administratorCount": 906
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 37277,
+    "teacherCount": 2173,
+    "schoolCount": 159,
+    "administratorCount": 216
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13553,
+    "teacherCount": 1137,
+    "schoolCount": 57,
+    "administratorCount": 371
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 13886,
+    "teacherCount": 1156,
+    "schoolCount": 56,
+    "administratorCount": 96
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 14802,
+    "teacherCount": 1086,
+    "schoolCount": 80,
+    "administratorCount": 402
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15187,
+    "teacherCount": 1082,
+    "schoolCount": 98,
+    "administratorCount": 105
+  },
+  {
+    "year": 2019,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5803,
+    "teacherCount": 335,
+    "schoolCount": 81,
+    "administratorCount": 161
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 21384,
+    "teacherCount": 3016,
+    "schoolCount": 218,
+    "administratorCount": 897
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 20202,
+    "teacherCount": 2700,
+    "schoolCount": 220,
+    "administratorCount": 254
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8995,
+    "teacherCount": 1191,
+    "schoolCount": 73,
+    "administratorCount": 202
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9129,
+    "teacherCount": 1059,
+    "schoolCount": 59,
+    "administratorCount": 75
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9324,
+    "teacherCount": 1440,
+    "schoolCount": 129,
+    "administratorCount": 287
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9362,
+    "teacherCount": 1244,
+    "schoolCount": 115,
+    "administratorCount": 87
+  },
+  {
+    "year": 2020,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6830,
+    "teacherCount": 447,
+    "schoolCount": 145,
+    "administratorCount": 283
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 42285,
+    "teacherCount": 3135,
+    "schoolCount": 162,
+    "administratorCount": 1326
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 38231,
+    "teacherCount": 3617,
+    "schoolCount": 165,
+    "administratorCount": 368
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 13842,
+    "teacherCount": 1525,
+    "schoolCount": 79,
+    "administratorCount": 336
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 14435,
+    "teacherCount": 1241,
+    "schoolCount": 76,
+    "administratorCount": 127
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 15871,
+    "teacherCount": 1579,
+    "schoolCount": 103,
+    "administratorCount": 498
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15726,
+    "teacherCount": 1286,
+    "schoolCount": 109,
+    "administratorCount": 139
+  },
+  {
+    "year": 2020,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9560,
+    "teacherCount": 555,
+    "schoolCount": 104,
+    "administratorCount": 410
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 23370,
+    "teacherCount": 1645,
+    "schoolCount": 111,
+    "administratorCount": 384
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 23432,
+    "teacherCount": 2149,
+    "schoolCount": 111,
+    "administratorCount": 87
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8511,
+    "teacherCount": 813,
+    "schoolCount": 46,
+    "administratorCount": 134
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9138,
+    "teacherCount": 847,
+    "schoolCount": 51,
+    "administratorCount": 44
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9435,
+    "teacherCount": 855,
+    "schoolCount": 62,
+    "administratorCount": 191
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9106,
+    "teacherCount": 842,
+    "schoolCount": 69,
+    "administratorCount": 36
+  },
+  {
+    "year": 2020,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5358,
+    "teacherCount": 293,
+    "schoolCount": 61,
+    "administratorCount": 114
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 403926,
+    "teacherCount": 31883,
+    "schoolCount": 1585,
+    "administratorCount": 12326
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 351929,
+    "teacherCount": 25148,
+    "schoolCount": 1415,
+    "administratorCount": 2842
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 156294,
+    "teacherCount": 14456,
+    "schoolCount": 695,
+    "administratorCount": 4994
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 163863,
+    "teacherCount": 12679,
+    "schoolCount": 602,
+    "administratorCount": 904
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 164395,
+    "teacherCount": 14092,
+    "schoolCount": 938,
+    "administratorCount": 5983
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 175355,
+    "teacherCount": 13378,
+    "schoolCount": 919,
+    "administratorCount": 1188
+  },
+  {
+    "year": 2020,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 104179,
+    "teacherCount": 8672,
+    "schoolCount": 1233,
+    "administratorCount": 3424
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 247266,
+    "teacherCount": 14958,
+    "schoolCount": 734,
+    "administratorCount": 5044
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 222120,
+    "teacherCount": 15208,
+    "schoolCount": 662,
+    "administratorCount": 1157
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 90451,
+    "teacherCount": 7864,
+    "schoolCount": 323,
+    "administratorCount": 2203
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 92840,
+    "teacherCount": 7734,
+    "schoolCount": 340,
+    "administratorCount": 537
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 98465,
+    "teacherCount": 7540,
+    "schoolCount": 441,
+    "administratorCount": 2458
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 102978,
+    "teacherCount": 7872,
+    "schoolCount": 468,
+    "administratorCount": 621
+  },
+  {
+    "year": 2020,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 62027,
+    "teacherCount": 4629,
+    "schoolCount": 563,
+    "administratorCount": 1311
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 74448,
+    "teacherCount": 7805,
+    "schoolCount": 472,
+    "administratorCount": 2337
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 72101,
+    "teacherCount": 6886,
+    "schoolCount": 443,
+    "administratorCount": 896
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32205,
+    "teacherCount": 4154,
+    "schoolCount": 204,
+    "administratorCount": 855
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32600,
+    "teacherCount": 3075,
+    "schoolCount": 155,
+    "administratorCount": 340
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 33000,
+    "teacherCount": 3804,
+    "schoolCount": 278,
+    "administratorCount": 1008
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 33472,
+    "teacherCount": 3337,
+    "schoolCount": 256,
+    "administratorCount": 412
+  },
+  {
+    "year": 2020,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 18781,
+    "teacherCount": 1421,
+    "schoolCount": 323,
+    "administratorCount": 736
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 116581,
+    "teacherCount": 9779,
+    "schoolCount": 501,
+    "administratorCount": 2712
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 107853,
+    "teacherCount": 8410,
+    "schoolCount": 456,
+    "administratorCount": 744
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49609,
+    "teacherCount": 4611,
+    "schoolCount": 212,
+    "administratorCount": 1012
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 48475,
+    "teacherCount": 4278,
+    "schoolCount": 179,
+    "administratorCount": 257
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 51067,
+    "teacherCount": 4766,
+    "schoolCount": 302,
+    "administratorCount": 1170
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 51042,
+    "teacherCount": 4825,
+    "schoolCount": 314,
+    "administratorCount": 309
+  },
+  {
+    "year": 2020,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 28241,
+    "teacherCount": 2184,
+    "schoolCount": 364,
+    "administratorCount": 853
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 54987,
+    "teacherCount": 4097,
+    "schoolCount": 241,
+    "administratorCount": 1849
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 52770,
+    "teacherCount": 3853,
+    "schoolCount": 227,
+    "administratorCount": 117
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 22105,
+    "teacherCount": 2055,
+    "schoolCount": 103,
+    "administratorCount": 586
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23200,
+    "teacherCount": 1838,
+    "schoolCount": 88,
+    "administratorCount": 68
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23447,
+    "teacherCount": 2047,
+    "schoolCount": 152,
+    "administratorCount": 754
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24270,
+    "teacherCount": 1960,
+    "schoolCount": 154,
+    "administratorCount": 63
+  },
+  {
+    "year": 2020,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 11956,
+    "teacherCount": 830,
+    "schoolCount": 118,
+    "administratorCount": 518
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 96911,
+    "teacherCount": 7420,
+    "schoolCount": 470,
+    "administratorCount": 2806
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 86686,
+    "teacherCount": 6126,
+    "schoolCount": 481,
+    "administratorCount": 621
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 35029,
+    "teacherCount": 2581,
+    "schoolCount": 137,
+    "administratorCount": 582
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 37350,
+    "teacherCount": 2899,
+    "schoolCount": 158,
+    "administratorCount": 148
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 38942,
+    "teacherCount": 3191,
+    "schoolCount": 263,
+    "administratorCount": 890
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 40379,
+    "teacherCount": 3579,
+    "schoolCount": 302,
+    "administratorCount": 205
+  },
+  {
+    "year": 2020,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 24490,
+    "teacherCount": 1648,
+    "schoolCount": 280,
+    "administratorCount": 948
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 42574,
+    "teacherCount": 4372,
+    "schoolCount": 273,
+    "administratorCount": 1513
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 41052,
+    "teacherCount": 4591,
+    "schoolCount": 288,
+    "administratorCount": 625
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 16703,
+    "teacherCount": 1927,
+    "schoolCount": 106,
+    "administratorCount": 331
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 18204,
+    "teacherCount": 1888,
+    "schoolCount": 106,
+    "administratorCount": 150
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 17162,
+    "teacherCount": 2044,
+    "schoolCount": 146,
+    "administratorCount": 479
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 18083,
+    "teacherCount": 2096,
+    "schoolCount": 160,
+    "administratorCount": 184
+  },
+  {
+    "year": 2020,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9971,
+    "teacherCount": 685,
+    "schoolCount": 156,
+    "administratorCount": 605
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 126871,
+    "teacherCount": 12391,
+    "schoolCount": 809,
+    "administratorCount": 5016
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 118464,
+    "teacherCount": 11073,
+    "schoolCount": 789,
+    "administratorCount": 1236
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 51205,
+    "teacherCount": 6043,
+    "schoolCount": 289,
+    "administratorCount": 1388
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 52813,
+    "teacherCount": 5008,
+    "schoolCount": 276,
+    "administratorCount": 353
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 54914,
+    "teacherCount": 5776,
+    "schoolCount": 439,
+    "administratorCount": 1607
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 55643,
+    "teacherCount": 5384,
+    "schoolCount": 472,
+    "administratorCount": 425
+  },
+  {
+    "year": 2020,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 26816,
+    "teacherCount": 1690,
+    "schoolCount": 474,
+    "administratorCount": 1198
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 375578,
+    "teacherCount": 27718,
+    "schoolCount": 1368,
+    "administratorCount": 8090
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 359555,
+    "teacherCount": 25042,
+    "schoolCount": 1214,
+    "administratorCount": 2497
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 152685,
+    "teacherCount": 14012,
+    "schoolCount": 587,
+    "administratorCount": 3386
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 161140,
+    "teacherCount": 13214,
+    "schoolCount": 547,
+    "administratorCount": 953
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 161207,
+    "teacherCount": 13858,
+    "schoolCount": 828,
+    "administratorCount": 3845
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 173037,
+    "teacherCount": 13382,
+    "schoolCount": 826,
+    "administratorCount": 1107
+  },
+  {
+    "year": 2020,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 76695,
+    "teacherCount": 6435,
+    "schoolCount": 880,
+    "administratorCount": 1755
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 41549,
+    "teacherCount": 2899,
+    "schoolCount": 154,
+    "administratorCount": 925
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 36511,
+    "teacherCount": 2397,
+    "schoolCount": 156,
+    "administratorCount": 216
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 14283,
+    "teacherCount": 1233,
+    "schoolCount": 58,
+    "administratorCount": 378
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 14024,
+    "teacherCount": 1181,
+    "schoolCount": 57,
+    "administratorCount": 90
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 15489,
+    "teacherCount": 1115,
+    "schoolCount": 79,
+    "administratorCount": 391
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15526,
+    "teacherCount": 1187,
+    "schoolCount": 99,
+    "administratorCount": 105
+  },
+  {
+    "year": 2020,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 8828,
+    "teacherCount": 396,
+    "schoolCount": 96,
+    "administratorCount": 189
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 21700,
+    "teacherCount": 2996,
+    "schoolCount": 215,
+    "administratorCount": 876
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 19348,
+    "teacherCount": 2596,
+    "schoolCount": 207,
+    "administratorCount": 245
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9056,
+    "teacherCount": 1252,
+    "schoolCount": 74,
+    "administratorCount": 176
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9330,
+    "teacherCount": 1131,
+    "schoolCount": 59,
+    "administratorCount": 67
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9594,
+    "teacherCount": 1431,
+    "schoolCount": 127,
+    "administratorCount": 285
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9564,
+    "teacherCount": 1257,
+    "schoolCount": 114,
+    "administratorCount": 84
+  },
+  {
+    "year": 2021,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5872,
+    "teacherCount": 429,
+    "schoolCount": 145,
+    "administratorCount": 283
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 43217,
+    "teacherCount": 3064,
+    "schoolCount": 162,
+    "administratorCount": 1305
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 38001,
+    "teacherCount": 3516,
+    "schoolCount": 164,
+    "administratorCount": 372
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 14325,
+    "teacherCount": 1483,
+    "schoolCount": 79,
+    "administratorCount": 232
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 15049,
+    "teacherCount": 1167,
+    "schoolCount": 76,
+    "administratorCount": 89
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16827,
+    "teacherCount": 1559,
+    "schoolCount": 103,
+    "administratorCount": 497
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 16492,
+    "teacherCount": 1256,
+    "schoolCount": 107,
+    "administratorCount": 148
+  },
+  {
+    "year": 2021,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7616,
+    "teacherCount": 458,
+    "schoolCount": 107,
+    "administratorCount": 416
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 23849,
+    "teacherCount": 1602,
+    "schoolCount": 111,
+    "administratorCount": 384
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 23348,
+    "teacherCount": 2051,
+    "schoolCount": 110,
+    "administratorCount": 88
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8668,
+    "teacherCount": 789,
+    "schoolCount": 44,
+    "administratorCount": 56
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9172,
+    "teacherCount": 775,
+    "schoolCount": 50,
+    "administratorCount": 35
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9848,
+    "teacherCount": 844,
+    "schoolCount": 62,
+    "administratorCount": 191
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9478,
+    "teacherCount": 845,
+    "schoolCount": 69,
+    "administratorCount": 38
+  },
+  {
+    "year": 2021,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 4119,
+    "teacherCount": 250,
+    "schoolCount": 59,
+    "administratorCount": 114
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 393950,
+    "teacherCount": 30352,
+    "schoolCount": 1571,
+    "administratorCount": 12205
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 342316,
+    "teacherCount": 24305,
+    "schoolCount": 1370,
+    "administratorCount": 2843
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 158580,
+    "teacherCount": 13975,
+    "schoolCount": 690,
+    "administratorCount": 4011
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 168303,
+    "teacherCount": 11949,
+    "schoolCount": 602,
+    "administratorCount": 648
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 168677,
+    "teacherCount": 13751,
+    "schoolCount": 933,
+    "administratorCount": 5851
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 179341,
+    "teacherCount": 13110,
+    "schoolCount": 912,
+    "administratorCount": 1227
+  },
+  {
+    "year": 2021,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 62069,
+    "teacherCount": 7193,
+    "schoolCount": 1168,
+    "administratorCount": 3291
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 252842,
+    "teacherCount": 14439,
+    "schoolCount": 736,
+    "administratorCount": 4991
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 215212,
+    "teacherCount": 14684,
+    "schoolCount": 644,
+    "administratorCount": 1152
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 91825,
+    "teacherCount": 7570,
+    "schoolCount": 321,
+    "administratorCount": 1554
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 97325,
+    "teacherCount": 7337,
+    "schoolCount": 341,
+    "administratorCount": 360
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 102795,
+    "teacherCount": 7308,
+    "schoolCount": 443,
+    "administratorCount": 2432
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 107343,
+    "teacherCount": 7686,
+    "schoolCount": 467,
+    "administratorCount": 617
+  },
+  {
+    "year": 2021,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 42542,
+    "teacherCount": 3958,
+    "schoolCount": 564,
+    "administratorCount": 1326
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 75628,
+    "teacherCount": 7682,
+    "schoolCount": 464,
+    "administratorCount": 2345
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 67775,
+    "teacherCount": 6789,
+    "schoolCount": 426,
+    "administratorCount": 891
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32340,
+    "teacherCount": 4084,
+    "schoolCount": 201,
+    "administratorCount": 672
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 32994,
+    "teacherCount": 3035,
+    "schoolCount": 157,
+    "administratorCount": 261
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 33659,
+    "teacherCount": 3736,
+    "schoolCount": 273,
+    "administratorCount": 1003
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 34479,
+    "teacherCount": 3381,
+    "schoolCount": 258,
+    "administratorCount": 426
+  },
+  {
+    "year": 2021,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 16121,
+    "teacherCount": 1264,
+    "schoolCount": 314,
+    "administratorCount": 759
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 114991,
+    "teacherCount": 9559,
+    "schoolCount": 506,
+    "administratorCount": 2714
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 104608,
+    "teacherCount": 8180,
+    "schoolCount": 453,
+    "administratorCount": 740
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49380,
+    "teacherCount": 4447,
+    "schoolCount": 211,
+    "administratorCount": 748
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 49112,
+    "teacherCount": 4108,
+    "schoolCount": 178,
+    "administratorCount": 182
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 51983,
+    "teacherCount": 4685,
+    "schoolCount": 302,
+    "administratorCount": 1179
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 52072,
+    "teacherCount": 4804,
+    "schoolCount": 310,
+    "administratorCount": 319
+  },
+  {
+    "year": 2021,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 21108,
+    "teacherCount": 1834,
+    "schoolCount": 353,
+    "administratorCount": 814
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 54084,
+    "teacherCount": 4005,
+    "schoolCount": 237,
+    "administratorCount": 1837
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 50550,
+    "teacherCount": 3714,
+    "schoolCount": 222,
+    "administratorCount": 131
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 22299,
+    "teacherCount": 1911,
+    "schoolCount": 98,
+    "administratorCount": 488
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23485,
+    "teacherCount": 1795,
+    "schoolCount": 88,
+    "administratorCount": 41
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23631,
+    "teacherCount": 2050,
+    "schoolCount": 149,
+    "administratorCount": 766
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24192,
+    "teacherCount": 1932,
+    "schoolCount": 151,
+    "administratorCount": 64
+  },
+  {
+    "year": 2021,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7432,
+    "teacherCount": 641,
+    "schoolCount": 108,
+    "administratorCount": 522
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 97768,
+    "teacherCount": 7242,
+    "schoolCount": 476,
+    "administratorCount": 2810
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 79769,
+    "teacherCount": 5805,
+    "schoolCount": 482,
+    "administratorCount": 621
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 36292,
+    "teacherCount": 2531,
+    "schoolCount": 136,
+    "administratorCount": 525
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 37925,
+    "teacherCount": 2846,
+    "schoolCount": 156,
+    "administratorCount": 129
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 40284,
+    "teacherCount": 3050,
+    "schoolCount": 263,
+    "administratorCount": 887
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 41738,
+    "teacherCount": 3518,
+    "schoolCount": 302,
+    "administratorCount": 210
+  },
+  {
+    "year": 2021,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 20832,
+    "teacherCount": 1495,
+    "schoolCount": 288,
+    "administratorCount": 978
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 44223,
+    "teacherCount": 4356,
+    "schoolCount": 282,
+    "administratorCount": 1555
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 38657,
+    "teacherCount": 4393,
+    "schoolCount": 271,
+    "administratorCount": 613
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 16797,
+    "teacherCount": 1901,
+    "schoolCount": 104,
+    "administratorCount": 272
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 18423,
+    "teacherCount": 1924,
+    "schoolCount": 105,
+    "administratorCount": 129
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 18037,
+    "teacherCount": 1998,
+    "schoolCount": 144,
+    "administratorCount": 473
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 18697,
+    "teacherCount": 2099,
+    "schoolCount": 160,
+    "administratorCount": 206
+  },
+  {
+    "year": 2021,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7775,
+    "teacherCount": 618,
+    "schoolCount": 159,
+    "administratorCount": 602
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 128286,
+    "teacherCount": 12179,
+    "schoolCount": 806,
+    "administratorCount": 5013
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 111297,
+    "teacherCount": 10972,
+    "schoolCount": 750,
+    "administratorCount": 1198
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 52119,
+    "teacherCount": 5883,
+    "schoolCount": 285,
+    "administratorCount": 949
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 53888,
+    "teacherCount": 5071,
+    "schoolCount": 271,
+    "administratorCount": 247
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 56070,
+    "teacherCount": 5713,
+    "schoolCount": 436,
+    "administratorCount": 1653
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 56807,
+    "teacherCount": 5601,
+    "schoolCount": 468,
+    "administratorCount": 441
+  },
+  {
+    "year": 2021,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 21593,
+    "teacherCount": 1446,
+    "schoolCount": 474,
+    "administratorCount": 1195
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 366959,
+    "teacherCount": 26310,
+    "schoolCount": 1355,
+    "administratorCount": 7982
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 342538,
+    "teacherCount": 24080,
+    "schoolCount": 1180,
+    "administratorCount": 2505
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 154150,
+    "teacherCount": 13687,
+    "schoolCount": 587,
+    "administratorCount": 2805
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 166986,
+    "teacherCount": 12781,
+    "schoolCount": 544,
+    "administratorCount": 756
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 163857,
+    "teacherCount": 13358,
+    "schoolCount": 823,
+    "administratorCount": 3794
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 176922,
+    "teacherCount": 13132,
+    "schoolCount": 821,
+    "administratorCount": 1132
+  },
+  {
+    "year": 2021,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 49764,
+    "teacherCount": 4961,
+    "schoolCount": 862,
+    "administratorCount": 1644
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 42086,
+    "teacherCount": 2836,
+    "schoolCount": 154,
+    "administratorCount": 939
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 35317,
+    "teacherCount": 2235,
+    "schoolCount": 153,
+    "administratorCount": 220
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 14498,
+    "teacherCount": 1199,
+    "schoolCount": 58,
+    "administratorCount": 258
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 14599,
+    "teacherCount": 1173,
+    "schoolCount": 57,
+    "administratorCount": 71
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 15711,
+    "teacherCount": 1077,
+    "schoolCount": 80,
+    "administratorCount": 393
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 15977,
+    "teacherCount": 1155,
+    "schoolCount": 99,
+    "administratorCount": 115
+  },
+  {
+    "year": 2021,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7209,
+    "teacherCount": 364,
+    "schoolCount": 99,
+    "administratorCount": 202
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 24374,
+    "teacherCount": 2922,
+    "schoolCount": 196,
+    "administratorCount": 842
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 15915,
+    "teacherCount": 2539,
+    "schoolCount": 168,
+    "administratorCount": 213
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8965,
+    "teacherCount": 1215,
+    "schoolCount": 68,
+    "administratorCount": 238
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9172,
+    "teacherCount": 1173,
+    "schoolCount": 58,
+    "administratorCount": 86
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9689,
+    "teacherCount": 1381,
+    "schoolCount": 120,
+    "administratorCount": 274
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9750,
+    "teacherCount": 1308,
+    "schoolCount": 112,
+    "administratorCount": 91
+  },
+  {
+    "year": 2022,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6496,
+    "teacherCount": 414,
+    "schoolCount": 141,
+    "administratorCount": 279
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 48470,
+    "teacherCount": 2987,
+    "schoolCount": 160,
+    "administratorCount": 1169
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 34687,
+    "teacherCount": 3395,
+    "schoolCount": 153,
+    "administratorCount": 335
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 14941,
+    "teacherCount": 1461,
+    "schoolCount": 73,
+    "administratorCount": 320
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 15292,
+    "teacherCount": 1198,
+    "schoolCount": 71,
+    "administratorCount": 131
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 17290,
+    "teacherCount": 1544,
+    "schoolCount": 99,
+    "administratorCount": 449
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17744,
+    "teacherCount": 1253,
+    "schoolCount": 104,
+    "administratorCount": 147
+  },
+  {
+    "year": 2022,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7969,
+    "teacherCount": 407,
+    "schoolCount": 114,
+    "administratorCount": 401
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 25088,
+    "teacherCount": 1615,
+    "schoolCount": 116,
+    "administratorCount": 384
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 23162,
+    "teacherCount": 2003,
+    "schoolCount": 105,
+    "administratorCount": 82
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 8964,
+    "teacherCount": 791,
+    "schoolCount": 43,
+    "administratorCount": 116
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9332,
+    "teacherCount": 792,
+    "schoolCount": 50,
+    "administratorCount": 43
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 10092,
+    "teacherCount": 845,
+    "schoolCount": 63,
+    "administratorCount": 188
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 10421,
+    "teacherCount": 873,
+    "schoolCount": 68,
+    "administratorCount": 34
+  },
+  {
+    "year": 2022,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 4547,
+    "teacherCount": 221,
+    "schoolCount": 63,
+    "administratorCount": 114
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 442553,
+    "teacherCount": 29791,
+    "schoolCount": 1630,
+    "administratorCount": 11985
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 295752,
+    "teacherCount": 23106,
+    "schoolCount": 1230,
+    "administratorCount": 2604
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 162936,
+    "teacherCount": 13878,
+    "schoolCount": 664,
+    "administratorCount": 4711
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 172861,
+    "teacherCount": 11968,
+    "schoolCount": 603,
+    "administratorCount": 894
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 172428,
+    "teacherCount": 13858,
+    "schoolCount": 930,
+    "administratorCount": 5678
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 183790,
+    "teacherCount": 13341,
+    "schoolCount": 903,
+    "administratorCount": 1291
+  },
+  {
+    "year": 2022,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 74431,
+    "teacherCount": 5988,
+    "schoolCount": 1208,
+    "administratorCount": 2901
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 275520,
+    "teacherCount": 14238,
+    "schoolCount": 783,
+    "administratorCount": 4937
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 198781,
+    "teacherCount": 14113,
+    "schoolCount": 623,
+    "administratorCount": 1083
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 94311,
+    "teacherCount": 7379,
+    "schoolCount": 315,
+    "administratorCount": 2152
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 98812,
+    "teacherCount": 7389,
+    "schoolCount": 333,
+    "administratorCount": 516
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 105566,
+    "teacherCount": 7145,
+    "schoolCount": 450,
+    "administratorCount": 2384
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 109165,
+    "teacherCount": 7653,
+    "schoolCount": 469,
+    "administratorCount": 595
+  },
+  {
+    "year": 2022,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 49197,
+    "teacherCount": 3330,
+    "schoolCount": 614,
+    "administratorCount": 1238
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 89483,
+    "teacherCount": 7824,
+    "schoolCount": 494,
+    "administratorCount": 2422
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 55464,
+    "teacherCount": 6643,
+    "schoolCount": 360,
+    "administratorCount": 806
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 32710,
+    "teacherCount": 3938,
+    "schoolCount": 188,
+    "administratorCount": 798
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 34315,
+    "teacherCount": 3205,
+    "schoolCount": 157,
+    "administratorCount": 346
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 34654,
+    "teacherCount": 3568,
+    "schoolCount": 259,
+    "administratorCount": 966
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 35791,
+    "teacherCount": 3571,
+    "schoolCount": 255,
+    "administratorCount": 447
+  },
+  {
+    "year": 2022,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 17234,
+    "teacherCount": 1056,
+    "schoolCount": 325,
+    "administratorCount": 722
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 125086,
+    "teacherCount": 9419,
+    "schoolCount": 497,
+    "administratorCount": 2664
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 94810,
+    "teacherCount": 7923,
+    "schoolCount": 427,
+    "administratorCount": 662
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 49649,
+    "teacherCount": 4363,
+    "schoolCount": 208,
+    "administratorCount": 977
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 49706,
+    "teacherCount": 4130,
+    "schoolCount": 178,
+    "administratorCount": 253
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 52894,
+    "teacherCount": 4614,
+    "schoolCount": 303,
+    "administratorCount": 1198
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 53631,
+    "teacherCount": 5049,
+    "schoolCount": 314,
+    "administratorCount": 326
+  },
+  {
+    "year": 2022,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 24462,
+    "teacherCount": 1518,
+    "schoolCount": 365,
+    "administratorCount": 782
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 57645,
+    "teacherCount": 3905,
+    "schoolCount": 238,
+    "administratorCount": 1780
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 48445,
+    "teacherCount": 3630,
+    "schoolCount": 211,
+    "administratorCount": 128
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 22452,
+    "teacherCount": 1880,
+    "schoolCount": 92,
+    "administratorCount": 633
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 23614,
+    "teacherCount": 1787,
+    "schoolCount": 86,
+    "administratorCount": 59
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 23938,
+    "teacherCount": 2031,
+    "schoolCount": 150,
+    "administratorCount": 760
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 24758,
+    "teacherCount": 1956,
+    "schoolCount": 154,
+    "administratorCount": 72
+  },
+  {
+    "year": 2022,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9025,
+    "teacherCount": 522,
+    "schoolCount": 119,
+    "administratorCount": 509
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 102089,
+    "teacherCount": 7244,
+    "schoolCount": 469,
+    "administratorCount": 2712
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 72499,
+    "teacherCount": 5787,
+    "schoolCount": 456,
+    "administratorCount": 603
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 37499,
+    "teacherCount": 2498,
+    "schoolCount": 135,
+    "administratorCount": 647
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 38705,
+    "teacherCount": 2931,
+    "schoolCount": 156,
+    "administratorCount": 153
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 41117,
+    "teacherCount": 3017,
+    "schoolCount": 258,
+    "administratorCount": 886
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 41973,
+    "teacherCount": 3587,
+    "schoolCount": 305,
+    "administratorCount": 221
+  },
+  {
+    "year": 2022,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 21775,
+    "teacherCount": 1292,
+    "schoolCount": 296,
+    "administratorCount": 972
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 50203,
+    "teacherCount": 4339,
+    "schoolCount": 287,
+    "administratorCount": 1598
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 34736,
+    "teacherCount": 4357,
+    "schoolCount": 251,
+    "administratorCount": 584
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 17084,
+    "teacherCount": 1858,
+    "schoolCount": 94,
+    "administratorCount": 305
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 18410,
+    "teacherCount": 1948,
+    "schoolCount": 100,
+    "administratorCount": 136
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 18615,
+    "teacherCount": 1968,
+    "schoolCount": 137,
+    "administratorCount": 458
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 19263,
+    "teacherCount": 2106,
+    "schoolCount": 158,
+    "administratorCount": 201
+  },
+  {
+    "year": 2022,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9357,
+    "teacherCount": 525,
+    "schoolCount": 159,
+    "administratorCount": 577
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 139911,
+    "teacherCount": 12069,
+    "schoolCount": 805,
+    "administratorCount": 5054
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 102866,
+    "teacherCount": 10640,
+    "schoolCount": 660,
+    "administratorCount": 1085
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 53506,
+    "teacherCount": 5656,
+    "schoolCount": 272,
+    "administratorCount": 1427
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 54506,
+    "teacherCount": 5047,
+    "schoolCount": 260,
+    "administratorCount": 392
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 56926,
+    "teacherCount": 5533,
+    "schoolCount": 422,
+    "administratorCount": 1670
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 57605,
+    "teacherCount": 5665,
+    "schoolCount": 461,
+    "administratorCount": 466
+  },
+  {
+    "year": 2022,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 26522,
+    "teacherCount": 1200,
+    "schoolCount": 482,
+    "administratorCount": 1198
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 403276,
+    "teacherCount": 26089,
+    "schoolCount": 1385,
+    "administratorCount": 8042
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 297305,
+    "teacherCount": 23186,
+    "schoolCount": 1062,
+    "administratorCount": 2326
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 155152,
+    "teacherCount": 13135,
+    "schoolCount": 559,
+    "administratorCount": 3364
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 165116,
+    "teacherCount": 12633,
+    "schoolCount": 524,
+    "administratorCount": 990
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 166477,
+    "teacherCount": 12953,
+    "schoolCount": 801,
+    "administratorCount": 3748
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 178630,
+    "teacherCount": 13265,
+    "schoolCount": 803,
+    "administratorCount": 1147
+  },
+  {
+    "year": 2022,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 57128,
+    "teacherCount": 4054,
+    "schoolCount": 870,
+    "administratorCount": 1540
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 48878,
+    "teacherCount": 2816,
+    "schoolCount": 164,
+    "administratorCount": 942
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 31793,
+    "teacherCount": 2171,
+    "schoolCount": 143,
+    "administratorCount": 211
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 14799,
+    "teacherCount": 1169,
+    "schoolCount": 56,
+    "administratorCount": 321
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 14975,
+    "teacherCount": 1193,
+    "schoolCount": 59,
+    "administratorCount": 84
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 15054,
+    "teacherCount": 1044,
+    "schoolCount": 80,
+    "administratorCount": 377
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 16063,
+    "teacherCount": 1243,
+    "schoolCount": 100,
+    "administratorCount": 125
+  },
+  {
+    "year": 2022,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 7806,
+    "teacherCount": 291,
+    "schoolCount": 112,
+    "administratorCount": 205
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 26185,
+    "teacherCount": 3003,
+    "schoolCount": 183,
+    "administratorCount": 833
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 13065,
+    "teacherCount": 2186,
+    "schoolCount": 147,
+    "administratorCount": 196
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9010,
+    "teacherCount": 1149,
+    "schoolCount": 64,
+    "administratorCount": 207
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9217,
+    "teacherCount": 1185,
+    "schoolCount": 57,
+    "administratorCount": 90
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9794,
+    "teacherCount": 1188,
+    "schoolCount": 98,
+    "administratorCount": 243
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 10006,
+    "teacherCount": 1233,
+    "schoolCount": 105,
+    "administratorCount": 99
+  },
+  {
+    "year": 2023,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6751,
+    "teacherCount": 509,
+    "schoolCount": 145,
+    "administratorCount": 281
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 55207,
+    "teacherCount": 3436,
+    "schoolCount": 170,
+    "administratorCount": 1266
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 30945,
+    "teacherCount": 3275,
+    "schoolCount": 142,
+    "administratorCount": 326
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 15699,
+    "teacherCount": 1492,
+    "schoolCount": 67,
+    "administratorCount": 304
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 15888,
+    "teacherCount": 1203,
+    "schoolCount": 65,
+    "administratorCount": 118
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 18774,
+    "teacherCount": 1567,
+    "schoolCount": 97,
+    "administratorCount": 492
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 18965,
+    "teacherCount": 1380,
+    "schoolCount": 104,
+    "administratorCount": 157
+  },
+  {
+    "year": 2023,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 11206,
+    "teacherCount": 692,
+    "schoolCount": 124,
+    "administratorCount": 413
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 26174,
+    "teacherCount": 1790,
+    "schoolCount": 115,
+    "administratorCount": 390
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 22653,
+    "teacherCount": 1972,
+    "schoolCount": 102,
+    "administratorCount": 83
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9475,
+    "teacherCount": 802,
+    "schoolCount": 42,
+    "administratorCount": 107
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9521,
+    "teacherCount": 755,
+    "schoolCount": 46,
+    "administratorCount": 44
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 10627,
+    "teacherCount": 868,
+    "schoolCount": 61,
+    "administratorCount": 174
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 11208,
+    "teacherCount": 870,
+    "schoolCount": 63,
+    "administratorCount": 39
+  },
+  {
+    "year": 2023,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6083,
+    "teacherCount": 319,
+    "schoolCount": 69,
+    "administratorCount": 126
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 473208,
+    "teacherCount": 32548,
+    "schoolCount": 1625,
+    "administratorCount": 12481
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 285512,
+    "teacherCount": 22085,
+    "schoolCount": 1181,
+    "administratorCount": 2655
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 167333,
+    "teacherCount": 14267,
+    "schoolCount": 655,
+    "administratorCount": 4336
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 176468,
+    "teacherCount": 12391,
+    "schoolCount": 610,
+    "administratorCount": 987
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 179360,
+    "teacherCount": 13502,
+    "schoolCount": 906,
+    "administratorCount": 5304
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 190481,
+    "teacherCount": 13062,
+    "schoolCount": 887,
+    "administratorCount": 1358
+  },
+  {
+    "year": 2023,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 111293,
+    "teacherCount": 8088,
+    "schoolCount": 1244,
+    "administratorCount": 3155
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 295321,
+    "teacherCount": 17483,
+    "schoolCount": 801,
+    "administratorCount": 5114
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 189109,
+    "teacherCount": 13311,
+    "schoolCount": 603,
+    "administratorCount": 1060
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 98037,
+    "teacherCount": 7782,
+    "schoolCount": 315,
+    "administratorCount": 1990
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 102811,
+    "teacherCount": 7567,
+    "schoolCount": 327,
+    "administratorCount": 501
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 110066,
+    "teacherCount": 7145,
+    "schoolCount": 437,
+    "administratorCount": 2353
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 114570,
+    "teacherCount": 7505,
+    "schoolCount": 469,
+    "administratorCount": 594
+  },
+  {
+    "year": 2023,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 65780,
+    "teacherCount": 4636,
+    "schoolCount": 636,
+    "administratorCount": 1325
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 96451,
+    "teacherCount": 8074,
+    "schoolCount": 505,
+    "administratorCount": 2503
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 50471,
+    "teacherCount": 6448,
+    "schoolCount": 333,
+    "administratorCount": 767
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 33697,
+    "teacherCount": 3781,
+    "schoolCount": 182,
+    "administratorCount": 750
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 35057,
+    "teacherCount": 3238,
+    "schoolCount": 156,
+    "administratorCount": 368
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 35932,
+    "teacherCount": 3362,
+    "schoolCount": 246,
+    "administratorCount": 934
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 37311,
+    "teacherCount": 3607,
+    "schoolCount": 245,
+    "administratorCount": 453
+  },
+  {
+    "year": 2023,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 19963,
+    "teacherCount": 1330,
+    "schoolCount": 337,
+    "administratorCount": 731
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 134449,
+    "teacherCount": 9831,
+    "schoolCount": 512,
+    "administratorCount": 2690
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 87200,
+    "teacherCount": 7683,
+    "schoolCount": 398,
+    "administratorCount": 646
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 50942,
+    "teacherCount": 4433,
+    "schoolCount": 206,
+    "administratorCount": 994
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 50454,
+    "teacherCount": 4342,
+    "schoolCount": 176,
+    "administratorCount": 274
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 54809,
+    "teacherCount": 4618,
+    "schoolCount": 297,
+    "administratorCount": 1165
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 55698,
+    "teacherCount": 4986,
+    "schoolCount": 306,
+    "administratorCount": 323
+  },
+  {
+    "year": 2023,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 31128,
+    "teacherCount": 1912,
+    "schoolCount": 397,
+    "administratorCount": 748
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 61009,
+    "teacherCount": 4090,
+    "schoolCount": 239,
+    "administratorCount": 1781
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 46525,
+    "teacherCount": 3528,
+    "schoolCount": 205,
+    "administratorCount": 143
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 22953,
+    "teacherCount": 1920,
+    "schoolCount": 91,
+    "administratorCount": 562
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 24167,
+    "teacherCount": 1686,
+    "schoolCount": 84,
+    "administratorCount": 72
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 24784,
+    "teacherCount": 1943,
+    "schoolCount": 147,
+    "administratorCount": 742
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 25467,
+    "teacherCount": 1875,
+    "schoolCount": 156,
+    "administratorCount": 85
+  },
+  {
+    "year": 2023,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 13309,
+    "teacherCount": 653,
+    "schoolCount": 125,
+    "administratorCount": 509
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 110591,
+    "teacherCount": 7676,
+    "schoolCount": 471,
+    "administratorCount": 2683
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 64184,
+    "teacherCount": 5432,
+    "schoolCount": 431,
+    "administratorCount": 575
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 39091,
+    "teacherCount": 2811,
+    "schoolCount": 137,
+    "administratorCount": 640
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 39767,
+    "teacherCount": 2926,
+    "schoolCount": 154,
+    "administratorCount": 158
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 42732,
+    "teacherCount": 3189,
+    "schoolCount": 257,
+    "administratorCount": 862
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 42893,
+    "teacherCount": 3487,
+    "schoolCount": 297,
+    "administratorCount": 230
+  },
+  {
+    "year": 2023,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 25582,
+    "teacherCount": 1643,
+    "schoolCount": 326,
+    "administratorCount": 978
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 52148,
+    "teacherCount": 4385,
+    "schoolCount": 288,
+    "administratorCount": 1595
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 33097,
+    "teacherCount": 4188,
+    "schoolCount": 228,
+    "administratorCount": 556
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 17504,
+    "teacherCount": 1818,
+    "schoolCount": 93,
+    "administratorCount": 298
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 18791,
+    "teacherCount": 2105,
+    "schoolCount": 98,
+    "administratorCount": 142
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 19910,
+    "teacherCount": 1889,
+    "schoolCount": 133,
+    "administratorCount": 444
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 20477,
+    "teacherCount": 2096,
+    "schoolCount": 148,
+    "administratorCount": 200
+  },
+  {
+    "year": 2023,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 10384,
+    "teacherCount": 701,
+    "schoolCount": 165,
+    "administratorCount": 562
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 151889,
+    "teacherCount": 13157,
+    "schoolCount": 795,
+    "administratorCount": 5111
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 96465,
+    "teacherCount": 10015,
+    "schoolCount": 620,
+    "administratorCount": 1054
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 55648,
+    "teacherCount": 5579,
+    "schoolCount": 261,
+    "administratorCount": 1342
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 56222,
+    "teacherCount": 5140,
+    "schoolCount": 256,
+    "administratorCount": 394
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 58973,
+    "teacherCount": 5304,
+    "schoolCount": 401,
+    "administratorCount": 1630
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 60486,
+    "teacherCount": 5579,
+    "schoolCount": 439,
+    "administratorCount": 460
+  },
+  {
+    "year": 2023,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 32331,
+    "teacherCount": 2030,
+    "schoolCount": 505,
+    "administratorCount": 1168
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 425513,
+    "teacherCount": 28597,
+    "schoolCount": 1390,
+    "administratorCount": 8295
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 274624,
+    "teacherCount": 22398,
+    "schoolCount": 983,
+    "administratorCount": 2288
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 157734,
+    "teacherCount": 13661,
+    "schoolCount": 537,
+    "administratorCount": 3108
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 167021,
+    "teacherCount": 13188,
+    "schoolCount": 515,
+    "administratorCount": 1029
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 170332,
+    "teacherCount": 12534,
+    "schoolCount": 764,
+    "administratorCount": 3678
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 182027,
+    "teacherCount": 13992,
+    "schoolCount": 768,
+    "administratorCount": 1188
+  },
+  {
+    "year": 2023,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 78470,
+    "teacherCount": 5126,
+    "schoolCount": 925,
+    "administratorCount": 1663
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 53368,
+    "teacherCount": 3275,
+    "schoolCount": 180,
+    "administratorCount": 921
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 28128,
+    "teacherCount": 1980,
+    "schoolCount": 135,
+    "administratorCount": 215
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 15657,
+    "teacherCount": 1181,
+    "schoolCount": 58,
+    "administratorCount": 314
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 15604,
+    "teacherCount": 1177,
+    "schoolCount": 61,
+    "administratorCount": 89
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 16676,
+    "teacherCount": 1037,
+    "schoolCount": 84,
+    "administratorCount": 362
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 17734,
+    "teacherCount": 1151,
+    "schoolCount": 101,
+    "administratorCount": 123
+  },
+  {
+    "year": 2023,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 10753,
+    "teacherCount": 357,
+    "schoolCount": 122,
+    "administratorCount": 211
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 27057,
+    "teacherCount": 2849,
+    "schoolCount": 182,
+    "administratorCount": 826
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 11894,
+    "teacherCount": 2016,
+    "schoolCount": 135,
+    "administratorCount": 191
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9184,
+    "teacherCount": 1189,
+    "schoolCount": 63,
+    "administratorCount": 63
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 9225,
+    "teacherCount": 1161,
+    "schoolCount": 55,
+    "administratorCount": 40
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 9726,
+    "teacherCount": 1109,
+    "schoolCount": 97,
+    "administratorCount": 249
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 9937,
+    "teacherCount": 1273,
+    "schoolCount": 102,
+    "administratorCount": 126
+  },
+  {
+    "year": 2024,
+    "region": "الباحة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 5885,
+    "teacherCount": 324,
+    "schoolCount": 148,
+    "administratorCount": 294
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 60503,
+    "teacherCount": 3673,
+    "schoolCount": 176,
+    "administratorCount": 1278
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 29120,
+    "teacherCount": 3197,
+    "schoolCount": 137,
+    "administratorCount": 333
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 16632,
+    "teacherCount": 1512,
+    "schoolCount": 68,
+    "administratorCount": 237
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 16751,
+    "teacherCount": 1205,
+    "schoolCount": 65,
+    "administratorCount": 50
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 19295,
+    "teacherCount": 1539,
+    "schoolCount": 99,
+    "administratorCount": 496
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 19952,
+    "teacherCount": 1401,
+    "schoolCount": 103,
+    "administratorCount": 167
+  },
+  {
+    "year": 2024,
+    "region": "الجوف",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 10720,
+    "teacherCount": 667,
+    "schoolCount": 129,
+    "administratorCount": 401
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 27940,
+    "teacherCount": 1933,
+    "schoolCount": 118,
+    "administratorCount": 407
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 21993,
+    "teacherCount": 1865,
+    "schoolCount": 95,
+    "administratorCount": 87
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 9831,
+    "teacherCount": 853,
+    "schoolCount": 44,
+    "administratorCount": 44
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 10043,
+    "teacherCount": 802,
+    "schoolCount": 45,
+    "administratorCount": 27
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 11066,
+    "teacherCount": 832,
+    "schoolCount": 61,
+    "administratorCount": 170
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 11540,
+    "teacherCount": 925,
+    "schoolCount": 64,
+    "administratorCount": 38
+  },
+  {
+    "year": 2024,
+    "region": "الحدود الشمالية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 6300,
+    "teacherCount": 315,
+    "schoolCount": 69,
+    "administratorCount": 117
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 510264,
+    "teacherCount": 35031,
+    "schoolCount": 1672,
+    "administratorCount": 12595
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 278555,
+    "teacherCount": 21866,
+    "schoolCount": 1139,
+    "administratorCount": 2591
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 173901,
+    "teacherCount": 14089,
+    "schoolCount": 682,
+    "administratorCount": 3602
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 184597,
+    "teacherCount": 12334,
+    "schoolCount": 628,
+    "administratorCount": 782
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 181893,
+    "teacherCount": 13480,
+    "schoolCount": 928,
+    "administratorCount": 5168
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 195278,
+    "teacherCount": 13419,
+    "schoolCount": 899,
+    "administratorCount": 1404
+  },
+  {
+    "year": 2024,
+    "region": "الرياض",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 115753,
+    "teacherCount": 8470,
+    "schoolCount": 1305,
+    "administratorCount": 3224
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 309412,
+    "teacherCount": 18322,
+    "schoolCount": 845,
+    "administratorCount": 5206
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 187637,
+    "teacherCount": 12834,
+    "schoolCount": 587,
+    "administratorCount": 1012
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 99534,
+    "teacherCount": 7680,
+    "schoolCount": 313,
+    "administratorCount": 1584
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 109269,
+    "teacherCount": 7880,
+    "schoolCount": 330,
+    "administratorCount": 396
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 109969,
+    "teacherCount": 7166,
+    "schoolCount": 436,
+    "administratorCount": 2217
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 120941,
+    "teacherCount": 7570,
+    "schoolCount": 468,
+    "administratorCount": 613
+  },
+  {
+    "year": 2024,
+    "region": "الشرقية",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 63847,
+    "teacherCount": 4304,
+    "schoolCount": 662,
+    "administratorCount": 1316
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 103978,
+    "teacherCount": 8483,
+    "schoolCount": 516,
+    "administratorCount": 2525
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 46360,
+    "teacherCount": 6367,
+    "schoolCount": 312,
+    "administratorCount": 735
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 34773,
+    "teacherCount": 3889,
+    "schoolCount": 179,
+    "administratorCount": 439
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 36411,
+    "teacherCount": 3450,
+    "schoolCount": 151,
+    "administratorCount": 201
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 36762,
+    "teacherCount": 3337,
+    "schoolCount": 242,
+    "administratorCount": 954
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 37675,
+    "teacherCount": 3816,
+    "schoolCount": 240,
+    "administratorCount": 457
+  },
+  {
+    "year": 2024,
+    "region": "القصيم",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 19977,
+    "teacherCount": 1257,
+    "schoolCount": 343,
+    "administratorCount": 712
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 148638,
+    "teacherCount": 10428,
+    "schoolCount": 517,
+    "administratorCount": 2717
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 77486,
+    "teacherCount": 7330,
+    "schoolCount": 362,
+    "administratorCount": 606
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 52039,
+    "teacherCount": 4488,
+    "schoolCount": 209,
+    "administratorCount": 876
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 51382,
+    "teacherCount": 4622,
+    "schoolCount": 178,
+    "administratorCount": 219
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 55702,
+    "teacherCount": 4494,
+    "schoolCount": 296,
+    "administratorCount": 1157
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 56606,
+    "teacherCount": 5084,
+    "schoolCount": 302,
+    "administratorCount": 326
+  },
+  {
+    "year": 2024,
+    "region": "المدينة المنورة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 31226,
+    "teacherCount": 2030,
+    "schoolCount": 425,
+    "administratorCount": 724
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 65653,
+    "teacherCount": 4219,
+    "schoolCount": 241,
+    "administratorCount": 1727
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 45329,
+    "teacherCount": 3402,
+    "schoolCount": 194,
+    "administratorCount": 146
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 23768,
+    "teacherCount": 1899,
+    "schoolCount": 92,
+    "administratorCount": 523
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 24449,
+    "teacherCount": 1650,
+    "schoolCount": 88,
+    "administratorCount": 58
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 25262,
+    "teacherCount": 1912,
+    "schoolCount": 146,
+    "administratorCount": 742
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 26261,
+    "teacherCount": 1803,
+    "schoolCount": 153,
+    "administratorCount": 89
+  },
+  {
+    "year": 2024,
+    "region": "تبوك",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 13328,
+    "teacherCount": 568,
+    "schoolCount": 133,
+    "administratorCount": 513
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 119757,
+    "teacherCount": 7874,
+    "schoolCount": 482,
+    "administratorCount": 2681
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 57608,
+    "teacherCount": 5002,
+    "schoolCount": 401,
+    "administratorCount": 572
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 40106,
+    "teacherCount": 2926,
+    "schoolCount": 138,
+    "administratorCount": 465
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 40091,
+    "teacherCount": 3092,
+    "schoolCount": 153,
+    "administratorCount": 70
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 43046,
+    "teacherCount": 3200,
+    "schoolCount": 260,
+    "administratorCount": 907
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 43660,
+    "teacherCount": 3666,
+    "schoolCount": 293,
+    "administratorCount": 257
+  },
+  {
+    "year": 2024,
+    "region": "جازان",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 24797,
+    "teacherCount": 1528,
+    "schoolCount": 343,
+    "administratorCount": 998
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 53444,
+    "teacherCount": 4333,
+    "schoolCount": 283,
+    "administratorCount": 1556
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 33320,
+    "teacherCount": 3999,
+    "schoolCount": 210,
+    "administratorCount": 535
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 18385,
+    "teacherCount": 2002,
+    "schoolCount": 97,
+    "administratorCount": 118
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 19378,
+    "teacherCount": 2007,
+    "schoolCount": 97,
+    "administratorCount": 63
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 20681,
+    "teacherCount": 1751,
+    "schoolCount": 133,
+    "administratorCount": 477
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 21353,
+    "teacherCount": 2194,
+    "schoolCount": 151,
+    "administratorCount": 211
+  },
+  {
+    "year": 2024,
+    "region": "حائل",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 9914,
+    "teacherCount": 590,
+    "schoolCount": 169,
+    "administratorCount": 571
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 162180,
+    "teacherCount": 13468,
+    "schoolCount": 800,
+    "administratorCount": 5141
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 90434,
+    "teacherCount": 9549,
+    "schoolCount": 595,
+    "administratorCount": 1042
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 57126,
+    "teacherCount": 5524,
+    "schoolCount": 263,
+    "administratorCount": 1120
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 57316,
+    "teacherCount": 5189,
+    "schoolCount": 254,
+    "administratorCount": 348
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 60372,
+    "teacherCount": 5236,
+    "schoolCount": 399,
+    "administratorCount": 1768
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 61988,
+    "teacherCount": 5585,
+    "schoolCount": 433,
+    "administratorCount": 486
+  },
+  {
+    "year": 2024,
+    "region": "عسير",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 31040,
+    "teacherCount": 1808,
+    "schoolCount": 521,
+    "administratorCount": 1164
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 459032,
+    "teacherCount": 29692,
+    "schoolCount": 1433,
+    "administratorCount": 8447
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 256784,
+    "teacherCount": 21746,
+    "schoolCount": 928,
+    "administratorCount": 2190
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 160809,
+    "teacherCount": 14809,
+    "schoolCount": 540,
+    "administratorCount": 1646
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 170726,
+    "teacherCount": 14198,
+    "schoolCount": 516,
+    "administratorCount": 822
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 171319,
+    "teacherCount": 12597,
+    "schoolCount": 765,
+    "administratorCount": 3673
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 184643,
+    "teacherCount": 14525,
+    "schoolCount": 760,
+    "administratorCount": 1221
+  },
+  {
+    "year": 2024,
+    "region": "مكة المكرمة",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 77049,
+    "teacherCount": 5389,
+    "schoolCount": 970,
+    "administratorCount": 1719
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنات",
+    "studentCount": 58685,
+    "teacherCount": 3499,
+    "schoolCount": 193,
+    "administratorCount": 943
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة الإبتدائية",
+    "gender": "بنين",
+    "studentCount": 25646,
+    "teacherCount": 1675,
+    "schoolCount": 127,
+    "administratorCount": 208
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنات",
+    "studentCount": 15853,
+    "teacherCount": 1229,
+    "schoolCount": 60,
+    "administratorCount": 284
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة الثانوية",
+    "gender": "بنين",
+    "studentCount": 16074,
+    "teacherCount": 1130,
+    "schoolCount": 59,
+    "administratorCount": 106
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنات",
+    "studentCount": 18062,
+    "teacherCount": 1081,
+    "schoolCount": 86,
+    "administratorCount": 365
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "المرحلة المتوسطة",
+    "gender": "بنين",
+    "studentCount": 18968,
+    "teacherCount": 1038,
+    "schoolCount": 98,
+    "administratorCount": 135
+  },
+  {
+    "year": 2024,
+    "region": "نجران",
+    "stage": "رياض الأطفال",
+    "gender": "بنات",
+    "studentCount": 10377,
+    "teacherCount": 379,
+    "schoolCount": 134,
+    "administratorCount": 229
+  }
+]

@@ -17,9 +17,9 @@
 
 **Purpose**: File structure, placeholder assets, and translation scaffolding that every user story depends on.
 
-- [ ] T001 Create placeholder dataset files `education-statistics/src/assets/datasets/records.json`, `master.json`, `summary.json` with empty arrays `[]`
-- [ ] T002 [P] Create Arabic translation file `education-statistics/src/assets/i18n/ar.json` with all required keys: `nav.*`, `topbar.*`, `state.*` (see contracts/service-contracts.md §6)
-- [ ] T003 [P] Create English translation file `education-statistics/src/assets/i18n/en.json` with all required keys: `nav.*`, `topbar.*`, `state.*`
+- [ ] T001 Create placeholder dataset files `education-statistics/public/datasets/records.json`, `master.json`, `summary.json` with empty arrays `[]`
+- [ ] T002 [P] Create Arabic translation file `education-statistics/public/i18n/ar.json` with all required keys: `nav.*`, `topbar.*`, `state.*`, `filter.*` (see contracts/service-contracts.md §6)
+- [ ] T003 [P] Create English translation file `education-statistics/public/i18n/en.json` with all required keys: `nav.*`, `topbar.*`, `state.*`, `filter.*`
 
 **Checkpoint**: Assets and translation files exist. App can be served without missing-file errors.
 
@@ -70,8 +70,8 @@
 
 - [ ] T015 [US2] Verify `TranslocoService.setActiveLang()` is called from `PreferencesService` `effect()` on every language change — confirm Transloco `reRenderOnLangChange: true` is set in `app.config.ts` (already present; add test step only if missing) in `education-statistics/src/app/app.config.ts` + `education-statistics/src/app/core/services/preferences.service.ts` (depends on T008)
 - [ ] T016 [US2] Ensure all text in `TopbarComponent`, `NavComponent`, and `ShellComponent` templates uses `transloco` pipe or `TranslocoDirective` — NO hardcoded Arabic or English strings in any template in `education-statistics/src/app/core/layout/` (depends on T010, T011, T012)
-- [ ] T017 [P] [US2] Add Arabic translation values to `education-statistics/src/assets/i18n/ar.json` for all shell + nav + state keys (fill in actual Arabic text for all keys defined at T002) (depends on T002)
-- [ ] T018 [P] [US2] Add English translation values to `education-statistics/src/assets/i18n/en.json` for all shell + nav + state keys (fill in actual English text for all keys defined at T003) (depends on T003)
+- [ ] T017 [P] [US2] Add Arabic translation values to `education-statistics/public/i18n/ar.json` for all shell + nav + state keys (fill in actual Arabic text for all keys defined at T002) (depends on T002)
+- [ ] T018 [P] [US2] Add English translation values to `education-statistics/public/i18n/en.json` for all shell + nav + state keys (fill in actual English text for all keys defined at T003) (depends on T003)
 - [ ] T019 [US2] Verify `dir` attribute is applied to `<html>` element reactively when language changes — confirm `document.documentElement.setAttribute('dir', ...)` side-effect runs inside the `PreferencesService` `effect()` (if not yet done in T008, fix here) in `education-statistics/src/app/core/services/preferences.service.ts` (depends on T008)
 
 **Checkpoint**: Toggle lang button → all visible labels update immediately to Arabic/English; layout direction flips; preference persists across reload.
@@ -105,23 +105,43 @@
 - [ ] T023 [P] [US4] Implement `LoadingStateComponent` (presentational; optional `message` input; uses `ds-state-panel` class; animated Lucide `loader-2` icon or skeleton shimmer; transloco-based default message `state.loading`; `OnPush`) in `education-statistics/src/app/shared/ui/loading-state/loading-state.component.ts` (depends on T007)
 - [ ] T024 [P] [US4] Implement `EmptyStateComponent` (presentational; optional `title` and `detail` inputs; uses `ds-state-panel` class; Lucide `inbox` or `search-x` icon; default messages from `state.empty` + `state.empty-detail` translation keys; `OnPush`) in `education-statistics/src/app/shared/ui/empty-state/empty-state.component.ts` (depends on T007)
 - [ ] T025 [P] [US4] Implement `ErrorStateComponent` (presentational; optional `message` input; `retry` output emitter; uses `ds-state-panel` class; Lucide `triangle-alert` icon; default message from `state.error` + `state.error-detail` keys; retry button using `ds-btn-outline` class; `OnPush`) in `education-statistics/src/app/shared/ui/error-state/error-state.component.ts` (depends on T007)
-- [ ] T026 [US4] Add `state.*` translation values to `education-statistics/src/assets/i18n/ar.json`: `state.loading`, `state.empty`, `state.empty-detail`, `state.error`, `state.error-detail`, `state.retry` (actual Arabic text) (depends on T017)
-- [ ] T027 [US4] Add `state.*` translation values to `education-statistics/src/assets/i18n/en.json`: same keys but English text (depends on T018)
+- [ ] T026 [US4] Add `state.*` translation values to `education-statistics/public/i18n/ar.json`: `state.loading`, `state.empty`, `state.empty-detail`, `state.error`, `state.error-detail`, `state.retry` (actual Arabic text) (depends on T017)
+- [ ] T027 [US4] Add `state.*` translation values to `education-statistics/public/i18n/en.json`: same keys but English text (depends on T018)
 - [ ] T028 [US4] Wire `ViewState<T>` pattern into the stub/placeholder for `overview` feature page to demonstrate and verify the 4-state model end-to-end: use `signal<ViewState<unknown>>(ViewStateLoading)`, subscribe to `EducationDataService.getRecords()`, and handle error gracefully with `viewStateError` — this proves the pattern works before other feature pages are built. Use the `@switch` template pattern from `contracts/service-contracts.md §5` in `education-statistics/src/app/features/overview/pages/overview-page.component.ts` (depends on T007, T009, T023, T024, T025; note: overview page stub must exist)
 
 **Checkpoint**: Overview page cycles through all 4 states. Shared state components render correctly in both languages. Error state shows meaningful message, never a blank.
 
 ---
 
-## Phase 7: Polish & Cross-Cutting Concerns
+## Phase 6.5: User Story 5 — Unified Data Exploration Filters (Priority: P2)
 
-**Purpose**: Final quality pass covering accessibility, mobile layout, RTL verification, and FR-018 (no hardcoded strings).
+**Goal**: Provide a shared global filter bar in the layout header that allows users to filter dashboard data by academic year, region, stage, and gender. Filter state is shared across all feature pages via a single `GlobalFilterService`. Each route declares which filters are visible. Filter selections persist during navigation.
+
+**Independent Test**: Open overview page. Select year 2020 and region الرياض. Navigate to trends — same year and region preselected. Navigate to regional analysis — year filter visible and preselected; region filter may not appear if the page doesn't declare it. Click reset → all filters return to default.
+
+### Implementation for User Story 5
+
+- [ ] T034 [P] [US5] Create `GlobalFilterState` interface, `FilterDimension` union type (`'year' | 'region' | 'stage' | 'gender'`), `FilterConfig` interface (maps route path to allowed dimensions), and `DEFAULT_FILTER_STATE` constant (all values `null` meaning "all") in `education-statistics/src/app/shared/models/global-filter.model.ts`
+- [ ] T035 [US5] Implement `GlobalFilterService` (singleton; signals: `year: Signal<number | null>`, `region: Signal<string | null>`, `stage: Signal<string | null>`, `gender: Signal<string | null>`, `state: computed<GlobalFilterState>`, `activeConfig: Signal<FilterConfig>`; methods: `setFilter(dimension, value)`, `resetAll()`, `setActiveConfig(config: FilterConfig)`; derives available options from `EducationDataService.getMaster()` — extracts unique years, regions, stages, genders at init; exposes `availableYears`, `availableRegions`, `availableStages`, `availableGenders` as signals) in `education-statistics/src/app/core/services/global-filter.service.ts` (depends on T034, T009)
+- [ ] T036 [US5] Implement `FilterBarComponent` (presentational/dumb; inputs: `availableYears: number[]`, `availableRegions: string[]`, `availableStages: string[]`, `availableGenders: string[]`, `currentState: GlobalFilterState`, `visibleDimensions: FilterDimension[]`; outputs: `filterChange: {dimension: FilterDimension, value: string | number | null}`, `reset: void`; renders `ds-select` dropdowns for each visible dimension; includes a reset button using `ds-btn-tertiary`; uses Transloco for labels `filter.year`, `filter.region`, `filter.stage`, `filter.gender`, `filter.all`, `filter.reset`; mobile-first responsive layout; RTL-safe; `OnPush`) in `education-statistics/src/app/shared/ui/filter-bar/filter-bar.component.ts` (depends on T034)
+- [ ] T037 [US5] Define route filter configurations: add `ROUTE_FILTER_CONFIG: Record<string, FilterDimension[]>` constant mapping each feature route to its allowed filter dimensions (e.g., `'overview': ['year', 'region', 'stage', 'gender']`, `'trends': ['year', 'region', 'stage']`, `'regional-analysis': ['year', 'stage', 'gender']`) in `education-statistics/src/app/core/layout/shell/route-filter-config.ts` (depends on T034)
+- [ ] T038 [US5] Integrate `FilterBarComponent` into `ShellComponent`: inject `GlobalFilterService`; read `Router.events` to detect route changes and call `globalFilterService.setActiveConfig(ROUTE_FILTER_CONFIG[activeRoute])`; render `<app-filter-bar>` inside the shell below the topbar, passing current filter state, available options, and visible dimensions; handle `filterChange` and `reset` outputs by calling `GlobalFilterService` methods in `education-statistics/src/app/core/layout/shell/shell.component.ts` (depends on T012, T035, T036, T037)
+- [ ] T039 [P] [US5] Add `filter.*` translation keys to both `education-statistics/public/i18n/ar.json` and `education-statistics/public/i18n/en.json`: `filter.year`, `filter.region`, `filter.stage`, `filter.gender`, `filter.all` ("الكل" / "All"), `filter.reset` ("إعادة تعيين" / "Reset Filters") (depends on T017, T018)
+- [ ] T040 [US5] Wire `GlobalFilterService` filter state into the overview page: inject `GlobalFilterService`, use `computed()` to derive filtered data from `EducationDataService.getMaster()` based on active filters — update the `ViewState` pipeline to re-evaluate on every filter change in `education-statistics/src/app/features/overview/pages/overview-page.component.ts` (depends on T028, T035)
+
+**Checkpoint**: Global filter bar visible on all feature pages. Selecting a filter on overview carries to trends. Each page shows only its relevant filters. Reset clears all. Filter options derived from dataset, not hardcoded.
+
+---
+
+## Phase 8: Polish & Cross-Cutting Concerns
+
+**Purpose**: Final quality pass covering accessibility, mobile layout, RTL verification, FR-018 (no hardcoded strings), and FR-019–FR-028 (filter system).
 
 - [ ] T029 [P] Audit all templates in `core/layout/` and `shared/ui/` for hardcoded English or Arabic strings — replace any found with Transloco keys (FR-018) in `education-statistics/src/app/core/layout/` + `education-statistics/src/app/shared/ui/`
-- [ ] T030 [P] Verify keyboard accessibility: tab through topbar toggles, nav links, and error-state retry button — all must be reachable and operable by keyboard alone, with visible focus indicators (FR-017)
-- [ ] T031 [P] Verify mobile layout at 375px viewport: shell does not overflow, nav is accessible, topbar controls are touch-friendly (FR-016) — fix any layout issues in `education-statistics/src/app/core/layout/shell/shell.component.ts` or design system CSS
-- [ ] T032 Verify RTL layout at all breakpoints: switch to Arabic, inspect all layout containers in `ShellComponent`, `TopbarComponent`, `NavComponent` for left/right assumptions — fix any direction-specific CSS in component styles (FR-005, SC-009)
-- [ ] T033 Run full verification checklist from `quickstart.md` — check FR-001 through FR-018 systematically and document any remaining gaps
+- [ ] T030 [P] Verify keyboard accessibility: tab through topbar toggles, nav links, filter dropdowns, filter reset button, and error-state retry button — all must be reachable and operable by keyboard alone, with visible focus indicators (FR-017)
+- [ ] T031 [P] Verify mobile layout at 375px viewport: shell does not overflow, nav is accessible, topbar controls are touch-friendly, filter bar stacks vertically on narrow screens (FR-016, SC-015) — fix any layout issues in `education-statistics/src/app/core/layout/shell/shell.component.ts` or design system CSS
+- [ ] T032 Verify RTL layout at all breakpoints: switch to Arabic, inspect all layout containers in `ShellComponent`, `TopbarComponent`, `NavComponent`, `FilterBarComponent` for left/right assumptions — fix any direction-specific CSS in component styles (FR-005, SC-009)
+- [ ] T033 Run full verification checklist from `quickstart.md` — check FR-001 through FR-028 systematically and document any remaining gaps
 
 ---
 
@@ -141,12 +161,14 @@ Phase 3 (US1 — Shell) ← MVP start after Phase 2
 Phase 4 (US2 — Language)
 Phase 5 (US3 — Theme)
 Phase 6 (US4 — Data States)
+Phase 6.5 (US5 — Global Filters)
     └── All depend on: Phase 2 complete
-    └── US1 should be done before US2/US3 (topbar/nav must exist)
+    └── US1 should be done before US2/US3/US5 (topbar/shell must exist)
     └── US2/US3 can proceed in parallel after US1
     └── US4 shared components can start in parallel with US1 (T023–T025)
+    └── US5 depends on US1 (shell) + US4 (overview demo) + EducationDataService (T009)
 
-Phase 7 (Polish)
+Phase 8 (Polish)
     └── Depends on: All user story phases complete
 ```
 
@@ -157,7 +179,8 @@ Phase 7 (Polish)
 | US1 — Shell (P1) | Phase 2 complete | US4 shared components (T023–T025) |
 | US2 — Language (P2) | US1 complete (topbar/nav exist) | US3 |
 | US3 — Theme (P2) | US1 complete (topbar exists) | US2 |
-| US4 — Data States (P3) | Phase 2 complete (shared components); US1 for overview demo | — |
+| US4 — Data States (P3) | Phase 2 complete (shared components); US1 for overview demo | US5 model (T034) |
+| US5 — Global Filters (P2) | US1 (shell), US4 (overview demo), T009 (data service) | — |
 
 ### Within Each Phase
 
@@ -165,6 +188,9 @@ Phase 7 (Polish)
 - `PreferencesService` (T008) → before Shell components (T010–T013)
 - Shell components (T010–T012) → before language/theme polish (T015–T022)
 - `ViewState<T>` (T007) → before state components (T023–T025) → before overview demo (T028)
+- `GlobalFilterState` model (T034) → before `GlobalFilterService` (T035) → before `FilterBarComponent` (T036)
+- `GlobalFilterService` (T035) + Shell (T012) → before shell integration (T038)
+- Overview demo (T028) + `GlobalFilterService` (T035) → before filtered overview (T040)
 
 ---
 
@@ -214,11 +240,12 @@ T025 ErrorStateComponent
 3. Phase 4 (US2) → Language switching fully works — validate
 4. Phase 5 (US3) → Theme toggle fully works — validate (can overlap with US2)
 5. Phase 6 (US4) → 4-state model proven end-to-end — validate
-6. Phase 7 (Polish) → Full FR coverage confirmed
+6. Phase 6.5 (US5) → Global filter system works cross-page — validate
+7. Phase 8 (Polish) → Full FR coverage confirmed (FR-001 through FR-028)
 
 ### Suggested MVP Scope
 
-> Implement Phases 1–3 first. This delivers a working shell that can host any feature page, with persistent preferences. Phases 4–6 are additive — they refine existing behaviour.
+> Implement Phases 1–3 first. This delivers a working shell that can host any feature page, with persistent preferences. Phases 4–6.5 are additive — they refine existing behaviour and add the global filter system.
 
 ---
 

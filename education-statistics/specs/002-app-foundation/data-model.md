@@ -146,9 +146,56 @@ export interface NavItem {
 
 ---
 
-## 5. Translation Keys (Contract)
+## 5. GlobalFilterState
 
-**Location**: `src/assets/i18n/ar.json` and `src/assets/i18n/en.json`  
+**Location**: `src/app/shared/models/global-filter.model.ts`  
+**Scope**: Shared across all feature pages. Managed by `GlobalFilterService`.
+
+```ts
+export type FilterDimension = 'year' | 'region' | 'stage' | 'gender';
+
+export interface GlobalFilterState {
+  /** Selected academic year, or null for "all years" */
+  year: number | null;
+  /** Selected region name, or null for "all regions" */
+  region: string | null;
+  /** Selected education stage, or null for "all stages" */
+  stage: string | null;
+  /** Selected gender, or null for "all genders" */
+  gender: string | null;
+}
+
+export const DEFAULT_FILTER_STATE: GlobalFilterState = {
+  year: null,
+  region: null,
+  stage: null,
+  gender: null,
+};
+
+/**
+ * Defines which filter dimensions are visible for a given feature route.
+ * Used by ShellComponent to show/hide dropdowns in the global filter bar.
+ */
+export type FilterConfig = FilterDimension[];
+```
+
+**Relationships**:
+- `GlobalFilterService` owns a `signal<GlobalFilterState>` initialized to `DEFAULT_FILTER_STATE`
+- `FilterBarComponent` receives `FilterConfig` as input to determine which dropdowns to render
+- Route changes update the active `FilterConfig` via `ROUTE_FILTER_CONFIG` constant
+
+**State transitions**:
+```
+Default (all null) → user selects a dimension value → update signal + derived data re-evaluates
+User navigates to another page → filter state preserved, visible dimensions change per route config
+User clicks reset → all filter values return to null
+```
+
+---
+
+## 6. Translation Keys (Contract)
+
+**Location**: `public/i18n/ar.json` and `public/i18n/en.json`  
 **Scope**: All UI strings for the foundation shell and shared state components.
 
 Minimum required keys for this feature:
@@ -174,6 +221,14 @@ Minimum required keys for this feature:
     "error": "...",
     "error-detail": "...",
     "retry": "..."
+  },
+  "filter": {
+    "year": "...",
+    "region": "...",
+    "stage": "...",
+    "gender": "...",
+    "all": "...",
+    "reset": "..."
   }
 }
 ```
@@ -197,4 +252,12 @@ ViewState<T> (generic) ──used by──► every feature page container (sign
 
 NavItem[] ──rendered by──► NavComponent ──hosted by──► ShellComponent
 DatasetKey ──loaded by──► EducationDataService (shareReplay cache)
+
+GlobalFilterState (1) ──managed by──► GlobalFilterService (singleton)
+                                          │
+                                          ├──► FilterBarComponent (renders dropdowns)
+                                          ├──► derives options from EducationDataService.getMaster()
+                                          └──► consumed by feature page computed() signals
+
+FilterConfig ──defined in──► ROUTE_FILTER_CONFIG ──read by──► ShellComponent (on route change)
 ```

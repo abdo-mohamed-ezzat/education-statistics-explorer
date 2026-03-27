@@ -1,59 +1,206 @@
-# EducationStatistics
+# Education Statistics Explorer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Interactive dashboard for exploring Saudi Arabia general education statistics (2016–2024).
 
-## Development server
+The project transforms large open datasets into clear visual insights that help understand the growth and distribution of students in general education.
 
-To start a local development server, run:
+This project is part of a **Frontend Mentorship program** where the developer practices real-world data analysis, visualization, and clean architecture.
 
-```bash
-ng serve
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/0d33543c-632f-4c8b-8861-6defe7275ef5" />
+
+---
+
+# Project Goal
+
+Large datasets are often difficult to understand in raw formats such as Excel or CSV.
+
+The goal of this project is to build an **interactive data explorer** that allows users to:
+
+- Understand student growth over time
+- Explore differences between regions
+- Compare gender distribution
+- Identify trends in education development
+
+---
+
+# Data Source
+
+Saudi Open Data – General Education Statistics.
+
+The dataset includes student statistics from **2016 to 2024**, including:
+
+- Total number of students
+- Distribution by gender
+- Distribution by region
+- Distribution by education stage (if available)
+
+---
+
+# Features
+
+## Dashboard Overview
+
+Key indicators displayed as quick statistics:
+
+- Total number of students
+- Growth rate since 2016
+- Gender distribution
+- Largest region by number of students
+
+---
+
+## Student Growth Analysis
+
+Visualization of student growth across years.
+
+Example insights:
+
+- How education expanded over time
+- Years with the highest growth
+
+---
+
+## Gender Distribution
+
+Compare:
+
+- Male students
+- Female students
+
+Across years or regions.
+
+---
+
+## Regional Analysis
+
+Compare student numbers across regions.
+
+Examples:
+
+- Riyadh
+- Makkah
+- Eastern Province
+- Madinah
+- Other regions
+
+---
+
+## Education Stage Analysis (Optional)
+
+If the dataset includes stages:
+
+- Primary
+- Intermediate
+- Secondary
+
+The dashboard will visualize their distribution.
+
+---
+
+# Example Visualizations
+
+The dashboard will include:
+
+- Line charts for trends
+- Bar charts for comparisons
+- Donut charts for proportions
+- Interactive filters for exploration
+
+---
+
+# Tech Stack
+
+Frontend
+
+- Angular
+- TypeScript
+
+Visualization
+
+- Apache ECharts or ApexCharts
+
+Styling
+
+- TailwindCSS
+
+Data
+
+- JSON datasets derived from Saudi Open Data
+
+---
+
+# Project Structure
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+src/
+core/
+data services
+models
 
-## Code scaffolding
+features/
+dashboard
+charts
+filters
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+shared/
+ui components
 
-```bash
-ng generate component component-name
+assets/
+datasets
+
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+# Mentorship Context
 
-## Building
+This project is developed as part of a **Frontend Mentorship Program**.
 
-To build the project run:
+Goals for the mentee include:
 
-```bash
-ng build
-```
+- Working with real datasets
+- Structuring a scalable Angular application
+- Implementing clean and readable code
+- Building meaningful visualizations
+- Practicing GitHub workflow
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+# Learning Objectives
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+By building this project, the developer will learn:
 
-```bash
-ng test
-```
+- Data transformation and preparation
+- Dashboard UX design
+- Angular feature-based architecture
+- Clean code practices
+- Real-world project workflow
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+# Future Improvements
 
-```bash
-ng e2e
-```
+Possible future extensions:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Interactive map of Saudi regions
+- Export reports as PDF
+- Advanced analytics and insights
+- Data comparison between years
+- Public API integration
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# License
+
+This project uses publicly available datasets from Saudi Open Data.
+
+The code is intended for educational and demonstration purposes.
+
+---
+
+# Author
+
+Developed as part of a mentorship program focused on practical frontend development and real-world problem solving.
+
+

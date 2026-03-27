@@ -90,6 +90,22 @@ A user navigating to any feature page (e.g., the overview dashboard, trends, reg
 
 ---
 
+### User Story 5 — Unified Data Exploration Filters (Priority: P2)
+
+A user exploring the dashboard wants to filter data by academic year, region, stage, or gender using a shared filter bar in the header area. When they select a filter on the overview page, the same selection carries over when they navigate to the trends or regional analysis page. Each page may show only the filters that are relevant to it, but the underlying filter state is shared.
+
+**Why this priority**: The dashboard screens share common exploration dimensions (year, region, stage, gender). Without a shared filter system, each feature page would implement its own filter UI and state — creating inconsistency, duplication, and a fragmented user experience. The filter bar is a cross-cutting concern that belongs in the foundation.
+
+**Independent Test**: Open the overview page. Select "2020" as the academic year and "الرياض" as the region. Navigate to the trends page — the same year and region should be preselected. Navigate to regional analysis — the year filter should be visible and preselected, but the region filter may not appear if it is not relevant on that page. Clear all filters — all pages show unfiltered data.
+
+**Acceptance Scenarios**:
+
+1. **Given** a user is on any feature page with the filter bar visible, **When** they select a filter value (e.g., year = 2020), **Then** the page data updates to reflect the filter and the filter selection is preserved when navigating to another page.
+2. **Given** a user navigates from the overview page (where they selected filters) to the trends page, **When** the trends page loads, **Then** the global filters the trends page supports are preselected with the same values.
+3. **Given** a feature page supports only a subset of global filters (e.g., trends does not use gender), **When** the page is active, **Then** only the relevant filters appear in the header filter bar.
+4. **Given** a user resets the filters, **When** the reset completes, **Then** all global filter values return to their defaults (all selected / no restriction) and the page data updates accordingly.
+5. **Given** a feature page needs a local-only filter that does not belong in the shared header (e.g., a chart-specific metric picker), **When** the page renders, **Then** that local filter is rendered inside the page content area, not in the global header filter bar.
+
 ### Edge Cases
 
 - What happens when a user opens the app with no saved preferences (first visit)? The app should default to a sensible baseline (e.g., English, light mode) or detect the browser's preferred language.
@@ -98,6 +114,9 @@ A user navigating to any feature page (e.g., the overview dashboard, trends, reg
 - What happens if a dataset file fails to load (network error, missing file)? The affected feature page should show the error state, not a blank or broken panel.
 - What happens if the user switches language or theme while a page is actively loading data? The switch should still apply and the loading state should remain visible until data resolves.
 - What happens if the same dataset is requested multiple times from different feature pages? The data should only be fetched once; subsequent requests should use a cached response.
+- What happens if a user selects a filter on one page and navigates to a page that does not support that filter dimension? The filter value should be preserved in global state but not displayed. If the user returns to the original page, the value should still be selected.
+- What happens if the master dataset has not loaded yet when the filter bar tries to render filter options? The filter bar should show a loading indicator or disabled dropdowns until options are available.
+- What happens if a user selects a region on the overview page, then navigates to a page that does not show the region filter, then returns to the overview? The region selection should still be active.
 
 ---
 
@@ -123,12 +142,24 @@ A user navigating to any feature page (e.g., the overview dashboard, trends, reg
 - **FR-016**: The layout MUST be fully functional on mobile screen widths, not just desktop.
 - **FR-017**: The layout and all reusable state components MUST be accessible to keyboard users and screen readers.
 - **FR-018**: All visible text in the interface MUST be sourced from a translation dictionary, not hardcoded strings.
+- **FR-019**: The application MUST provide a shared global filter bar rendered in the layout header/topbar area.
+- **FR-020**: The global filter bar MUST support filtering by academic year, region, stage, and gender.
+- **FR-021**: Global filter state MUST be managed by a single `GlobalFilterService` that exposes filter values as Angular signals.
+- **FR-022**: When a user changes a global filter value, all subscribed feature pages MUST react and update their displayed data without a page reload.
+- **FR-023**: Global filter selections MUST be preserved when navigating between feature pages.
+- **FR-024**: Each feature page MUST be able to declare which global filters are relevant to it (route/feature filter configuration).
+- **FR-025**: Only the filters declared relevant by the active feature page MUST be visible in the global filter bar.
+- **FR-026**: Feature pages MAY add local-only filters inside their own content area for advanced controls that do not belong in the global header.
+- **FR-027**: The global filter bar MUST derive its available options (years, regions, stages, genders) from the loaded dataset — not from hardcoded lists.
+- **FR-028**: The global filter bar MUST have a visible "reset filters" control that returns all filters to their default (all/unfiltered) state.
 
 ### Key Entities
 
 - **User Preferences**: Represents the user's chosen language (`ar` or `en`), layout direction (`rtl` or `ltr`), and theme (`light` or `dark`). Persists across sessions.
 - **Dataset**: Represents a named education data file (records, master, summary) with a defined loading status (pending, loaded, failed).
 - **Feature View State**: Represents the status of any feature page as one of four states — loading, empty, data (with typed payload), or error (with message). Shared across all features.
+- **Global Filter State**: Represents the current filter selections (year, region, stage, gender) shared across all feature pages. Each value is `null` (meaning "all") or a specific selection. Managed by a singleton `GlobalFilterService`.
+- **Filter Configuration**: A per-feature declaration of which global filter dimensions are relevant to that feature page. Used by the shell to show/hide filters in the global bar.
 - **Translation Dictionary**: A language-keyed set of UI string keys and their translations. Loaded at runtime and switched without page reload.
 
 ---
@@ -147,6 +178,12 @@ A user navigating to any feature page (e.g., the overview dashboard, trends, reg
 - **SC-008**: All interactive controls in the shell (language toggle, theme toggle, navigation links) are reachable and operable by keyboard alone.
 - **SC-009**: The app renders correctly in both right-to-left and left-to-right orientations with no content overlap or broken alignment.
 - **SC-010**: A new feature page can be integrated into the layout and adopt the shared state model with no changes to the foundation code.
+- **SC-011**: A filter selected on the overview page is preserved and pre-selected when navigating to the trends page.
+- **SC-012**: The global filter bar shows only the filters declared relevant by the active feature page.
+- **SC-013**: Changing a global filter immediately updates the displayed data on the active feature page without a page reload.
+- **SC-014**: The filter bar's available options are derived from the loaded dataset, not hardcoded.
+- **SC-015**: The global filter bar is fully functional at 375px viewport width and in RTL layout.
+- **SC-016**: A reset control clears all global filters and returns to the unfiltered state.
 
 ---
 
@@ -159,3 +196,5 @@ A user navigating to any feature page (e.g., the overview dashboard, trends, reg
 - LocalStorage is the appropriate persistence mechanism for user preferences; no account-based preference sync is required.
 - The existing design system in `src/styles/` is the visual source of truth; this feature does not redesign or extend it beyond what is already defined.
 - The navigation items in the shell will be placeholders for the initial delivery; actual routes will be connected when feature pages are built.
+- The global filter dimensions are exactly: year, region, stage, and gender — derived from the education dataset fields. No additional filter dimensions will be added in this phase.
+- Filter options are extracted from the `edu-master.json` (or `education-records.json`) dataset at runtime; they are not maintained as a separate configuration file.

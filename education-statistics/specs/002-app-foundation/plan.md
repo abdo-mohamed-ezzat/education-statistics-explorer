@@ -7,7 +7,7 @@
 
 ## Summary
 
-Build the structural and behavioral backbone of the Education Statistics Explorer: a reusable main layout shell (topbar + sidenav + router outlet), a singleton `PreferencesService` that manages language/direction/theme via Angular signals and persists to localStorage, bilingual support (Arabic/English) via Transloco, a single-responsibility `EducationDataService` that loads JSON datasets with session caching, a generic `ViewState<T>` discriminated union shared by all feature pages, and three shared UI state components (loading, empty, error) built on the `ds-state-panel` design system class.
+Build the structural and behavioral backbone of the Education Statistics Explorer: a reusable main layout shell (topbar + sidenav + router outlet), a singleton `PreferencesService` that manages language/direction/theme via Angular signals and persists to localStorage, bilingual support (Arabic/English) via Transloco, a single-responsibility `EducationDataService` that loads JSON datasets with session caching, a generic `ViewState<T>` discriminated union shared by all feature pages, three shared UI state components (loading, empty, error) built on the `ds-state-panel` design system class, and a **shared global filter system** (`GlobalFilterService` + `FilterBarComponent`) that provides cross-feature data exploration by year, region, stage, and gender with route-aware filter visibility.
 
 ---
 
@@ -21,7 +21,7 @@ Build the structural and behavioral backbone of the Education Statistics Explore
 **Project Type**: Web dashboard (single-page application)  
 **Performance Goals**: Language/theme switch ≤ 2s (SC-001/SC-002); each dataset fetched at most once per session (SC-005)  
 **Constraints**: No backend; no authentication; datasets ≤ memory budget; localStorage may be unavailable (FR-007 fallback)  
-**Scale/Scope**: 5 feature pages; 2 languages; 3 datasets; 1 shared state model
+**Scale/Scope**: 5 feature pages; 2 languages; 3 datasets; 1 shared state model; 1 global filter system (4 dimensions: year, region, stage, gender)
 
 ---
 
@@ -36,6 +36,7 @@ Build the structural and behavioral backbone of the Education Statistics Explore
 | Data Flow | III. Clean Data Flow | ✅ PASS | JSON loading centralized in `EducationDataService`; `OnPush` required on all components; signals drive preferences; no business logic in shell |
 | RTL + Mobile | IV. RTL-Safe, Mobile-First UI | ✅ PASS | `dir` set on `<html>` from preferences; layout built mobile-first; `ds-shell` is RTL-safe; FOUC prevented via inline script |
 | Page States | V. Explicit Page States | ✅ PASS | `ViewState<T>` discriminated union + 3 shared state components defined; usage contract in `contracts/service-contracts.md` |
+| Data Filtering | III. Clean Data Flow | ✅ PASS | Global filter state managed by singleton `GlobalFilterService` with signals; filter bar rendered in shell; route-aware config determines visibility; no filter logic in presentational components |
 
 No violations. Complexity Tracking table not required.
 
@@ -62,7 +63,7 @@ specs/002-app-foundation/
 education-statistics/
 └── src/
     ├── index.html                              ← Modified: FOUC-prevention inline script
-    ├── assets/
+    ├── public/
     │   ├── i18n/
     │   │   ├── ar.json                         ← NEW: Arabic UI strings
     │   │   └── en.json                         ← NEW: English UI strings
@@ -82,7 +83,8 @@ education-statistics/
         │   │   └── nav-item.model.ts           ← NEW
         │   ├── services/
         │   │   ├── preferences.service.ts      ← NEW (signals + effects + localStorage)
-        │   │   └── education-data.service.ts   ← NEW (HttpClient + shareReplay cache)
+        │   │   ├── education-data.service.ts   ← NEW (HttpClient + shareReplay cache)
+        │   │   └── global-filter.service.ts    ← NEW (global filter signals + route-aware config)
         │   └── layout/
         │       ├── shell/
         │       │   └── shell.component.ts      ← NEW (smart container)
@@ -92,8 +94,11 @@ education-statistics/
         │           └── nav.component.ts        ← NEW (dumb: nav links)
         └── shared/
             ├── models/
-            │   └── view-state.model.ts         ← NEW (ViewState<T> + factory helpers)
+            │   ├── view-state.model.ts         ← NEW (ViewState<T> + factory helpers)
+            │   └── global-filter.model.ts      ← NEW (GlobalFilterState, FilterDimension, FilterConfig)
             └── ui/
+                ├── filter-bar/
+                │   └── filter-bar.component.ts     ← NEW (global filter bar, dumb)
                 ├── loading-state/
                 │   └── loading-state.component.ts  ← NEW
                 ├── empty-state/

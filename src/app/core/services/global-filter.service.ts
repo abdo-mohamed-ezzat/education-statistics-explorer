@@ -1,6 +1,7 @@
 import { Injectable, computed, signal, inject } from '@angular/core';
 import { DEFAULT_FILTER_STATE, FilterConfig, FilterDimension, GlobalFilterState } from '../../shared/models/global-filter.model';
 import { EducationDataService } from './education-data.service';
+import { EducationMasterData } from '../models/education-data.model';
 
 @Injectable({
   providedIn: 'root'
@@ -62,7 +63,7 @@ export class GlobalFilterService {
 
   private extractOptions(): void {
     this.dataService.getMaster().subscribe({
-      next: (data) => {
+      next: (data: EducationMasterData[]) => {
         if (!data || !Array.isArray(data)) return;
 
         const years = new Set<number>();

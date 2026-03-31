@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { EducationDataService } from '../../../../core/services/education-data.service';
 import { GlobalFilterService } from '../../../../core/services/global-filter.service';
+import { EducationMasterData } from '../../../../core/models/education-data.model';
 import { ViewState, ViewStateHelpers } from '../../../../shared/models/view-state.model';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 import { ErrorStateComponent } from '../../../../shared/ui/error-state/error-state.component';
@@ -23,7 +24,7 @@ export class OverviewPage implements OnInit {
   private readonly dataService = inject(EducationDataService);
   private readonly filterService = inject(GlobalFilterService);
 
-  public readonly viewState = signal<ViewState<any[]>>(ViewStateHelpers.loading());
+  public readonly viewState = signal<ViewState<EducationMasterData[]>>(ViewStateHelpers.loading());
 
   // We derive the filtered dataset synchronously from the loaded state and the filter state
   public readonly filteredData = computed(() => {
@@ -67,11 +68,11 @@ export class OverviewPage implements OnInit {
   }
 
   // Template helpers to narrow types since Angular templates sometimes struggle with complex discriminated unions
-  public asError(state: ViewState<any[]>): { status: 'error'; error: Error | string } {
-    return state as any;
+  public asError(state: ViewState<EducationMasterData[]>): { status: 'error'; error: Error | string } {
+    return state as { status: 'error'; error: Error | string };
   }
 
-  public asContent(state: ViewState<any[]>): { status: 'content'; data: any[] } {
-    return state as any;
+  public asContent(state: ViewState<EducationMasterData[]>): { status: 'content'; data: EducationMasterData[] } {
+    return state as { status: 'content'; data: EducationMasterData[] };
   }
 }

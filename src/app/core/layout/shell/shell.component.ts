@@ -11,7 +11,6 @@ import { ROUTE_FILTER_CONFIG, DEFAULT_ROUTE_FILTER_CONFIG } from './route-filter
 
 @Component({
   selector: 'app-shell',
-  standalone: true,
   imports: [RouterOutlet, TopbarComponent, NavComponent, FloatingSettingsComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

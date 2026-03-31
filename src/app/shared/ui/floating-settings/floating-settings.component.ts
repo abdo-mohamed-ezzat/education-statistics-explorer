@@ -6,59 +6,12 @@ import { Language, Theme } from '../../../core/models/user-preferences.model';
 
 @Component({
   selector: 'app-floating-settings',
-  standalone: true,
   imports: [CommonModule, TranslocoModule, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'fixed bottom-20 ltr:right-4 rtl:left-4 z-[9999] md:bottom-6 sm:bottom-20',
   },
-  template: `
-    <div class="flex flex-col items-center gap-3">
-      <!-- Expanded Menu (Slide Up) -->
-      @if (isOpen()) {
-        <div
-          class="flex flex-col gap-3 animate-slide-up"
-          role="menu"
-          aria-label="Settings Menu"
-        >
-          <!-- Language Toggle -->
-          <button
-            class="ds-icon-btn shadow-ambient bg-surface-highest transition-transform hover:scale-110"
-            [title]="'topbar.toggle-lang' | transloco"
-            (click)="toggleLang.emit()"
-            [attr.aria-label]="'topbar.toggle-lang' | transloco"
-          >
-            <lucide-icon [img]="LanguagesIcon" size="20"></lucide-icon>
-          </button>
-
-          <!-- Theme Toggle -->
-          <button
-            class="ds-icon-btn shadow-ambient bg-surface-highest transition-transform hover:scale-110"
-            [title]="'topbar.toggle-theme' | transloco"
-            (click)="toggleTheme.emit()"
-            [attr.aria-label]="'topbar.toggle-theme' | transloco"
-          >
-            @if (currentTheme() === 'light') {
-              <lucide-icon [img]="MoonIcon" size="20"></lucide-icon>
-            } @else {
-              <lucide-icon [img]="SunIcon" size="20"></lucide-icon>
-            }
-          </button>
-        </div>
-      }
-
-      <!-- Main Trigger Button -->
-      <button
-        class="ds-icon-btn-active shadow-ambient transition-all duration-300 hover:scale-110"
-        [class.rotate-45]="isOpen()"
-        [attr.aria-expanded]="isOpen()"
-        (click)="toggleOpen()"
-        title="Settings"
-      >
-        <lucide-icon [img]="isOpen() ? CloseIcon : SettingsIcon" size="24"></lucide-icon>
-      </button>
-    </div>
-  `,
+  templateUrl: './floating-settings.component.html',
   styles: [`
     @keyframes slide-up {
       from {

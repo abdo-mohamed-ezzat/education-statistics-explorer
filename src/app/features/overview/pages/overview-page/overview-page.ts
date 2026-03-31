@@ -15,7 +15,6 @@ import { EmptyStateComponent } from '../../../../shared/ui/empty-state/empty-sta
 
 @Component({
   selector: 'app-overview-page',
-  standalone: true,
   imports: [LoadingStateComponent, ErrorStateComponent, EmptyStateComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './overview-page.html',

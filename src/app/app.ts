@@ -3,8 +3,7 @@ import { ShellComponent } from './core/layout/shell/shell.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [ShellComponent],
-  template: `<app-shell />`,
+  templateUrl: './app.html'
 })
 export class App {}

@@ -1,6 +1,14 @@
-import { ChangeDetectionStrategy, Component, computed, input, output, effect, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  input,
+  output,
+  effect,
+  signal,
+} from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
-import { LucideAngularModule, Moon, Sun, Languages, Leaf } from 'lucide-angular';
+import { LucideAngularModule, Leaf } from 'lucide-angular';
 import { Language, Theme } from '../../models/user-preferences.model';
 import { FilterBarComponent } from '../../../shared/ui/filter-bar/filter-bar.component';
 import {
@@ -11,13 +19,13 @@ import {
 
 @Component({
   selector: 'app-topbar',
-  standalone: true,
   imports: [TranslocoModule, LucideAngularModule, FilterBarComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'block w-full',
   },
   templateUrl: './topbar.component.html',
+  styleUrl: './topbar.component.css',
 })
 export class TopbarComponent {
   // Status signals
@@ -34,12 +42,6 @@ export class TopbarComponent {
 
   public filterChange = output<{ dimension: FilterDimension; value: string | number | null }>();
   public resetFilters = output<void>();
-
-  // Icons and Sizes
-  public LogoSize = computed(() => {
-    // Basic responsive size toggle
-    return window.innerWidth < 640 ? 20 : 24;
-  });
 
   public readonly LogoIcon = Leaf;
 }

@@ -5,7 +5,6 @@ import { LucideAngularModule, FilterX } from 'lucide-angular';
 
 @Component({
   selector: 'app-filter-bar',
-  standalone: true,
   imports: [TranslocoModule, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

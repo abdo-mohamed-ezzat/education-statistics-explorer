@@ -42,7 +42,7 @@ All technical choices for this feature are **fixed by the project constitution**
 **Decision**: Transloco with `provideTranslocoPersistLang` (localStorage), `provideTranslocoLocale`, and runtime `reRenderOnLangChange: true`.  
 **Rationale**: Already configured in `app.config.ts`. Transloco natively supports structural directives (`*transloco`), the `TranslocoService`, and lazy language file loading via HTTP. It ships a `PersistLangPlugin` that restores the active language from `localStorage` on cold start — satisfying FR-006, FR-007, and FR-008 without custom code.
 
-**Translation file location**: `src/assets/i18n/ar.json` and `src/assets/i18n/en.json`.
+**Translation file location**: `public/i18n/ar.json` and `public/i18n/en.json`.
 
 **RTL strategy**:
 - The `dir` attribute on `<html>` must be set synchronously (before first paint) to avoid a flash: managed by the `PreferencesService` using an `effect()` that calls `document.documentElement.setAttribute('dir', ...)`.
@@ -69,7 +69,7 @@ All technical choices for this feature are **fixed by the project constitution**
 
 ### 5. Data Access Layer (Education Data Service)
 
-**Decision**: A single `EducationDataService` in `core/services/` that uses Angular's `HttpClient` with `shareReplay(1)` (or a signal-based cache) to load JSON datasets from `src/assets/datasets/`.  
+**Decision**: A single `EducationDataService` in `core/services/` that uses Angular's `HttpClient` with `shareReplay(1)` (or a signal-based cache) to load JSON datasets from `public/datasets/`.  
 **Rationale**:
 - FR-009 and FR-010 require a single access layer and session-level caching.
 - Using `HttpClient` (with `withFetch()`) and caching the `Observable` with `shareReplay(1)` ensures each dataset file is fetched at most once. The subscription model lets multiple feature pages subscribe with zero additional HTTP calls.
@@ -81,7 +81,7 @@ All technical choices for this feature are **fixed by the project constitution**
 - `summary.json` — pre-aggregated KPI values
 
 **Best Practices**:
-- Cache at the Observable level: `private readonly records$ = this.http.get<EducationRecord[]>('/assets/datasets/records.json').pipe(shareReplay(1))`.
+- Cache at the Observable level: `private readonly records$ = this.http.get<EducationRecord[]>('/public/datasets/records.json').pipe(shareReplay(1))`.
 - Expose public getter methods; do not expose the cached Observable directly.
 - Return typed arrays with strong interfaces — no `any[]`.
 
@@ -160,6 +160,6 @@ export type ViewState<T> =
 | Preference persistence | `PreferencesService` + Transloco PersistLang plugin (localStorage) |
 | RTL implementation | `direction` CSS property on `<html>` set via `effect()` in `PreferencesService` |
 | 4-state model shape | Discriminated union `ViewState<T>` in `shared/models/` |
-| Translation file location | `src/assets/i18n/ar.json` + `en.json` |
+| Translation file location | `public/i18n/ar.json` + `en.json` |
 | Layout shell location | `src/app/core/layout/shell/` |
 | Shared state components location | `src/app/shared/ui/` |

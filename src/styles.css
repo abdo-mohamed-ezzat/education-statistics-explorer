@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+@import './styles/tokens.css';
+@import './styles/themes.css';
+@import './styles/fonts.css';
+@import './styles/base.css';
+@import './styles/utilities.css';
+@import './styles/components.css';

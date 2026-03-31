@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "trends": "Trends",
+    "regional-analysis": "Regional Analysis",
+    "gender-analysis": "Gender Analysis",
+    "stage-analysis": "Stage Analysis",
+    "moe-portal": "MOE Portal"
+  },
+  "topbar": {
+    "app-title": "Education Statistics Explorer",
+    "subtitle": "Saudi General Education Analytics (2016 – 2024)",
+    "toggle-lang": "Toggle Language",
+    "toggle-theme": "Toggle Theme"
+  },
+  "state": {
+    "loading": "Loading...",
+    "empty": "No Data Available",
+    "empty-detail": "No data matches your selected filters.",
+    "error": "Something went wrong",
+    "error-detail": "Failed to load the requested data. Please try again.",
+    "retry": "Retry"
+  },
+  "filter": {
+    "year": "Year",
+    "region": "Region",
+    "stage": "Stage",
+    "gender": "Gender",
+    "all": "All",
+    "reset": "Reset Filters"
+  }
+}

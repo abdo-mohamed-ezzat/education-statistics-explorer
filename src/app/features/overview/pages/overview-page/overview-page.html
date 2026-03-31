@@ -1,0 +1,23 @@
+<div class="h-full flex flex-col ds-stack-6">
+  @switch (viewState().status) {
+    @case ('loading') {
+      <app-loading-state />
+    }
+    @case ('error') {
+      <!-- We use $any locally or cast state in template to satisfy strict typing when using union types in Angular templates if needed, but modern Angular type narrowing via @switch often works out of the box. -->
+      <app-error-state [error]="asError(viewState()).error" (retry)="loadData()" />
+    }
+    @case ('empty') {
+      <app-empty-state />
+    }
+    @case ('content') {
+      <div>
+        <h2 class="ds-title-lg text-main mb-4">Overview Data</h2>
+        <p class="ds-body-md text-soft max-w-2xl bg-surface-low p-4 rounded-xl border border-soft">
+          Data successfully loaded and filtered! Total records matching criteria:
+          <span class="font-bold text-main">{{ filteredData().length }}</span>
+        </p>
+      </div>
+    }
+  }
+</div>

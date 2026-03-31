@@ -1,8 +1,8 @@
 <!--
 SYNC IMPACT REPORT
 ==================
-Version change: [TEMPLATE] → 1.0.0
-Bump rationale: MAJOR — first real ratification, all placeholders replaced with project-specific content.
+Version change: 1.0.0 → 1.1.0
+Bump rationale: MINOR — Amended to allow dark mode.
 
 Modified principles:
   - [PRINCIPLE_1_NAME] → I. Feature-First Angular Architecture
@@ -42,6 +42,7 @@ The codebase MUST follow a strict feature-first folder structure under `src/app/
   data-access/facade, and models.
 
 Each feature folder MUST follow:
+
 ```
 feature-name/
   pages/        ← smart/container components
@@ -74,6 +75,7 @@ Styling priority order (MUST be followed in this order):
 5. New token added to `tokens.css` only if a reusable design value is missing
 
 Tailwind CSS v4 compatibility is NON-NEGOTIABLE:
+
 - `@apply` MUST only be used with native Tailwind utilities
 - `@apply ds-btn`, `@apply ds-card`, or any custom class chaining via `@apply`
   is FORBIDDEN
@@ -120,6 +122,7 @@ All layouts MUST remain correct in both `dir="rtl"` (Arabic) and `dir="ltr"`
 - Arabic (`ar`) is the default language; English (`en`) is the secondary language.
 
 Accessibility MUST be maintained:
+
 - Semantic HTML, visible focus states, keyboard-accessible controls,
   labels on all form inputs, readable contrast, touch-friendly targets.
 - Clickable `div` elements where a `button` is appropriate are FORBIDDEN.
@@ -157,7 +160,7 @@ The following technology choices are fixed for this project:
 - **Datasets**: JSON files in `src/assets/datasets/` (read-only; no mutation)
 
 The following are explicitly out of scope for now:
-authentication, backend API, SSR, PDF export, map integration, dark mode,
+authentication, backend API, PDF export, map integration,
 public API integration, and complex drill-through routing.
 
 ## Mentorship & Code Quality Standards
@@ -182,6 +185,7 @@ This constitution supersedes all other development practices, style rules, and
 framework defaults for this project.
 
 Amendment procedure:
+
 1. Propose a change with rationale and impacted sections clearly identified.
 2. Determine version bump type (MAJOR / MINOR / PATCH) using semantic versioning rules.
 3. Update this file, increment the version, and set `Last Amended` to today.
@@ -189,6 +193,7 @@ Amendment procedure:
 5. Update the Sync Impact Report comment at the top of this file.
 
 Compliance review expectations:
+
 - All PRs and implementation plans MUST pass a Constitution Check before proceeding.
 - The `plan-template.md` Constitution Check section MUST reference the active
   principle gates relevant to the feature being built.
@@ -198,4 +203,4 @@ Compliance review expectations:
 All agents working on this project MUST load and apply this constitution before
 generating any code, plan, or task list.
 
-**Version**: 1.0.0 | **Ratified**: 2026-03-23 | **Last Amended**: 2026-03-23
+**Version**: 1.1.0 | **Ratified**: 2026-03-23 | **Last Amended**: 2026-03-23

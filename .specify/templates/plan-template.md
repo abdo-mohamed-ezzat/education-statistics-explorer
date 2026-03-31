@@ -31,13 +31,7 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-| Gate | Principle | Pass Condition |
-|------|-----------|---------------|
-| Architecture | I. Feature-First Angular Architecture | Feature folder follows `pages/ui/data-access/models/` structure; smart/dumb split is clear; no business logic in templates |
-| Design System | II. Design System Supremacy | DS classes used first; no hardcoded hex colors; no `@apply` with custom classes; chart colors use `--chart-N` tokens |
-| Data Flow | III. Clean Data Flow | Data loaded only in services/facades; components receive ready-to-render view models; `OnPush` applied |
-| RTL + Mobile | IV. RTL-Safe, Mobile-First UI | Mobile-first layout; RTL layout verified; chart containers have explicit heights; semantic HTML used |
-| Page States | V. Explicit Page States | All 4 states (loading/error/empty/content) are planned at page level; shared state UI components are used |
+[Gates determined based on constitution file]
 
 ## Project Structure
 

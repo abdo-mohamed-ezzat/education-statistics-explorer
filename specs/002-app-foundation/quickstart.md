@@ -18,46 +18,51 @@ The application foundation is the invisible backbone every feature page depends 
 
 ```
 education-statistics/
-└── src/
-    ├── index.html                          ← Add FOUC-prevention inline script (theme + dir)
-    ├── assets/
-    │   ├── i18n/
-    │   │   ├── ar.json                     ← Arabic translation strings (NEW)
-    │   │   └── en.json                     ← English translation strings (NEW)
-    │   └── datasets/
-    │       ├── records.json                ← Placeholder (populated by later features)
-    │       ├── master.json                 ← Placeholder
-    │       └── summary.json                ← Placeholder
-    └── app/
-        ├── app.ts                          ← Simplified: only renders <app-shell>
-        ├── app.html                        ← Replaced with just <app-shell />
-        ├── app.config.ts                   ← Already configured; keep as-is
-        ├── app.routes.ts                   ← Already configured; keep as-is
-        ├── core/
-        │   ├── models/
-        │   │   ├── user-preferences.model.ts  ← Language, Direction, Theme, UserPreferences
-        │   │   ├── dataset.model.ts            ← DatasetKey, DatasetLoadStatus
-        │   │   └── nav-item.model.ts           ← NavItem
-        │   ├── services/
-        │   │   ├── preferences.service.ts      ← Signals, localStorage, DOM side-effects
-        │   │   └── education-data.service.ts   ← HttpClient + shareReplay cache
-        │   └── layout/
-        │       ├── shell/
-        │       │   └── shell.component.ts      ← App layout wrapper (smart)
-        │       ├── topbar/
-        │       │   └── topbar.component.ts     ← Header bar (dumb)
-        │       └── nav/
-        │           └── nav.component.ts        ← Sidebar/bottom nav (dumb)
-        └── shared/
-            ├── models/
-            │   └── view-state.model.ts         ← ViewState<T> + factory helpers
-            └── ui/
-                ├── loading-state/
-                │   └── loading-state.component.ts
-                ├── empty-state/
-                │   └── empty-state.component.ts
-                └── error-state/
-                    └── error-state.component.ts
+├── src/
+│   ├── index.html                          ← Add FOUC-prevention inline script (theme + dir)
+│   └── app/
+│       ├── app.ts                          ← Simplified: only renders <app-shell>
+│       ├── app.html                        ← Replaced with just <app-shell />
+│       ├── app.config.ts                   ← Already configured; keep as-is
+│       ├── app.routes.ts                   ← Already configured; keep as-is
+│       ├── core/
+│       │   ├── models/
+│       │   │   ├── user-preferences.model.ts  ← Language, Direction, Theme, UserPreferences
+│       │   │   ├── dataset.model.ts            ← DatasetKey, DatasetLoadStatus
+│       │   │   └── nav-item.model.ts           ← NavItem
+│       │   ├── services/
+│       │   │   ├── preferences.service.ts      ← Signals, localStorage, DOM side-effects
+│       │   │   ├── education-data.service.ts   ← HttpClient + shareReplay cache
+│       │   │   └── global-filter.service.ts    ← Global filter signals + route config
+│       │   └── layout/
+│       │       ├── shell/
+│       │       │   ├── shell.component.ts      ← App layout wrapper (smart)
+│       │       │   └── route-filter-config.ts  ← Maps routes to visible filter dimensions
+│       │       ├── topbar/
+│       │       │   └── topbar.component.ts     ← Header bar (dumb)
+│       │       └── nav/
+│       │           └── nav.component.ts        ← Sidebar/bottom nav (dumb)
+│       └── shared/
+│           ├── models/
+│           │   ├── view-state.model.ts         ← ViewState<T> + factory helpers
+│           │   └── global-filter.model.ts      ← GlobalFilterState, FilterDimension, FilterConfig
+│           └── ui/
+│               ├── filter-bar/
+│               │   └── filter-bar.component.ts ← Global filter dropdowns (dumb)
+│               ├── loading-state/
+│               │   └── loading-state.component.ts
+│               ├── empty-state/
+│               │   └── empty-state.component.ts
+│               └── error-state/
+│                   └── error-state.component.ts
+└── public/
+    ├── i18n/
+    │   ├── ar.json                     ← Arabic translation strings (NEW)
+    │   └── en.json                     ← English translation strings (NEW)
+    └── datasets/
+        ├── education-records.json          ← Placeholder (populated by later features)
+        ├── edu-master.json                 ← Placeholder
+        └── edu-summary.json                ← Placeholder
 ```
 
 ---
@@ -71,23 +76,27 @@ Follow this order to avoid circular dependencies and broken builds at each step:
    - `core/models/nav-item.model.ts`
    - `core/models/dataset.model.ts`
    - `shared/models/view-state.model.ts`
+   - `shared/models/global-filter.model.ts`
 
 2. **Services** (depend only on Angular + models)
    - `core/services/preferences.service.ts`
    - `core/services/education-data.service.ts`
+   - `core/services/global-filter.service.ts`
 
 3. **Translation files** (static JSON)
-   - `assets/i18n/ar.json`
-   - `assets/i18n/en.json`
+   - `public/i18n/ar.json`
+   - `public/i18n/en.json`
 
 4. **Shared state UI components** (depend on models, translate pipe)
    - `shared/ui/loading-state/`
    - `shared/ui/empty-state/`
    - `shared/ui/error-state/`
+   - `shared/ui/filter-bar/`
 
 5. **Layout shell components** (depend on services, nav model, router)
    - `core/layout/topbar/topbar.component.ts`
    - `core/layout/nav/nav.component.ts`
+   - `core/layout/shell/route-filter-config.ts`
    - `core/layout/shell/shell.component.ts`
 
 6. **App root** (wires everything together)
@@ -176,6 +185,10 @@ After implementation, verify each requirement manually:
 | FR-016 Mobile layout | Resize to 375px; check layout remains functional |
 | FR-017 Keyboard accessibility | Tab through all nav + toggle controls |
 | FR-018 No hardcoded strings | grep for any literal Arabic/English text in templates |
+| FR-019 Global filter bar visible | Check filter bar appears in topbar/header area |
+| FR-020–025 Filter dimensions & config | Select year/region/stage/gender; navigate between pages |
+| FR-027 Options from dataset | Check filter options match values from edu-master.json |
+| FR-028 Reset control | Click reset; all filters return to default |
 
 ---
 

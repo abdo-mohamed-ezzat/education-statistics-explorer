@@ -1,6 +1,8 @@
-import { Routes } from "@angular/router";
-import { OverviewPage } from "./pages/overview-page/overview-page";
+import { Routes } from '@angular/router';
 
 export const overviewRoutes: Routes = [
-    { path: '', component: OverviewPage }
+  {
+    path: '',
+    loadComponent: () => import('./pages/overview-page/overview-page').then((m) => m.OverviewPage),
+  },
 ];

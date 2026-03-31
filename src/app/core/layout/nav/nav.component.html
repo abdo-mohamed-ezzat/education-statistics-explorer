@@ -3,21 +3,40 @@
   aria-label="Main Navigation"
 >
   @for (item of navItems; track item.id) {
-    <a
-      [routerLink]="item.path"
-      routerLinkActive="bg-primary text-white shadow-soft font-medium drop-shadow-sm [&>span]:text-white [&>lucide-icon]:text-white pointer-events-none"
-      [routerLinkActiveOptions]="{ exact: false }"
-      class="flex flex-col flex-1 md:flex-none justify-center items-center gap-[0.25rem] px-[0.25rem] py-[0.5rem] md:py-[0.75rem] rounded-xl text-muted hover:text-main hover:bg-surface-low transition-all group overflow-hidden"
-    >
-      <lucide-icon
-        [img]="getIcon(item.icon)"
-        size="22"
-        strokeWidth="1.5"
-        class="flex-none transition-colors group-hover:text-primary"
-      ></lucide-icon>
-      <span class="w-full text-center text-[0.625rem] md:text-[0.75rem] font-body truncate transition-colors px-[0.125rem]">
-        {{ item.labelKey | transloco }}
-      </span>
-    </a>
+    @if (item.external) {
+      <a
+        [href]="item.path"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex flex-col flex-1 md:flex-none justify-center items-center gap-[0.25rem] px-[0.25rem] py-[0.5rem] md:py-[0.75rem] rounded-xl text-muted hover:text-main hover:bg-surface-low transition-all group overflow-hidden"
+      >
+        <lucide-icon
+          [img]="getIcon(item.icon)"
+          size="22"
+          strokeWidth="1.5"
+          class="flex-none transition-colors group-hover:text-primary"
+        ></lucide-icon>
+        <span class="w-full text-center text-[0.625rem] md:text-[0.75rem] font-body truncate transition-colors px-[0.125rem]">
+          {{ item.labelKey | transloco }}
+        </span>
+      </a>
+    } @else {
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="bg-primary text-white shadow-soft font-medium drop-shadow-sm [&>span]:text-white [&>lucide-icon]:text-white pointer-events-none"
+        [routerLinkActiveOptions]="{ exact: false }"
+        class="flex flex-col flex-1 md:flex-none justify-center items-center gap-[0.25rem] px-[0.25rem] py-[0.5rem] md:py-[0.75rem] rounded-xl text-muted hover:text-main hover:bg-surface-low transition-all group overflow-hidden"
+      >
+        <lucide-icon
+          [img]="getIcon(item.icon)"
+          size="22"
+          strokeWidth="1.5"
+          class="flex-none transition-colors group-hover:text-primary"
+        ></lucide-icon>
+        <span class="w-full text-center text-[0.625rem] md:text-[0.75rem] font-body truncate transition-colors px-[0.125rem]">
+          {{ item.labelKey | transloco }}
+        </span>
+      </a>
+    }
   }
 </nav>

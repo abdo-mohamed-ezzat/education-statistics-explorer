@@ -9,6 +9,7 @@ import {
   Users,
   Layers,
   TrendingUp,
+  ExternalLink,
 } from 'lucide-angular';
 import { NavItem } from '../../models/nav-item.model';
 
@@ -31,6 +32,13 @@ export class NavComponent {
       labelKey: 'nav.regional-analysis',
       icon: 'map',
     },
+    {
+      id: 'moe-portal',
+      path: 'https://moe.gov.sa',
+      labelKey: 'nav.moe-portal',
+      icon: 'external-link',
+      external: true,
+    },
   ];
 
   public getIcon(name: string): any {
@@ -45,6 +53,8 @@ export class NavComponent {
         return Users;
       case 'layers':
         return Layers;
+      case 'external-link':
+        return ExternalLink;
       default:
         return LayoutDashboard;
     }

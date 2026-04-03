@@ -30,7 +30,7 @@ export class PreferencesService {
       const prefs = this.state();
       
       if (this.isBrowser) {
-        // Update local storage
+        // Persist to single source of truth (edu_stats_preferences)
         localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
         
         // Apply direction and language to DOM
@@ -45,7 +45,9 @@ export class PreferencesService {
         }
       }
 
-      // Update translation language
+      // Keep Transloco in sync on runtime language changes.
+      // (Initial boot lang is set by APP_INITIALIZER in app.config.ts before
+      //  any component renders, preventing the Arabic → English flicker.)
       this.transloco.setActiveLang(prefs.language);
     });
   }

@@ -1,11 +1,12 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
 import { FilterConfig, FilterDimension, GlobalFilterState } from '../../models/global-filter.model';
 import { LucideAngularModule, FilterX } from 'lucide-angular';
+import { FilterSelectComponent, FilterSelectOption } from '../filter-select/filter-select.component';
 
 @Component({
   selector: 'app-filter-bar',
-  imports: [TranslocoModule, LucideAngularModule],
+  imports: [TranslocoModule, LucideAngularModule, FilterSelectComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'block px-2',
@@ -21,6 +22,34 @@ export class FilterBarComponent {
   public availableStages = input<string[]>([]);
   public availableGenders = input<string[]>([]);
 
+  public readonly yearOptions = computed<FilterSelectOption[]>(() => {
+    return [
+      { value: null, labelKey: 'filter.all' },
+      ...this.availableYears().map(y => ({ value: y, label: y.toString() }))
+    ];
+  });
+
+  public readonly regionOptions = computed<FilterSelectOption[]>(() => {
+    return [
+      { value: null, labelKey: 'filter.all' },
+      ...this.availableRegions().map(r => ({ value: r, label: r }))
+    ];
+  });
+
+  public readonly stageOptions = computed<FilterSelectOption[]>(() => {
+    return [
+      { value: null, labelKey: 'filter.all' },
+      ...this.availableStages().map(s => ({ value: s, label: s }))
+    ];
+  });
+
+  public readonly genderOptions = computed<FilterSelectOption[]>(() => {
+    return [
+      { value: null, labelKey: 'filter.all' },
+      ...this.availableGenders().map(g => ({ value: g, label: g }))
+    ];
+  });
+
   public filterChange = output<{ dimension: FilterDimension; value: string | number | null }>();
   public resetFilters = output<void>();
 
@@ -30,17 +59,12 @@ export class FilterBarComponent {
     return this.activeConfig().allowedDimensions.includes(dim);
   }
 
-  public onChange(dimension: FilterDimension, event: Event): void {
-    const target = event.target as HTMLSelectElement;
-    let value: string | number | null = target.value;
-
-    if (value === 'null') {
-      value = null;
-    } else if (dimension === 'year') {
-      value = Number(value);
+  public onChangeFilter(dimension: FilterDimension, value: string | number | null): void {
+    let finalValue = value;
+    if (dimension === 'year' && value !== null) {
+      finalValue = Number(value);
     }
-
-    this.filterChange.emit({ dimension, value });
+    this.filterChange.emit({ dimension, value: finalValue });
   }
 
   public onReset(): void {

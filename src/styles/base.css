@@ -42,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -55,7 +55,7 @@ h6,
   color: var(--color-on-surface);
   line-height: 1.1;
   letter-spacing: -0.02em;
-}
+} */
 
 h1 {
   font-size: var(--text-display-md);

@@ -401,10 +401,106 @@
   }
 
   .ds-kpi-card {
-    @apply rounded-[var(--radius-xl)] p-4 md:p-5;
-    min-height: var(--card-min-height);
-    background-color: var(--color-surface-lowest);
+    @apply flex items-center justify-between p-6 w-full h-full;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-outline-soft);
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-soft);
+    min-height: 8.75rem;
+  }
+
+  .ds-kpi-card-content {
+    @apply flex flex-col justify-between h-full gap-4;
+  }
+
+  .ds-kpi-card-label {
+    @apply text-label-md font-medium mb-1;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-kpi-card-value {
+    @apply text-display-md leading-none font-bold tracking-tight;
+    color: var(--color-on-surface);
+  }
+
+  .ds-kpi-card-value-up {
+    color: var(--color-success-alt);
+  }
+
+  .ds-kpi-card-value-down {
+    color: var(--color-error);
+  }
+
+  .ds-kpi-card-sublabel {
+    @apply text-body-sm font-medium;
+    color: var(--color-on-surface-muted);
+  }
+
+  .ds-kpi-card-icon-container {
+    @apply flex-shrink-0 ml-4 flex items-center justify-center pointer-events-none;
+  }
+
+  .ds-kpi-card-icon {
+    @apply opacity-30;
+    color: var(--color-success-alt);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  }
+
+  .ds-kpi-card-icon-up {
+    @apply opacity-50;
+    color: var(--color-success-alt);
+  }
+
+  .ds-kpi-card-icon-down {
+    @apply opacity-50;
+    color: var(--color-error-soft);
+  }
+
+  /* Gender KPI Card */
+  .ds-gender-kpi-card {
+    @apply flex flex-col p-6 w-full h-full;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-outline-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    min-height: 8.75rem;
+  }
+
+  .ds-gender-kpi-card-label {
+    @apply text-label-md font-medium mb-5;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-gender-kpi-card-grid {
+    @apply grid grid-cols-2;
+  }
+
+  .ds-gender-kpi-card-col {
+    @apply flex flex-col gap-1;
+  }
+
+  .ds-gender-kpi-card-col-left {
+    @apply pr-4;
+  }
+
+  .ds-gender-kpi-card-col-right {
+    @apply pl-6 border-l;
+    border-color: var(--color-outline-soft);
+  }
+
+  .ds-gender-kpi-card-stat-label {
+    @apply text-label-sm font-medium;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-gender-kpi-card-value {
+    @apply text-title-lg font-bold leading-none mt-1;
+    color: var(--color-on-surface);
+  }
+
+  .ds-gender-kpi-card-percent {
+    @apply text-sm;
+    color: var(--color-on-surface-muted);
   }
 
   .ds-stat-card {
@@ -452,5 +548,30 @@
     border-radius: var(--radius-pill);
     background-color: var(--color-info-soft);
     color: var(--color-info);
+  }
+
+  .ds-insight-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold;
+    border-radius: var(--radius-pill);
+  }
+
+  .ds-insight-badge-growth {
+    background-color: var(--color-success-soft);
+    color: var(--color-success);
+  }
+
+  .ds-insight-badge-demographics {
+    background-color: var(--color-info-soft);
+    color: var(--color-info);
+  }
+
+  .ds-insight-badge-regional {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary);
+  }
+
+  .ds-insight-badge-stage {
+    background-color: var(--color-secondary-soft);
+    color: var(--color-secondary);
   }
 }

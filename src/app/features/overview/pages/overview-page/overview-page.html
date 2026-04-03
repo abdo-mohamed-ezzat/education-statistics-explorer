@@ -1,22 +1,46 @@
-<div class="h-full flex flex-col ds-stack-6">
+<div class="ds-stack-6 h-full">
   @switch (viewState().status) {
     @case ('loading') {
       <app-loading-state />
     }
     @case ('error') {
-      <!-- We use $any locally or cast state in template to satisfy strict typing when using union types in Angular templates if needed, but modern Angular type narrowing via @switch often works out of the box. -->
       <app-error-state [error]="asError(viewState()).error" (retry)="loadData()" />
     }
     @case ('empty') {
       <app-empty-state />
     }
     @case ('content') {
-      <div>
-        <h2 class="ds-title-lg text-main mb-4">Overview Data</h2>
-        <p class="ds-body-md text-soft max-w-2xl bg-surface-low p-4 rounded-xl border border-soft">
-          Data successfully loaded and filtered! Total records matching criteria:
-          <span class="font-bold text-main">{{ filteredData().length }}</span>
-        </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 items-stretch">
+        <app-kpi-card class="h-full" [vm]="asContent(viewState()).data.kpis.totalStudents" />
+        <app-kpi-card class="h-full" [vm]="asContent(viewState()).data.kpis.growthRate" />
+        <app-gender-kpi-card class="h-full" [vm]="asContent(viewState()).data.kpis.genderDistribution" />
+        <app-kpi-card class="h-full" [vm]="asContent(viewState()).data.kpis.largestRegion" />
+      </div>
+
+      <!-- Unified Analytics & Highlights Section -->
+      <div class="ds-section">
+        <h2 class="ds-title-md mb-6">{{ 'overview.analytics.section-title' | transloco }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+          <app-yoy-bar-chart
+            class="h-full"
+            [series]="asContent(viewState()).data.yoySeries"
+            [theme]="theme()"
+          />
+          <app-regional-leaderboard class="h-full" [rows]="asContent(viewState()).data.leaderboard" />
+          <app-parity-gauge
+            class="h-full"
+            [vm]="asContent(viewState()).data.parityIndex"
+            [theme]="theme()"
+          />
+          <!-- Insights / Highlights as the 4th chart card -->
+          <div class="ds-chart-card flex flex-col h-full overflow-hidden">
+             <h3 class="ds-title-sm mb-1">{{ 'overview.insights.section-title' | transloco }}</h3>
+             <p class="ds-caption mb-4">{{ 'overview.insights.section-subtitle' | transloco }}</p>
+             <div class="flex-grow scrollbar-thin-soft overflow-y-auto max-h-[300px]">
+                <app-insights-list [insights]="asContent(viewState()).data.insights" />
+             </div>
+          </div>
+        </div>
       </div>
     }
   }

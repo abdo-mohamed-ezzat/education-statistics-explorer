@@ -2,77 +2,58 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
-  signal,
-  computed,
-  OnInit,
 } from '@angular/core';
-import { EducationDataService } from '../../../../core/services/education-data.service';
-import { GlobalFilterService } from '../../../../core/services/global-filter.service';
-import { EducationMasterData } from '../../../../core/models/education-data.model';
-import { ViewState, ViewStateHelpers } from '../../../../shared/models/view-state.model';
+import { TranslocoPipe } from '@jsverse/transloco';
+import { OverviewFacade } from '../../data-access/overview.facade';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { ViewState } from '../../../../shared/models/view-state.model';
+import { OverviewViewModel } from '../../models/overview.model';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 import { ErrorStateComponent } from '../../../../shared/ui/error-state/error-state.component';
 import { EmptyStateComponent } from '../../../../shared/ui/empty-state/empty-state.component';
+import { KpiCardComponent } from '../../ui/kpi-card/kpi-card.component';
+import { GenderKpiCardComponent } from '../../ui/kpi-card/gender-kpi-card.component';
+import { YoyBarChartComponent } from '../../ui/yoy-bar-chart/yoy-bar-chart.component';
+import { RegionalLeaderboardComponent } from '../../ui/regional-leaderboard/regional-leaderboard.component';
+import { ParityGaugeComponent } from '../../ui/parity-gauge/parity-gauge.component';
+
+import { InsightsListComponent } from '../../ui/insights-list/insights-list.component';
 
 @Component({
   selector: 'app-overview-page',
-  imports: [LoadingStateComponent, ErrorStateComponent, EmptyStateComponent],
+  imports: [
+    TranslocoPipe,
+    LoadingStateComponent,
+    ErrorStateComponent,
+    EmptyStateComponent,
+    KpiCardComponent,
+    GenderKpiCardComponent,
+    YoyBarChartComponent,
+    RegionalLeaderboardComponent,
+    ParityGaugeComponent,
+    InsightsListComponent,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './overview-page.html',
 })
-export class OverviewPage implements OnInit {
-  private readonly dataService = inject(EducationDataService);
-  private readonly filterService = inject(GlobalFilterService);
+export class OverviewPage {
+  private readonly facade = inject(OverviewFacade);
+  private readonly prefsService = inject(PreferencesService);
 
-  public readonly viewState = signal<ViewState<EducationMasterData[]>>(ViewStateHelpers.loading());
+  protected readonly viewState = this.facade.viewState;
+  protected readonly theme = this.prefsService.theme;
 
-  // We derive the filtered dataset synchronously from the loaded state and the filter state
-  public readonly filteredData = computed(() => {
-    const currentState = this.viewState();
-    if (currentState.status !== 'content') {
-      return [];
-    }
-
-    const filters = this.filterService.state();
-    const data = currentState.data;
-
-    return data.filter((row) => {
-      let matches = true;
-      if (filters.year !== null && row.year !== filters.year) matches = false;
-      if (filters.region !== null && row.region !== filters.region) matches = false;
-      if (filters.stage !== null && row.stage !== filters.stage) matches = false;
-      if (filters.gender !== null && row.gender !== filters.gender) matches = false;
-      return matches;
-    });
-  });
-
-  public ngOnInit(): void {
-    this.loadData();
+  protected loadData(): void {
+    this.facade.loadData();
   }
 
-  public loadData(): void {
-    this.viewState.set(ViewStateHelpers.loading());
-
-    this.dataService.getMaster().subscribe({
-      next: (data) => {
-        if (!data || data.length === 0) {
-          this.viewState.set(ViewStateHelpers.empty());
-        } else {
-          this.viewState.set(ViewStateHelpers.content(data));
-        }
-      },
-      error: (err) => {
-        this.viewState.set(ViewStateHelpers.error(err));
-      },
-    });
-  }
-
-  // Template helpers to narrow types since Angular templates sometimes struggle with complex discriminated unions
-  public asError(state: ViewState<EducationMasterData[]>): { status: 'error'; error: Error | string } {
+  // Template helper to narrow type for error state
+  protected asError(state: ViewState<OverviewViewModel>): { status: 'error'; error: Error | string } {
     return state as { status: 'error'; error: Error | string };
   }
 
-  public asContent(state: ViewState<EducationMasterData[]>): { status: 'content'; data: EducationMasterData[] } {
-    return state as { status: 'content'; data: EducationMasterData[] };
+  // Template helper to narrow type for content state
+  protected asContent(state: ViewState<OverviewViewModel>): { status: 'content'; data: OverviewViewModel } {
+    return state as { status: 'content'; data: OverviewViewModel };
   }
 }

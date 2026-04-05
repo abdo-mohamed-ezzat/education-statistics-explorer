@@ -66,5 +66,15 @@
       "insight-primary-share": "تمثل المرحلة الابتدائية {{ value }}% من إجمالي الطلاب.",
       "insight-peak-year": "سجل عام {{ year }} أعلى معدل نمو سنوي بنسبة {{ value }}%."
     }
+  },
+  "trends": {
+    "page-title": "الاتجاهات الزمانية",
+    "charts": {
+      "total-growth": "نمو إجمالي الطلاب",
+      "stage-growth": "النمو حسب المرحلة التعليمية",
+      "region-growth": "النمو حسب المنطقة",
+      "teacher-ratio": "نسبة الطلاب للمعلمين",
+      "infrastructure-growth": "نمو البنية التحتية"
+    }
   }
 }

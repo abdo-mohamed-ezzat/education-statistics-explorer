@@ -18,7 +18,7 @@ import { NavItem } from '../../models/nav-item.model';
   imports: [RouterLink, RouterLinkActive, TranslocoModule, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'block w-full h-16 md:h-full bg-surface-lowest border-t md:border-t-0 md:border-r border-soft',
+    class: 'block w-full h-16 md:h-full bg-transparent',
   },
   templateUrl: './nav.component.html'
 })

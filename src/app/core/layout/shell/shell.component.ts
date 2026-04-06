@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { filter, takeUntil } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { PreferencesService } from '../../services/preferences.service';
@@ -11,7 +12,7 @@ import { ROUTE_FILTER_CONFIG, DEFAULT_ROUTE_FILTER_CONFIG } from './route-filter
 
 @Component({
   selector: 'app-shell',
-  imports: [RouterOutlet, TopbarComponent, NavComponent, FloatingSettingsComponent],
+  imports: [RouterOutlet, TopbarComponent, NavComponent, FloatingSettingsComponent, TranslocoPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'block w-full h-[100dvh] overflow-hidden bg-page text-main flex flex-col',
@@ -22,6 +23,9 @@ export class ShellComponent {
   public readonly prefService = inject(PreferencesService);
   public readonly filterService = inject(GlobalFilterService);
   private readonly router = inject(Router);
+  private readonly activatedRoute = inject(ActivatedRoute);
+
+  public pageTitleKey = signal<string>('');
 
   constructor() {
     // Monitor router events to figure out which dimensions to show
@@ -37,6 +41,12 @@ export class ShellComponent {
 
         const config = ROUTE_FILTER_CONFIG[featurePath] || DEFAULT_ROUTE_FILTER_CONFIG;
         this.filterService.setActiveConfig({ allowedDimensions: config });
+
+        let route = this.activatedRoute;
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        this.pageTitleKey.set(route.snapshot.data['titleKey'] || '');
       });
   }
 

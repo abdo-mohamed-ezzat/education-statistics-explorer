@@ -76,5 +76,20 @@
       "teacher-ratio": "نسبة الطلاب للمعلمين",
       "infrastructure-growth": "نمو البنية التحتية"
     }
+  },
+  "regional-analysis": {
+    "page-title": "لوحة التحليل المناطقي",
+    "page-subtitle": "إحصاءات التعليم العام في المملكة",
+    "total-students": "إجمالي الطلاب حسب المنطقة",
+    "region-profile": "الملف التعريفي لمنطقة {{ region }}",
+    "total-students-in-region": "إجمالي الطلاب",
+    "male-female-split": "توزيع الذكور والإناث",
+    "male": "ذكور",
+    "female": "إناث",
+    "key-highlights": "أبرز الإحصاءات",
+    "number-of-schools": "عدد المدارس",
+    "teacher-ratio": "نسبة المعلمين للطلاب",
+    "literacy-rate": "نسبة محو الأمية",
+    "new-schools": "مدارس جديدة ({{ year }})"
   }
 }

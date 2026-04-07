@@ -76,5 +76,20 @@
       "teacher-ratio": "Student-to-Teacher Ratio",
       "infrastructure-growth": "Infrastructure Growth"
     }
+  },
+  "regional-analysis": {
+    "page-title": "Regional Analysis Dashboard",
+    "page-subtitle": "Saudi General Education Statistics",
+    "total-students": "Total Students by Region",
+    "region-profile": "{{ region }} Region Profile",
+    "total-students-in-region": "Total Students",
+    "male-female-split": "Male/Female Split",
+    "male": "Male",
+    "female": "Female",
+    "key-highlights": "Key Highlights",
+    "number-of-schools": "Number of Schools",
+    "teacher-ratio": "Teacher-to-Student Ratio",
+    "literacy-rate": "Literacy Rate",
+    "new-schools": "New Schools ({{ year }})"
   }
 }

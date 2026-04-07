@@ -1,0 +1,127 @@
+<div class="flex flex-col h-full gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Totals Card -->
+    <div class="ds-card flex flex-col justify-start gap-2 border border-soft rounded-xl p-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-medium text-soft">{{
+          'regional-analysis.total-students-in-region' | transloco
+        }}</span>
+        <!-- Use an icon placeholder -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-primary"
+        >
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      </div>
+      <div class="text-3xl font-display font-bold text-primary">
+        {{ profile().totalStudents | number }}
+      </div>
+    </div>
+
+    <!-- Gender Split Card -->
+    <div class="ds-card flex flex-col gap-3 border border-soft rounded-xl p-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-medium text-soft">{{
+          'regional-analysis.male-female-split' | transloco
+        }}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-primary"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <!-- Male -->
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between text-xs text-soft">
+            <span
+              >{{ 'regional-analysis.male' | transloco }}:
+              {{ profile().malePercent | number: '1.0-0' }}% ({{
+                profile().maleCount | number
+              }})</span
+            >
+          </div>
+          <div class="w-full bg-surface-highest rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" [style.width.%]="profile().malePercent"></div>
+          </div>
+        </div>
+
+        <!-- Female -->
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between text-xs text-soft">
+            <span
+              >{{ 'regional-analysis.female' | transloco }}:
+              {{ profile().femalePercent | number: '1.0-0' }}% ({{
+                profile().femaleCount | number
+              }})</span
+            >
+          </div>
+          <div class="w-full bg-surface-highest rounded-full h-2">
+            <div
+              class="bg-[#00b0ff] h-2 rounded-full"
+              [style.width.%]="profile().femalePercent"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Highlights -->
+  <div class="flex flex-col gap-3 border-t border-soft p-4 rounded-xl">
+    <h4 class="text-sm font-bold text-main">
+      {{ 'regional-analysis.key-highlights' | transloco }}:
+    </h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex items-center gap-2 text-sm text-soft">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary block"></span>
+        <span
+          >{{ 'regional-analysis.number-of-schools' | transloco }}:
+          {{ profile().schoolsCount | number }}</span
+        >
+      </div>
+      <div class="flex items-center gap-2 text-sm text-soft">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary block"></span>
+        <span
+          >{{ 'regional-analysis.literacy-rate' | transloco }}: {{ profile().literacyRate }}%</span
+        >
+      </div>
+      <div class="flex items-center gap-2 text-sm text-soft">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary block"></span>
+        <span
+          >{{ 'regional-analysis.teacher-ratio' | transloco }}: 1:{{ profile().teacherRatio }}</span
+        >
+      </div>
+      <div class="flex items-center gap-2 text-sm text-soft">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary block"></span>
+        <span
+          >{{ 'regional-analysis.new-schools' | transloco: { year: profile().year } }}:
+          {{ profile().newSchools | number }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

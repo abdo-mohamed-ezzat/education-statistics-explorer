@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, shareReplay } from 'rxjs';
 import { EducationMasterData, EducationRecordData, EducationSummaryData } from '../models/education-data.model';
+import { GeoJsonFeatureCollection } from '../models/geojson.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,10 @@ export class EducationDataService {
     shareReplay(1)
   );
 
+  private readonly geoJsonCache$ = this.http.get<GeoJsonFeatureCollection>('datasets/saudi-arabia.geojson').pipe(
+    shareReplay(1)
+  );
+
   public getMaster(): Observable<EducationMasterData[]> {
     return this.masterCache$;
   }
@@ -35,5 +40,9 @@ export class EducationDataService {
 
   public getRecords(): Observable<EducationRecordData[]> {
     return this.recordsCache$;
+  }
+
+  public getSaudiGeoJson(): Observable<GeoJsonFeatureCollection> {
+    return this.geoJsonCache$;
   }
 }

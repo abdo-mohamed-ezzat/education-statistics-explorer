@@ -1,0 +1,10 @@
+<div class="h-full w-full min-h-[300px]">
+  @if (isBrowser()) {
+    <div
+      echarts
+      [options]="chartOptions()"
+      class="h-full w-full"
+      (chartClick)="onChartClick($event)"
+    ></div>
+  }
+</div>

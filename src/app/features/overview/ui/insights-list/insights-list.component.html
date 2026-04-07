@@ -1,0 +1,21 @@
+@if (isBrowser()) {
+  <ul class="ds-stack-4 list-none p-0 m-0">
+    @for (item of insights(); track item.textKey) {
+      <li class="flex items-start gap-4 p-3 rounded-[var(--radius-lg)] bg-surface-lowest shadow-soft border border-soft hover:shadow-ambient transition-all animate-in fade-in slide-in-from-right-2 duration-300">
+        <div class="flex-shrink-0 mt-1">
+          <span class="flex h-2 w-2 rounded-full bg-primary ring-4 ring-primary-soft"></span>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="ds-insight-badge ds-insight-badge-{{ item.category }} w-fit">
+            {{ item.badgeLabelKey | transloco }}
+          </span>
+          <p class="ds-body-sm text-soft leading-relaxed m-0">
+            {{ item.textKey | transloco : item.textParams }}
+          </p>
+        </div>
+      </li>
+    }
+  </ul>
+} @else {
+  <app-loading-state style="min-height: 200px;" />
+}

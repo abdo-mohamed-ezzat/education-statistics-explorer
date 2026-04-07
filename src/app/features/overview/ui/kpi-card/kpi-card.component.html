@@ -1,0 +1,48 @@
+<div class="ds-kpi-card">
+  <div class="ds-kpi-card-content">
+    <div class="flex flex-col">
+      <span class="ds-kpi-card-label">
+        {{ vm().labelKey | transloco }}
+      </span>
+
+      <span
+        class="ds-kpi-card-value"
+        [class.ds-kpi-card-value-up]="vm().trend === 'up'"
+        [class.ds-kpi-card-value-down]="vm().trend === 'down'"
+      >
+        {{ vm().value }}
+      </span>
+    </div>
+
+    @if (vm().sublabelKey) {
+      <span class="ds-kpi-card-sublabel">
+        {{ vm().sublabelKey | transloco : vm().sublabelParams }}
+      </span>
+    }
+  </div>
+
+  <div class="ds-kpi-card-icon-container">
+    @if (vm().iconName) {
+      <lucide-icon
+        [img]="getIcon(vm().iconName)"
+        aria-hidden="true"
+        size="64"
+        class="ds-kpi-card-icon"
+      />
+    } @else if (vm().trend === 'up') {
+      <lucide-icon
+        [img]="TrendingUp"
+        aria-hidden="true"
+        size="72"
+        class="ds-kpi-card-icon-up"
+      />
+    } @else if (vm().trend === 'down') {
+      <lucide-icon
+        [img]="TrendingDown"
+        aria-hidden="true"
+        size="72"
+        class="ds-kpi-card-icon-down"
+      />
+    }
+  </div>
+</div>

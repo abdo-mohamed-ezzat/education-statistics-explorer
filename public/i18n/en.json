@@ -28,5 +28,43 @@
     "gender": "Gender",
     "all": "All",
     "reset": "Reset Filters"
+  },
+  "overview": {
+    "page-title": "Overview",
+    "kpi": {
+      "total-students": "Total Students",
+      "total-students-sub": "{{ startYear }} – {{ endYear }} | All Years",
+      "growth-rate": "Growth Rate",
+      "growth-rate-sub": "since {{ baseYear }}",
+      "gender-distribution": "Gender Distribution",
+      "male-students": "Male Students",
+      "female-students": "Female Students",
+      "largest-region": "Largest Region",
+      "largest-region-sub": "{{ count }} students"
+    },
+    "analytics": {
+      "section-title": "Advanced Insights & Analytics",
+      "yoy-title": "Year-over-Year Growth Comparison",
+      "yoy-subtitle": "% growth by year",
+      "leaderboard-title": "Regional Performance Leaderboard",
+      "parity-title": "Gender Parity Index",
+      "parity-near": "Near Parity",
+      "parity-female": "Female Advantage",
+      "parity-male": "Male Advantage",
+      "parity-max": "Maximum Imbalance"
+    },
+    "insights": {
+      "section-title": "Insights & Highlights",
+      "section-subtitle": "Data-driven observations",
+      "badge-growth": "Growth",
+      "badge-demographics": "Demographics",
+      "badge-regional": "Regional",
+      "badge-stage": "Education Stage",
+      "insight-largest-region": "{{ region }} region recorded the highest student population.",
+      "insight-growth-rate": "Student enrollment {{ direction }} by {{ value }}% compared to 2016.",
+      "insight-female-share": "Female student enrollment accounts for {{ value }}% of all students.",
+      "insight-primary-share": "Primary education accounts for {{ value }}% of all students.",
+      "insight-peak-year": "Year {{ year }} recorded the highest YoY growth at {{ value }}%."
+    }
   }
 }

@@ -18,7 +18,7 @@
 
   .ds-section {
     @apply rounded-[var(--radius-xl)] p-4 md:p-6;
-    background-color: var(--color-surface-low);
+    background-color: var(--color-surface-high);
   }
 
   .ds-card {
@@ -404,7 +404,7 @@
     @apply flex items-center justify-between p-6 w-full h-full;
     background-color: var(--color-surface);
     border: 1px solid var(--color-outline-soft);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-soft);
     min-height: 8.75rem;
   }

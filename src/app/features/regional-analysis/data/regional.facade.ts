@@ -14,6 +14,7 @@ import {
   toScatterData,
 } from './regional.utils';
 import * as echarts from 'echarts';
+import { applyDataFilters } from '../../../shared/utils/data-filters.util';
 
 @Injectable({
   providedIn: 'root',
@@ -48,10 +49,9 @@ export class RegionalFacade {
     const filters = this.filterService.state();
     const effectiveYear = filters.year ?? DEFAULT_YEAR;
 
-    return raw.filter((record) => {
-      const matchYear = record.year === effectiveYear;
-      const matchStage = filters.stage === null || record.stage === filters.stage;
-      return matchYear && matchStage;
+    return applyDataFilters(raw, {
+      ...filters,
+      year: effectiveYear,
     });
   });
 

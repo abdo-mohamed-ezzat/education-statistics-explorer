@@ -12,6 +12,7 @@ import {
   computeTeacherStudentRatio,
   aggregateInfrastructure,
 } from './trends.utils';
+import { applyDataFilters } from '../../../shared/utils/data-filters.util';
 
 @Injectable({
   providedIn: 'root'
@@ -31,45 +32,31 @@ export class TrendsFacade {
 
   private readonly filterState = computed(() => this.filterService.state());
 
-  private filterDataScope(
-    data: EducationMasterData[],
-    filters: Partial<ReturnType<typeof this.filterService.state>>
-  ): EducationMasterData[] {
-    return data.filter((row) => {
-      if (filters.region !== undefined && filters.region !== null && row.region !== filters.region) return false;
-      if (filters.stage !== undefined && filters.stage !== null && row.stage !== filters.stage) return false;
-      if (filters.gender !== undefined && filters.gender !== null && row.gender !== filters.gender) return false;
-      return true;
-    });
-  }
 
-  // 1. timeSeriesData: Applies Region, Stage, Gender. IGNORES Year.
   private readonly timeSeriesFiltered = computed(() => {
     const data = this.rawData();
     const state = this.filterState();
-    return this.filterDataScope(data, {
+    return applyDataFilters(data, {
       region: state.region,
       stage: state.stage,
       gender: state.gender,
     });
   });
 
-  // 2. stageTrendData: Applies Region, Gender. IGNORES Year and Stage.
   private readonly stageTrendFiltered = computed(() => {
     const data = this.rawData();
     const state = this.filterState();
-    return this.filterDataScope(data, {
+    return applyDataFilters(data, {
       region: state.region,
       stage: null, // Ignore stage completely
       gender: state.gender,
     });
   });
 
-  // 3. regionTrendData: Applies Stage, Gender. IGNORES Year and Region.
   private readonly regionTrendFiltered = computed(() => {
     const data = this.rawData();
     const state = this.filterState();
-    return this.filterDataScope(data, {
+    return applyDataFilters(data, {
       region: null, // Ignore region completely
       stage: state.stage,
       gender: state.gender,

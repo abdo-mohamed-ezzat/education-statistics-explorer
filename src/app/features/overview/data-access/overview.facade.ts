@@ -12,36 +12,17 @@ import {
   GenderSplitItem,
 } from '../models/overview.model';
 import {
-  sumStudents,
   computeGrowthRate,
   computeYoySeries,
   buildLeaderboardRows,
-  splitByGender,
   computeParityIndex,
   buildInsightItems,
 } from './overview.utils';
 
-/**
- * Format a number with locale-aware separators and abbreviations for large numbers.
- */
-function formatStudentCount(value: number): string {
-  if (value >= 1_000_000) {
-    const millions = value / 1_000_000;
-    return millions.toFixed(2) + 'M';
-  } else if (value >= 1_000) {
-    const thousands = value / 1_000;
-    return thousands.toFixed(1) + 'K';
-  }
-  return value.toLocaleString('en-US');
-}
+import { applyDataFilters } from '../../../shared/utils/data-filters.util';
+import { formatCompactNumber, formatPercent } from '../../../shared/utils/formatters.util';
+import { sumMetric, splitByGender } from '../../../shared/utils/data-aggregation.util';
 
-/**
- * Format a percentage value.
- */
-function formatPercent(value: number): string {
-  const sign = value >= 0 ? '+' : '';
-  return sign + value.toFixed(1) + '%';
-}
 
 @Injectable({
   providedIn: 'root',
@@ -71,18 +52,6 @@ export class OverviewFacade {
     return Math.max(...data.map((r) => r.year));
   });
 
-  private filterDataScope(
-    data: EducationMasterData[],
-    filters: Partial<ReturnType<typeof this.filterService.state>>
-  ): EducationMasterData[] {
-    return data.filter((row) => {
-      if (filters.year !== undefined && filters.year !== null && row.year !== filters.year) return false;
-      if (filters.region !== undefined && filters.region !== null && row.region !== filters.region) return false;
-      if (filters.stage !== undefined && filters.stage !== null && row.stage !== filters.stage) return false;
-      if (filters.gender !== undefined && filters.gender !== null && row.gender !== filters.gender) return false;
-      return true;
-    });
-  }
 
   // Strictly filtered data (Total Students, Growth Rate)
   // If year is "All" (null), default to latestYear()
@@ -91,14 +60,14 @@ export class OverviewFacade {
     if (!data) return [];
     const state = this.filterState();
     const effectiveYear = state.year ?? this.latestYear();
-    return this.filterDataScope(data, { ...state, year: effectiveYear });
+    return applyDataFilters(data, { ...state, year: effectiveYear });
   });
 
   // Ignores Year filter
   private readonly yoyIsolatedData = computed(() => {
     const data = this.allData();
     if (!data) return [];
-    return this.filterDataScope(data, { ...this.filterState(), year: null });
+    return applyDataFilters(data, { ...this.filterState(), year: null });
   });
 
   // Ignores Region filter, but respects year (defaults to Latest Year)
@@ -107,7 +76,7 @@ export class OverviewFacade {
     if (!data) return [];
     const state = this.filterState();
     const effectiveYear = state.year ?? this.latestYear();
-    return this.filterDataScope(data, { ...state, region: null, year: effectiveYear });
+    return applyDataFilters(data, { ...state, region: null, year: effectiveYear });
   });
 
   // Ignores Gender filter, but respects year (defaults to Latest Year)
@@ -116,14 +85,14 @@ export class OverviewFacade {
     if (!data) return [];
     const state = this.filterState();
     const effectiveYear = state.year ?? this.latestYear();
-    return this.filterDataScope(data, { ...state, gender: null, year: effectiveYear });
+    return applyDataFilters(data, { ...state, gender: null, year: effectiveYear });
   });
 
   // Exact matching subset from 2016 (ignores current year filter, locks to 2016)
   private readonly baselineData2016 = computed(() => {
     const data = this.allData();
     if (!data) return [];
-    return this.filterDataScope(data, { ...this.filterState(), year: 2016 });
+    return applyDataFilters(data, { ...this.filterState(), year: 2016 });
   });
 
   // YoY series computed from yoyIsolatedData to show all years for current subset
@@ -204,9 +173,9 @@ export class OverviewFacade {
         throw new Error('Expected allData to be defined');
     }
 
-    const total = sumStudents(strictData);
+    const total = sumMetric(strictData, 'studentCount');
     const { maleCount, femaleCount } = splitByGender(genderData);
-    const genderTotal = sumStudents(genderData);
+    const genderTotal = sumMetric(genderData, 'studentCount');
     const leaderboard = buildLeaderboardRows(regionData, 7);
     const unfilteredLeaderboard = buildLeaderboardRows(regionData, 1);
     const parityIndex = computeParityIndex(maleCount, femaleCount);
@@ -244,7 +213,7 @@ export class OverviewFacade {
   ): KpiCardViewModel {
     return {
       labelKey: 'overview.kpi.total-students',
-      value: formatStudentCount(total),
+      value: formatCompactNumber(total),
       sublabelKey: 'overview.kpi.total-students-sub',
       sublabelParams: { startYear: minYear, endYear: maxYear },
       iconName: 'graduation-cap',
@@ -288,14 +257,14 @@ export class OverviewFacade {
 
     const male: GenderSplitItem = {
       labelKey: 'overview.kpi.male-students',
-      count: formatStudentCount(maleCount),
+      count: formatCompactNumber(maleCount),
       percent: malePercent.toFixed(1) + '%',
       iconName: 'user',
     };
 
     const female: GenderSplitItem = {
       labelKey: 'overview.kpi.female-students',
-      count: formatStudentCount(femaleCount),
+      count: formatCompactNumber(femaleCount),
       percent: femalePercent.toFixed(1) + '%',
       iconName: 'user',
     };
@@ -320,7 +289,7 @@ export class OverviewFacade {
       labelKey: 'overview.kpi.largest-region',
       value: top.region,
       sublabelKey: 'overview.kpi.largest-region-sub',
-      sublabelParams: { count: formatStudentCount(top.studentCount) },
+      sublabelParams: { count: formatCompactNumber(top.studentCount) },
       iconName: 'map-pin',
     };
   }

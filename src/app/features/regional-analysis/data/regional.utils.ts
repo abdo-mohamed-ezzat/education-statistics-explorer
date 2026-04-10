@@ -1,6 +1,7 @@
 import { EducationRecordData } from '../../../core/models/education-data.model';
 import { GeoJsonFeatureCollection } from '../../../core/models/geojson.model';
 import { RegionDataPoint, RegionProfile, RegionScatterDataItem } from './regional.model';
+import { splitByGender } from '../../../shared/utils/data-aggregation.util';
 
 /** Default year when global Year filter is null (All). */
 export const DEFAULT_YEAR = 2024;
@@ -99,8 +100,6 @@ export function computeRegionProfile(
   if (regionRecords.length === 0) return null;
 
   let totalStudents = 0;
-  let maleCount = 0;
-  let femaleCount = 0;
   let schoolsCount = 0;
   let teacherCount = 0;
 
@@ -108,13 +107,9 @@ export function computeRegionProfile(
     totalStudents += row.studentCount;
     schoolsCount += row.schoolCount;
     teacherCount += row.teacherCount;
-
-    if (row.gender === 'بنين') {
-      maleCount += row.studentCount;
-    } else if (row.gender === 'بنات') {
-      femaleCount += row.studentCount;
-    }
   }
+
+  const { maleCount, femaleCount } = splitByGender(regionRecords);
 
   const malePercent = totalStudents > 0 ? (maleCount / totalStudents) * 100 : 0;
   const femalePercent = totalStudents > 0 ? (femaleCount / totalStudents) * 100 : 0;

@@ -6,5 +6,7 @@
       class="h-full w-full"
       (chartClick)="onChartClick($event)"
     ></div>
+  } @else {
+    <app-loading-state />
   }
 </div>

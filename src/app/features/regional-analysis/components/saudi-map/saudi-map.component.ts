@@ -7,7 +7,7 @@ import {
   RegionMapDataItem,
   RegionScatterDataItem,
 } from '../../data/regional.model';
-
+import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 /**
  * ECharts typings use a discriminated union for EChartsOption that
  * cannot resolve the combination of `geo` + `map` series together.
@@ -18,7 +18,7 @@ type GeoMapOption = Record<string, unknown>;
 
 @Component({
   selector: 'app-saudi-map',
-  imports: [NgxEchartsDirective],
+  imports: [NgxEchartsDirective, LoadingStateComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './saudi-map.component.html',
 })

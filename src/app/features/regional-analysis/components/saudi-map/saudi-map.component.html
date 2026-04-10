@@ -6,5 +6,7 @@
       class="h-full w-full absolute inset-0"
       (chartClick)="onChartClick($event)"
     ></div>
+  } @else {
+    <app-loading-state />
   }
 </div>

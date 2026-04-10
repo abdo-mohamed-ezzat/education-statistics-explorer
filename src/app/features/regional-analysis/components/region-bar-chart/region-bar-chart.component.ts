@@ -3,10 +3,11 @@ import { PlatformService } from '../../../../core/services/platform.service';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import type { EChartsOption } from 'echarts';
 import { RegionDataPoint } from '../../data/regional.model';
+import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 
 @Component({
   selector: 'app-region-bar-chart',
-  imports: [NgxEchartsDirective],
+  imports: [NgxEchartsDirective, LoadingStateComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './region-bar-chart.component.html',
 })
@@ -54,9 +55,7 @@ export class RegionBarChartComponent {
         type: 'value',
         axisLabel: {
           formatter: (value: number) =>
-            value >= 1000000
-              ? (value / 1000000).toFixed(1) + 'M'
-              : (value / 1000).toFixed(0) + 'k',
+            value >= 1000000 ? (value / 1000000).toFixed(1) + 'M' : (value / 1000).toFixed(0) + 'k',
           color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
         },
         splitLine: {

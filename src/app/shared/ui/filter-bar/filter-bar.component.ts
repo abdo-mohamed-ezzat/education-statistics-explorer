@@ -3,6 +3,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { FilterConfig, FilterDimension, GlobalFilterState } from '../../models/global-filter.model';
 import { LucideAngularModule, FilterX } from 'lucide-angular';
 import { FilterSelectComponent, FilterSelectOption } from '../filter-select/filter-select.component';
+import { getTranslationKey } from '../../utils/data-translation.util';
 
 @Component({
   selector: 'app-filter-bar',
@@ -32,21 +33,21 @@ export class FilterBarComponent {
   public readonly regionOptions = computed<FilterSelectOption[]>(() => {
     return [
       { value: null, labelKey: 'filter.all' },
-      ...this.availableRegions().map(r => ({ value: r, label: r }))
+      ...this.availableRegions().map(r => ({ value: r, labelKey: getTranslationKey(r) }))
     ];
   });
 
   public readonly stageOptions = computed<FilterSelectOption[]>(() => {
     return [
       { value: null, labelKey: 'filter.all' },
-      ...this.availableStages().map(s => ({ value: s, label: s }))
+      ...this.availableStages().map(s => ({ value: s, labelKey: getTranslationKey(s) }))
     ];
   });
 
   public readonly genderOptions = computed<FilterSelectOption[]>(() => {
     return [
       { value: null, labelKey: 'filter.all' },
-      ...this.availableGenders().map(g => ({ value: g, label: g }))
+      ...this.availableGenders().map(g => ({ value: g, labelKey: getTranslationKey(g) }))
     ];
   });
 
@@ -76,3 +77,4 @@ export class FilterBarComponent {
     return s.year === null && s.region === null && s.stage === null && s.gender === null;
   }
 }
+// Trigger HMR recompile

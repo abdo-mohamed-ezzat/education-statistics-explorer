@@ -1,8 +1,9 @@
 @if (activeConfig().allowedDimensions.length > 0) {
-  <div class="flex flex-wrap items-center gap-2 lg:gap-4 w-full">
-    <div class="flex flex-wrap items-center gap-2 lg:gap-3">
+  <div class="flex items-center w-full min-w-0">
+    <div class="flex flex-nowrap md:flex-wrap items-center gap-2 lg:gap-3 w-full overflow-x-auto pb-2 -mb-2 pt-1 scrollbar-none snap-x focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none;">
       @if (hasDimension('year')) {
         <app-filter-select
+          class="shrink-0 snap-start"
           [label]="'filter.year' | transloco"
           [options]="yearOptions()"
           [value]="state().year"
@@ -12,6 +13,7 @@
 
       @if (hasDimension('region')) {
         <app-filter-select
+          class="shrink-0 snap-start"
           [label]="'filter.region' | transloco"
           [options]="regionOptions()"
           [value]="state().region"
@@ -21,6 +23,7 @@
 
       @if (hasDimension('stage')) {
         <app-filter-select
+          class="shrink-0 snap-start"
           [label]="'filter.stage' | transloco"
           [options]="stageOptions()"
           [value]="state().stage"
@@ -30,22 +33,25 @@
 
       @if (hasDimension('gender')) {
         <app-filter-select
+          class="shrink-0 snap-start"
           [label]="'filter.gender' | transloco"
           [options]="genderOptions()"
           [value]="state().gender"
           (valueChange)="onChangeFilter('gender', $event)"
         ></app-filter-select>
       }
-    </div>
 
-    @if (!isDefaultState()) {
-      <button
-        class="ds-icon-btn shrink-0"
-        (click)="onReset()"
-        [title]="'filter.reset' | transloco"
-      >
-        <lucide-icon [img]="ResetIcon" size="18"></lucide-icon>
-      </button>
-    }
+      @if (!isDefaultState()) {
+        <button
+          class="ds-icon-btn shrink-0 snap-start ms-1"
+          (click)="onReset()"
+          [title]="'filter.reset' | transloco"
+        >
+          <lucide-icon [img]="ResetIcon" size="18"></lucide-icon>
+        </button>
+      }
+    </div>
   </div>
 }
+
+<!-- Trigger HMR rebuild to sync the new model() signal output from FilterSelectComponent -->

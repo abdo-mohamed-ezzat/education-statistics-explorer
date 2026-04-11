@@ -1,13 +1,17 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, output } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { TranslocoService } from '@jsverse/transloco';
+import { getTranslationKey } from '../../../../shared/utils/data-translation.util';
 import { NgxEchartsDirective } from 'ngx-echarts';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { RegionDataPoint } from '../../data/regional.model';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 
 @Component({
   selector: 'app-region-bar-chart',
-  imports: [NgxEchartsDirective, LoadingStateComponent],
+  imports: [NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './region-bar-chart.component.html',
 })
@@ -19,12 +23,15 @@ export class RegionBarChartComponent {
   regionSelected = output<string>();
 
   private readonly platform = inject(PlatformService);
+  private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
   protected readonly isBrowser = this.platform.isBrowser;
 
   protected readonly chartOptions = computed<EChartsOption>(() => {
     const rawData = this.data();
     const currentTheme = this.theme();
     const currentActive = this.activeRegion();
+    const lang = this.prefs.language();
 
     const chartColor = currentTheme === 'dark' ? '#0f766e' : '#0d9488';
     const fallbackColor = currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7';
@@ -41,6 +48,7 @@ export class RegionBarChartComponent {
         type: 'category',
         data: rawData.map((d) => d.regionName),
         axisLabel: {
+          formatter: (value: string) => this.translocoService.translate(getTranslationKey(value)),
           color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
           interval: 0,
           rotate: 30,
@@ -86,6 +94,15 @@ export class RegionBarChartComponent {
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
+        formatter: (params: unknown) => {
+          const point = params as Array<{ name: string; value: number }>;
+          if (point && point[0]) {
+            const translatedName = this.translocoService.translate(getTranslationKey(point[0].name));
+            return `<div style="font-weight:bold;">${translatedName}</div>
+                    <div>${point[0].value.toLocaleString()}</div>`;
+          }
+          return '';
+        },
         backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
         borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
         textStyle: {
@@ -98,10 +115,12 @@ export class RegionBarChartComponent {
   // Use unknown to avoid the duplicate ECElementEvent type conflict
   // between echarts/types/dist/echarts and echarts/types/dist/shared.
   onChartClick(event: unknown): void {
-    const e = event as { name?: string; data?: { name?: string } | null };
-    const name = e?.name ?? e?.data?.name;
-    if (name) {
-      this.regionSelected.emit(name);
+    const e = event as { dataIndex?: number };
+    if (e.dataIndex !== undefined) {
+      const name = this.data()[e.dataIndex]?.regionName;
+      if (name) {
+        this.regionSelected.emit(name);
+      }
     }
   }
 }

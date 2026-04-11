@@ -1,12 +1,14 @@
-<div class="h-full relative min-h-[400px] w-full isolate">
-  @if (isBrowser()) {
-    <div
-      echarts
-      [options]="$any(chartOptions())"
-      class="h-full w-full absolute inset-0"
-      (chartClick)="onChartClick($event)"
-    ></div>
-  } @else {
-    <app-loading-state />
-  }
-</div>
+<app-chart-fullscreen-wrapper>
+  <div class="h-full relative min-h-[400px] w-full isolate">
+    @if (isBrowser()) {
+      <div
+        echarts
+        [options]="$any(chartOptions())"
+        class="h-full w-full absolute inset-0"
+        (chartClick)="onChartClick($event)"
+      ></div>
+    } @else {
+      <app-loading-state />
+    }
+  </div>
+</app-chart-fullscreen-wrapper>

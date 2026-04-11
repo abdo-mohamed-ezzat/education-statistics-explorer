@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, output } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { TranslocoService } from '@jsverse/transloco';
+import { getTranslationKey, DatasetTranslationMap } from '../../../../shared/utils/data-translation.util';
 import { NgxEchartsDirective } from 'ngx-echarts';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import {
   MapTooltipData,
   RegionDataPoint,
@@ -18,7 +22,7 @@ type GeoMapOption = Record<string, unknown>;
 
 @Component({
   selector: 'app-saudi-map',
-  imports: [NgxEchartsDirective, LoadingStateComponent],
+  imports: [NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './saudi-map.component.html',
 })
@@ -31,6 +35,8 @@ export class SaudiMapComponent {
   regionSelected = output<string>();
 
   private readonly platform = inject(PlatformService);
+  private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
   protected readonly isBrowser = this.platform.isBrowser;
 
   protected readonly chartOptions = computed<GeoMapOption>(() => {
@@ -39,6 +45,7 @@ export class SaudiMapComponent {
     const currentTheme = this.theme();
     const currentActive = this.activeRegion();
     const isDark = currentTheme === 'dark';
+    const lang = this.prefs.language();
 
     // Theme-aware color palette
     const areaColor = isDark ? '#1a2332' : '#e8f5e9';
@@ -54,29 +61,24 @@ export class SaudiMapComponent {
     const scatterColor = isDark ? '#34d399' : '#059669';
 
     // Map data items for the choropleth layer
-    const mapDataItems: RegionMapDataItem[] = rawData.map((d) => ({
-      name: d.regionName,
-      value: d.totalStudents,
-      totalStudents: d.totalStudents,
-      schoolCount: d.schoolCount,
-      teacherCount: d.teacherCount,
-    }));
-
-    // Highlight the active region via geo.regions
-    const highlightedRegions = currentActive
-      ? [
-          {
-            name: currentActive,
-            selected: true,
-            itemStyle: { areaColor: selectColor },
-            label: {
-              show: true,
-              color: isDark ? '#ffffff' : '#000000',
-              fontWeight: 'bold',
-            },
-          },
-        ]
-      : [];
+    const mapDataItems: any[] = rawData.map((d) => {
+      const isSelected = d.regionName === currentActive;
+      return {
+        name: d.regionName,
+        value: d.totalStudents,
+        totalStudents: d.totalStudents,
+        schoolCount: d.schoolCount,
+        teacherCount: d.teacherCount,
+        selected: isSelected,
+        ...(isSelected ? {
+          visualMap: false,
+          itemStyle: {
+            areaColor: selectColor,
+            color: selectColor
+          }
+        } : {})
+      };
+    });
 
     const maxStudents = Math.max(...rawData.map((d) => d.totalStudents), 1000);
 
@@ -85,6 +87,14 @@ export class SaudiMapComponent {
         map: 'SAUDI_ARABIA',
         roam: true,
         zoom: 1.2,
+        label: {
+          show: true,
+          color: textColor,
+          formatter: (params: any) => {
+             if (!params.name) return '';
+             return this.translocoService.translate(getTranslationKey(params.name));
+          }
+        },
         itemStyle: {
           areaColor,
           borderColor,
@@ -98,7 +108,6 @@ export class SaudiMapComponent {
           itemStyle: { areaColor: selectColor },
           label: { show: true, color: '#ffffff', fontWeight: 'bold' },
         },
-        regions: highlightedRegions,
       },
       tooltip: {
         trigger: 'item',
@@ -109,14 +118,20 @@ export class SaudiMapComponent {
           const p = params as { seriesType?: string; data?: MapTooltipData };
           const d = p?.data;
           if (!d?.name) return '';
+          
+          const translatedName = this.translocoService.translate(getTranslationKey(d.name));
+          const translatedStudents = this.translocoService.translate('trends.charts.students');
+          const translatedSchools = this.translocoService.translate('trends.charts.schools');
+          const translatedTeachers = this.translocoService.translate('trends.charts.teachers');
+
           if (p.seriesType === 'effectScatter') {
-            return `<div style="font-weight:bold;">${d.name}</div>
-                    <div>Students: ${d.value?.[2]?.toLocaleString()}</div>`;
+            return `<div style="font-weight:bold;">${translatedName}</div>
+                    <div>${translatedStudents}: ${d.value?.[2]?.toLocaleString()}</div>`;
           }
-          return `<div style="font-weight:bold; margin-bottom:4px;">${d.name}</div>
-                  <div>Students: ${d.totalStudents?.toLocaleString()}</div>
-                  <div>Schools: ${d.schoolCount?.toLocaleString()}</div>
-                  <div>Teachers: ${d.teacherCount?.toLocaleString()}</div>`;
+          return `<div style="font-weight:bold; margin-bottom:4px;">${translatedName}</div>
+                  <div>${translatedStudents}: ${d.totalStudents?.toLocaleString()}</div>
+                  <div>${translatedSchools}: ${d.schoolCount?.toLocaleString()}</div>
+                  <div>${translatedTeachers}: ${d.teacherCount?.toLocaleString()}</div>`;
         },
       },
       visualMap: {

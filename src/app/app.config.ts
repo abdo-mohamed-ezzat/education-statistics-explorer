@@ -12,10 +12,15 @@ import { echarts } from './core/charts/echarts.config';
 import { provideEchartsCore } from 'ngx-echarts';
 
 /**
- * Reads the persisted language from localStorage before Angular bootstraps.
- * This is the single source of truth initializer that prevents the Transloco
- * flicker (Arabic → English) by setting the active lang synchronously before
- * any component renders.
+ * Client-side safety net: sets the active Transloco language from localStorage
+ * BEFORE Angular bootstraps/hydrates, preventing any client-side flash if the
+ * SSR-rendered language doesn't match the stored preference.
+ *
+ * Primary flash prevention is handled server-side via the `edu_lang` cookie
+ * in `app.config.server.ts` — this initializer is the browser fallback.
+ *
+ * Reads only — PreferencesService.effect() is the single write source of truth
+ * for both localStorage and the edu_lang cookie.
  */
 function initTranslocoLang(transloco: TranslocoService) {
   return () => {
@@ -54,8 +59,9 @@ export const appConfig: ApplicationConfig = {
       loader: TranslocoHttpLoader,
     }),
     provideTranslocoLocale(),
-    // Single source of truth: read edu_stats_preferences and set Transloco lang
-    // BEFORE any component renders, eliminating the ar → en flicker.
+    // Browser-side safety net: aligns Transloco with stored preference before
+    // any component mounts. The real flash elimination happens server-side via
+    // the edu_lang cookie parsed in app.config.server.ts.
     {
       provide: APP_INITIALIZER,
       useFactory: initTranslocoLang,

@@ -1,15 +1,17 @@
-<div class="ds-chart-card h-full flex flex-col">
-  <h3 class="ds-title-sm mb-1">{{ 'overview.analytics.parity-title' | transloco }}</h3>
-  @if (isBrowser()) {
-    <div
-      echarts
-      [options]="chartOptions()"
-      [theme]="theme()"
-      role="img"
-      [attr.aria-label]="'overview.analytics.parity-title' | transloco"
-      class="flex-grow min-h-[300px]"
-    ></div>
-  } @else {
-    <app-loading-state class="flex-grow min-h-[300px]" />
-  }
-</div>
+<app-chart-fullscreen-wrapper>
+  <div class="ds-chart-card h-full flex flex-col">
+    <h3 class="ds-title-sm mb-1">{{ 'overview.analytics.parity-title' | transloco }}</h3>
+    @if (isBrowser()) {
+      <div
+        echarts
+        [options]="chartOptions()"
+        [theme]="theme()"
+        role="img"
+        [attr.aria-label]="'overview.analytics.parity-title' | transloco"
+        class="flex-grow min-h-[300px]"
+      ></div>
+    } @else {
+      <app-loading-state class="flex-grow min-h-[300px]" />
+    }
+  </div>
+</app-chart-fullscreen-wrapper>

@@ -1,14 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { YoyGrowthPoint } from '../../models/overview.model';
 
 @Component({
   selector: 'app-yoy-bar-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './yoy-bar-chart.component.html',
 })
@@ -17,11 +19,14 @@ export class YoyBarChartComponent {
   theme = input.required<'light' | 'dark'>();
   
   private readonly platform = inject(PlatformService);
+  private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
   protected readonly isBrowser = this.platform.isBrowser;
 
   protected readonly chartOptions = computed<EChartsOption>(() => {
     const data = this.series();
     const currentTheme = this.theme();
+    const lang = this.prefs.language();
 
     // Get chart color from CSS variable at runtime
     const chartColor = this.getCssVariable('--chart-1', currentTheme);
@@ -86,7 +91,8 @@ export class YoyBarChartComponent {
             const idx = point[0].dataIndex;
             const d = data[idx];
             if (d.growthPercent === 0 && idx === 0) {
-              return `Baseline Year (${d.year})`;
+              const baseLang = this.translocoService.translate('trends.charts.baseline-year');
+              return `${baseLang} (${d.year})`;
             }
             return `${d.year}: ${d.growthPercent.toFixed(1)}%`;
           }

@@ -34,6 +34,8 @@ export interface KpiCardViewModel {
   sublabelParams?: Record<string, string | number>;
   trend?: 'up' | 'down' | 'neutral';
   iconName?: string;
+  customSvgUrl?: string;
+  actionUrl?: string;
 }
 
 /**

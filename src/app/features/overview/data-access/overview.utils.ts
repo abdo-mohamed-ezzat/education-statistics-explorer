@@ -165,7 +165,8 @@ export function computeParityIndex(
 export function buildInsightItems(
   latestYearData: EducationMasterData[],
   yoySeries: YoyGrowthPoint[],
-  allData: EducationMasterData[]
+  allData: EducationMasterData[],
+  translateFn: (key: string) => string
 ): InsightItem[] {
   const insights: InsightItem[] = [];
   const total = sumMetric(latestYearData, 'studentCount');
@@ -180,7 +181,7 @@ export function buildInsightItems(
       badgeLabelKey: 'overview.insights.badge-regional',
       category: 'regional',
       textKey: 'overview.insights.insight-largest-region',
-      textParams: { region: topRegion.region, value: regionPercent },
+      textParams: { region: translateFn(topRegion.region), value: regionPercent },
     });
   }
 
@@ -189,7 +190,7 @@ export function buildInsightItems(
   const baselineData = allData.filter((r) => r.year === 2016);
   const growthRate = computeGrowthRate(latestYearData, baselineData);
   if (growthRate !== null) {
-    const direction = growthRate >= 0 ? 'increased' : 'decreased';
+    const direction = growthRate >= 0 ? translateFn('overview.insights.increased') : translateFn('overview.insights.decreased');
     const absGrowth = Math.abs(growthRate).toFixed(1);
     insights.push({
       badgeLabelKey: 'overview.insights.badge-growth',

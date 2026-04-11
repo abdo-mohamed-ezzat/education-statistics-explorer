@@ -22,7 +22,15 @@
   </div>
 
   <div class="ds-kpi-card-icon-container">
-    @if (vm().iconName) {
+    @if (vm().customSvgUrl) {
+      @if (vm().actionUrl) {
+        <a [routerLink]="vm().actionUrl" class="ds-kpi-map-svg-link" aria-label="Go to Regional Analysis">
+          <img [src]="vm().customSvgUrl" alt="" aria-hidden="true" />
+        </a>
+      } @else {
+        <img [src]="vm().customSvgUrl" alt="KPI Icon" class="w-20 h-20 object-contain opacity-40" />
+      }
+    } @else if (vm().iconName) {
       <lucide-icon
         [img]="getIcon(vm().iconName)"
         aria-hidden="true"

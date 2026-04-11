@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TranslocoPipe } from '@jsverse/transloco';
+import { RouterLink } from '@angular/router';
 import { LucideAngularModule, TrendingUp, TrendingDown, GraduationCap, MapPin } from 'lucide-angular';
 import { KpiCardViewModel } from '../../models/overview.model';
 
 @Component({
   selector: 'app-kpi-card',
-  imports: [TranslocoPipe, LucideAngularModule],
+  imports: [TranslocoPipe, LucideAngularModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './kpi-card.component.html',
 })

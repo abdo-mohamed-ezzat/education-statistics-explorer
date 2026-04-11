@@ -2,6 +2,8 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { EducationDataService } from '../../../core/services/education-data.service';
 import { GlobalFilterService } from '../../../core/services/global-filter.service';
+import { PreferencesService } from '../../../core/services/preferences.service';
+import { TranslocoService } from '@jsverse/transloco';
 import { EducationMasterData } from '../../../core/models/education-data.model';
 import { ViewState, ViewStateHelpers } from '../../../shared/models/view-state.model';
 import {
@@ -20,6 +22,7 @@ import {
 } from './overview.utils';
 
 import { applyDataFilters } from '../../../shared/utils/data-filters.util';
+import { getTranslationKey } from '../../../shared/utils/data-translation.util';
 import { formatCompactNumber, formatPercent } from '../../../shared/utils/formatters.util';
 import { sumMetric, splitByGender } from '../../../shared/utils/data-aggregation.util';
 
@@ -30,6 +33,8 @@ import { sumMetric, splitByGender } from '../../../shared/utils/data-aggregation
 export class OverviewFacade {
   private readonly dataService = inject(EducationDataService);
   private readonly filterService = inject(GlobalFilterService);
+  private readonly translocoService = inject(TranslocoService);
+  private readonly prefs = inject(PreferencesService);
 
   // Error state tracking
   private readonly errorState = signal<{ hasError: boolean; message: string }>({
@@ -144,6 +149,8 @@ export class OverviewFacade {
       return ViewStateHelpers.empty();
     }
 
+    const lang = this.prefs.language(); // React to language change
+
     // Build the view model
     return ViewStateHelpers.content(this.buildViewModel());
   });
@@ -182,7 +189,12 @@ export class OverviewFacade {
     const yoy = this.yoySeries();
     
     // Insights must use explicitly unfiltered point-in-time data to avoid mathematically invalid historical sums
-    const insights = buildInsightItems(this.unfilteredLatestYearData(), this.unfilteredYoySeries(), allData);
+    const insights = buildInsightItems(
+      this.unfilteredLatestYearData(),
+      this.unfilteredYoySeries(),
+      allData,
+      (key: string) => this.translocoService.translate(getTranslationKey(key))
+    );
 
     // Get year range for sub-label
     const years = allData.map((r) => r.year);
@@ -285,12 +297,14 @@ export class OverviewFacade {
     }
 
     const top = leaderboard[0];
+    const translatedRegion = this.translocoService.translate(getTranslationKey(top.region));
     return {
       labelKey: 'overview.kpi.largest-region',
-      value: top.region,
+      value: translatedRegion,
       sublabelKey: 'overview.kpi.largest-region-sub',
       sublabelParams: { count: formatCompactNumber(top.studentCount) },
-      iconName: 'map-pin',
+      customSvgUrl: '/images/map.svg',
+      actionUrl: '/regional-analysis',
     };
   }
 }

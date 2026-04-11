@@ -4,12 +4,13 @@ import { TranslocoPipe } from '@jsverse/transloco';
 import { LucideAngularModule, User } from 'lucide-angular';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { ParityIndexViewModel } from '../../models/overview.model';
 
 @Component({
   selector: 'app-parity-gauge',
-  imports: [TranslocoPipe, LucideAngularModule, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, LucideAngularModule, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './parity-gauge.component.html',
 })

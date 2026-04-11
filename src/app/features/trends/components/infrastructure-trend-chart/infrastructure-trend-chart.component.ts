@@ -1,15 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
 import { PreferencesService } from '../../../../core/services/preferences.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { InfrastructurePoint } from '../../data/trends.model';
 
 @Component({
   selector: 'app-infrastructure-trend-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './infrastructure-trend-chart.component.html',
 })
@@ -19,6 +20,7 @@ export class InfrastructureTrendChartComponent {
   
   private readonly platform = inject(PlatformService);
   private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
 
   protected readonly isBrowser = this.platform.isBrowser;
 
@@ -26,6 +28,7 @@ export class InfrastructureTrendChartComponent {
     const data = this.series();
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
+    const lang = this.prefs.language();
 
     const primaryColor = this.getCssVariable('--color-primary', currentTheme);
     const secondaryColor = this.getCssVariable('--color-secondary', currentTheme);
@@ -33,7 +36,10 @@ export class InfrastructureTrendChartComponent {
     return {
       rtl: isRtl,
       legend: {
-        data: ['Schools', 'Teachers'],
+        data: [
+          this.translocoService.translate('trends.charts.schools'),
+          this.translocoService.translate('trends.charts.teachers'),
+        ],
         textStyle: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
         top: 0
       },
@@ -53,7 +59,7 @@ export class InfrastructureTrendChartComponent {
       yAxis: [
         {
           type: 'value',
-          name: 'Schools',
+          name: this.translocoService.translate('trends.charts.schools'),
           position: isRtl ? 'right' : 'left',
           axisLine: { show: true, lineStyle: { color: primaryColor } },
           axisLabel: { formatter: (val: number) => this.formatValue(val) },
@@ -61,7 +67,7 @@ export class InfrastructureTrendChartComponent {
         },
         {
           type: 'value',
-          name: 'Teachers',
+          name: this.translocoService.translate('trends.charts.teachers'),
           position: isRtl ? 'left' : 'right',
           axisLine: { show: true, lineStyle: { color: secondaryColor } },
           axisLabel: { formatter: (val: number) => this.formatValue(val) },
@@ -70,7 +76,7 @@ export class InfrastructureTrendChartComponent {
       ],
       series: [
         {
-          name: 'Schools',
+          name: this.translocoService.translate('trends.charts.schools'),
           type: 'line',
           yAxisIndex: 0,
           data: data.map((d) => d.schools),
@@ -78,7 +84,7 @@ export class InfrastructureTrendChartComponent {
           lineStyle: { width: 3 }
         },
         {
-          name: 'Teachers',
+          name: this.translocoService.translate('trends.charts.teachers'),
           type: 'line',
           yAxisIndex: 1,
           data: data.map((d) => d.teachers),

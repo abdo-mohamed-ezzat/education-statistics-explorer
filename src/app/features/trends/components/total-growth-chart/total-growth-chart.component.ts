@@ -4,6 +4,7 @@ import { PreferencesService } from '../../../../core/services/preferences.servic
 import { TranslocoPipe } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { TrendPoint } from '../../data/trends.model';
 
@@ -11,7 +12,7 @@ import * as echarts from 'echarts';
 
 @Component({
   selector: 'app-total-growth-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './total-growth-chart.component.html',
 })

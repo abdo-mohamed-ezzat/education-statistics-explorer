@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { TranslocoPipe } from '@jsverse/transloco';
 import { TrendsFacade } from '../data/trends.facade';
 import { PreferencesService } from '../../../core/services/preferences.service';
 import { ViewState } from '../../../shared/models/view-state.model';
@@ -17,7 +16,6 @@ import { TeacherRatioChartComponent } from '../components/teacher-ratio-chart/te
 @Component({
   selector: 'app-trends-page',
   imports: [
-    TranslocoPipe,
     LoadingStateComponent,
     ErrorStateComponent,
     EmptyStateComponent,
@@ -44,7 +42,10 @@ export class TrendsPageComponent {
     return state as { status: 'error'; error: Error | string };
   }
 
-  protected asContent(state: ViewState<TrendsViewModel>): { status: 'content'; data: TrendsViewModel } {
+  protected asContent(state: ViewState<TrendsViewModel>): {
+    status: 'content';
+    data: TrendsViewModel;
+  } {
     return state as { status: 'content'; data: TrendsViewModel };
   }
 }

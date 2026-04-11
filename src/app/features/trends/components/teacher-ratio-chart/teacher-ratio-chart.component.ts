@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
 import { PreferencesService } from '../../../../core/services/preferences.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { RatioPoint } from '../../data/trends.model';
 
@@ -12,7 +13,7 @@ import * as echarts from 'echarts';
 
 @Component({
   selector: 'app-teacher-ratio-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './teacher-ratio-chart.component.html',
 })
@@ -22,6 +23,7 @@ export class TeacherRatioChartComponent {
   
   private readonly platform = inject(PlatformService);
   private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
 
   protected readonly isBrowser = this.platform.isBrowser;
 
@@ -29,6 +31,7 @@ export class TeacherRatioChartComponent {
     const data = this.series();
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
+    const lang = this.prefs.language();
 
     const chartColor = this.getCssVariable('--color-tertiary', currentTheme);
 
@@ -59,7 +62,7 @@ export class TeacherRatioChartComponent {
       },
       series: [
         {
-          name: 'Ratio',
+          name: this.translocoService.translate('trends.charts.ratio'),
           type: 'line',
           data: data.map(d => d.ratio),
           itemStyle: { color: chartColor },

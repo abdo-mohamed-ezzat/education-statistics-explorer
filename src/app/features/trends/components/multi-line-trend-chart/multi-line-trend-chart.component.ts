@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
 import { PreferencesService } from '../../../../core/services/preferences.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { MultiSeriesTrend } from '../../data/trends.model';
+import { getTranslationKey } from '../../../../shared/utils/data-translation.util';
 
 @Component({
   selector: 'app-multi-line-trend-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './multi-line-trend-chart.component.html',
 })
@@ -20,6 +22,8 @@ export class MultiLineTrendChartComponent {
   
   private readonly platform = inject(PlatformService);
   private readonly prefs = inject(PreferencesService);
+
+  private readonly translocoService = inject(TranslocoService);
 
   protected readonly isBrowser = this.platform.isBrowser;
 
@@ -37,12 +41,13 @@ export class MultiLineTrendChartComponent {
     ];
 
     const allYears = Array.from(new Set(data.flatMap(s => s.data.map(d => d.year)))).sort();
+    const lang = this.prefs.language(); // triggers recompute on language change
     
     return {
       rtl: isRtl,
       color: colors,
       legend: {
-        data: data.map(d => d.name),
+        data: data.map(d => this.translocoService.translate(getTranslationKey(d.name))),
         textStyle: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
         top: 0,
         type: 'scroll'
@@ -76,7 +81,7 @@ export class MultiLineTrendChartComponent {
             return match ? match.value : null;
         });
         return {
-          name: series.name,
+          name: this.translocoService.translate(getTranslationKey(series.name)),
           type: 'line',
           smooth: true,
           data: points as (number|null)[],

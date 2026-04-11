@@ -27,7 +27,30 @@
     "stage": "Stage",
     "gender": "Gender",
     "all": "All",
-    "reset": "Reset Filters"
+    "reset": "Reset Filters",
+    "gender.male": "Male",
+    "gender.female": "Female",
+    "stage.primary": "Primary Stage",
+    "stage.intermediate": "Intermediate Stage",
+    "stage.secondary": "Secondary Stage",
+    "stage.kindergarten": "Kindergarten",
+    "region.riyadh": "Riyadh",
+    "region.makkah": "Makkah",
+    "region.madinah": "Madinah",
+    "region.eastern_province": "Eastern Province",
+    "region.aseer": "Aseer",
+    "region.qassim": "Qassim",
+    "region.tabuk": "Tabuk",
+    "region.hail": "Hail",
+    "region.northern_borders": "Northern Borders",
+    "region.jazan": "Jazan",
+    "region.najran": "Najran",
+    "region.al_baha": "Al Baha",
+    "region.al_jouf": "Al Jouf"
+  },
+  "shared": {
+    "enter-fullscreen": "Enter fullscreen",
+    "exit-fullscreen": "Exit fullscreen"
   },
   "overview": {
     "page-title": "Overview",
@@ -62,6 +85,8 @@
       "badge-stage": "Education Stage",
       "insight-largest-region": "{{ region }} region recorded the highest student population.",
       "insight-growth-rate": "Student enrollment {{ direction }} by {{ value }}% compared to 2016.",
+      "increased": "increased",
+      "decreased": "decreased",
       "insight-female-share": "Female student enrollment accounts for {{ value }}% of all students.",
       "insight-primary-share": "Primary education accounts for {{ value }}% of all students.",
       "insight-peak-year": "Year {{ year }} recorded the highest YoY growth at {{ value }}%."
@@ -74,7 +99,12 @@
       "stage-growth": "Growth by Education Stage",
       "region-growth": "Growth by Region",
       "teacher-ratio": "Student-to-Teacher Ratio",
-      "infrastructure-growth": "Infrastructure Growth"
+      "infrastructure-growth": "Infrastructure Growth",
+      "schools": "Schools",
+      "teachers": "Teachers",
+      "students": "Students",
+      "ratio": "Ratio",
+      "baseline-year": "Baseline Year"
     }
   },
   "regional-analysis": {

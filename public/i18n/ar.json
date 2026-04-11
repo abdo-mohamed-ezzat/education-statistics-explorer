@@ -27,7 +27,30 @@
     "stage": "المرحلة",
     "gender": "الجنس",
     "all": "الكل",
-    "reset": "إعادة تعيين الفلاتر"
+    "reset": "إعادة تعيين الفلاتر",
+    "gender.male": "بنين",
+    "gender.female": "بنات",
+    "stage.primary": "المرحلة الإبتدائية",
+    "stage.intermediate": "المرحلة المتوسطة",
+    "stage.secondary": "المرحلة الثانوية",
+    "stage.kindergarten": "رياض الأطفال",
+    "region.riyadh": "الرياض",
+    "region.makkah": "مكة المكرمة",
+    "region.madinah": "المدينة المنورة",
+    "region.eastern_province": "الشرقية",
+    "region.aseer": "عسير",
+    "region.qassim": "القصيم",
+    "region.tabuk": "تبوك",
+    "region.hail": "حائل",
+    "region.northern_borders": "الحدود الشمالية",
+    "region.jazan": "جازان",
+    "region.najran": "نجران",
+    "region.al_baha": "الباحة",
+    "region.al_jouf": "الجوف"
+  },
+  "shared": {
+    "enter-fullscreen": "وضع ملء الشاشة",
+    "exit-fullscreen": "الخروج من ملء الشاشة"
   },
   "overview": {
     "page-title": "نظرة عامة",
@@ -62,6 +85,8 @@
       "badge-stage": "المرحلة التعليمية",
       "insight-largest-region": "سجلت منطقة {{ region }} أعلى عدد من الطلاب.",
       "insight-growth-rate": "{{ direction }} تسجيل الطلاب بنسبة {{ value }}% مقارنة بعام 2016.",
+      "increased": "ارتفع",
+      "decreased": "انخفض",
       "insight-female-share": "تشكل الطالبات الإناث {{ value }}% من إجمالي المسجلين.",
       "insight-primary-share": "تمثل المرحلة الابتدائية {{ value }}% من إجمالي الطلاب.",
       "insight-peak-year": "سجل عام {{ year }} أعلى معدل نمو سنوي بنسبة {{ value }}%."
@@ -74,7 +99,12 @@
       "stage-growth": "النمو حسب المرحلة التعليمية",
       "region-growth": "النمو حسب المنطقة",
       "teacher-ratio": "نسبة الطلاب للمعلمين",
-      "infrastructure-growth": "نمو البنية التحتية"
+      "infrastructure-growth": "نمو البنية التحتية",
+      "schools": "المدارس",
+      "teachers": "المعلمين",
+      "students": "الطلاب",
+      "ratio": "النسبة",
+      "baseline-year": "سنة التأسيس"
     }
   },
   "regional-analysis": {

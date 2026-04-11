@@ -437,7 +437,55 @@
   }
 
   .ds-kpi-card-icon-container {
-    @apply flex-shrink-0 ml-4 flex items-center justify-center pointer-events-none;
+    @apply flex-shrink-0 ml-4 flex items-center justify-center;
+  }
+
+  .ds-kpi-map-svg-link {
+    display: block;
+    cursor: pointer;
+    animation: kpi-map-pulse 2.8s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    will-change: transform, filter, opacity;
+  }
+
+  .ds-kpi-map-svg-link img {
+    width: 5.5rem;
+    height: 5.5rem;
+    object-fit: contain;
+    display: block;
+  }
+
+  .ds-kpi-map-svg-link:hover {
+    transform: translateY(-4px) scale(1.1);
+    animation: kpi-map-hover-in 0.35s ease forwards;
+  }
+
+  .ds-kpi-map-svg-link:active {
+    transform: translateY(-1px) scale(1.03);
+  }
+
+  @keyframes kpi-map-pulse {
+    0%, 100% {
+      opacity: 0.45;
+      filter: drop-shadow(0 0 1px color-mix(in srgb, var(--color-primary) 20%, transparent));
+    }
+    50% {
+      opacity: 0.82;
+      filter:
+        drop-shadow(0 0 4px color-mix(in srgb, var(--color-primary) 55%, transparent))
+        drop-shadow(0 0 10px color-mix(in srgb, var(--color-primary) 25%, transparent));
+    }
+  }
+
+  @keyframes kpi-map-hover-in {
+    to {
+      opacity: 1;
+      filter:
+        drop-shadow(0 0 1px var(--color-primary))
+        drop-shadow(0 0 4px var(--color-primary))
+        drop-shadow(0 0 12px color-mix(in srgb, var(--color-primary) 65%, transparent))
+        drop-shadow(0 8px 20px color-mix(in srgb, var(--color-primary) 35%, transparent));
+    }
   }
 
   .ds-kpi-card-icon {
@@ -573,5 +621,61 @@
   .ds-insight-badge-stage {
     background-color: var(--color-secondary-soft);
     color: var(--color-secondary);
+  }
+
+  /* --- Fullscreen Chart Wrapper --- */
+  .ds-chart-fullscreen-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ds-chart-fullscreen-active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    padding: var(--spacing-4);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  /* Force all children (except the button) to fill space in fullscreen */
+  .ds-chart-fullscreen-active > :not(.ds-chart-fullscreen-btn) {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .ds-chart-fullscreen-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; /* Fallback */
+    inset-inline-end: 0.5rem;
+    inset-inline-start: auto;
+    z-index: 10;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background-color: var(--color-surface-lowest);
+    color: var(--color-on-surface-soft);
+    border: none;
+    cursor: pointer;
+    opacity: 0.25;
+    transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .ds-chart-fullscreen-wrapper:hover .ds-chart-fullscreen-btn,
+  .ds-chart-fullscreen-active .ds-chart-fullscreen-btn {
+    opacity: 1;
+  }
+
+  .ds-chart-fullscreen-btn:hover {
+    background-color: var(--color-surface-highest);
+    transform: scale(1.1);
+    color: var(--color-primary);
   }
 }

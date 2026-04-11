@@ -18,9 +18,9 @@ import { NavItem } from '../../models/nav-item.model';
   imports: [RouterLink, RouterLinkActive, TranslocoModule, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'block w-full h-16 md:h-full bg-transparent',
+    class: 'block w-full md:h-full bg-transparent',
   },
-  templateUrl: './nav.component.html'
+  templateUrl: './nav.component.html',
 })
 export class NavComponent {
   public navItems: NavItem[] = [

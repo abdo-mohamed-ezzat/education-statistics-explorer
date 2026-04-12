@@ -56,7 +56,7 @@
     "page-title": "Overview",
     "kpi": {
       "total-students": "Total Students",
-      "total-students-sub": "{{ startYear }} – {{ endYear }} | All Years",
+      "total-students-sub": "{{ scope }}",
       "growth-rate": "Growth Rate",
       "growth-rate-sub": "since {{ baseYear }}",
       "gender-distribution": "Gender Distribution",

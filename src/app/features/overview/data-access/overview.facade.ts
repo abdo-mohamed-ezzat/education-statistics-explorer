@@ -223,11 +223,36 @@ export class OverviewFacade {
     minYear: number,
     maxYear: number
   ): KpiCardViewModel {
+    const filters = this.filterState();
+    const trans = (key: string) => this.translocoService.translate(key);
+
+    // 1. Year Scope
+    const yearPart = filters.year 
+      ? `${filters.year}` 
+      : `${minYear} – ${maxYear}`;
+
+    // 2. Filter Scope (Region, Stage, Gender)
+    const contextParts: string[] = [];
+    
+    if (filters.region) {
+      contextParts.push(trans(getTranslationKey(filters.region)));
+    }
+    if (filters.stage) {
+      contextParts.push(trans(getTranslationKey(filters.stage)));
+    }
+    if (filters.gender) {
+      contextParts.push(trans(getTranslationKey(filters.gender)));
+    }
+
+    const contextPart = contextParts.length > 0 
+      ? contextParts.join(' | ') 
+      : trans('filter.all');
+
     return {
       labelKey: 'overview.kpi.total-students',
       value: formatCompactNumber(total),
       sublabelKey: 'overview.kpi.total-students-sub',
-      sublabelParams: { startYear: minYear, endYear: maxYear },
+      sublabelParams: { scope: `${yearPart} | ${contextPart}` },
       iconName: 'graduation-cap',
     };
   }

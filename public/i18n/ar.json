@@ -56,7 +56,7 @@
     "page-title": "نظرة عامة",
     "kpi": {
       "total-students": "إجمالي الطلاب",
-      "total-students-sub": "{{ startYear }} – {{ endYear }} | جميع السنوات",
+      "total-students-sub": "{{ scope }}",
       "growth-rate": "معدل النمو",
       "growth-rate-sub": "منذ {{ baseYear }}",
       "gender-distribution": "التوزيع حسب الجنس",

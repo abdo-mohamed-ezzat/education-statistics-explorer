@@ -5,6 +5,7 @@ import { TranslocoService } from '@jsverse/transloco';
 import { getTranslationKey, DatasetTranslationMap } from '../../../../shared/utils/data-translation.util';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
+import { getChartThemeColors } from '../../../../shared/utils/formatters.util';
 import {
   MapTooltipData,
   RegionDataPoint,
@@ -46,18 +47,15 @@ export class SaudiMapComponent {
     const currentActive = this.activeRegion();
     const isDark = currentTheme === 'dark';
     const lang = this.prefs.language();
+    const themeColors = getChartThemeColors(currentTheme);
 
-    // Theme-aware color palette
+    // Theme-aware color palette for map-specific features
     const areaColor = isDark ? '#1a2332' : '#e8f5e9';
     const borderColor = isDark ? '#2d3748' : '#ffffff';
     const emphasisColor = isDark ? '#fbbf24' : '#f59e0b';
     const selectColor = isDark ? '#059669' : '#10b981';
     const lowColor = isDark ? '#115e59' : '#ccfbf1';
     const highColor = isDark ? '#0f766e' : '#0d9488';
-    const textColor = isDark ? '#e2e8f0' : '#1a202c';
-    const subtextColor = isDark ? '#a1a1aa' : '#52525b';
-    const tooltipBg = isDark ? '#27272a' : '#ffffff';
-    const tooltipBorder = isDark ? '#3f3f46' : '#e4e4e7';
     const scatterColor = isDark ? '#34d399' : '#059669';
 
     // Map data items for the choropleth layer
@@ -80,7 +78,8 @@ export class SaudiMapComponent {
       };
     });
 
-    const maxStudents = Math.max(...rawData.map((d) => d.totalStudents), 1000);
+    const MAX_STUDENTS_FALLBACK = 1000;
+    const maxStudents = Math.max(...rawData.map((d) => d.totalStudents), MAX_STUDENTS_FALLBACK);
 
     return {
       geo: {
@@ -89,7 +88,7 @@ export class SaudiMapComponent {
         zoom: 1.2,
         label: {
           show: true,
-          color: textColor,
+          color: themeColors.tooltipText, // High contrast for names
           formatter: (params: any) => {
              if (!params.name) return '';
              return this.translocoService.translate(getTranslationKey(params.name));
@@ -102,7 +101,7 @@ export class SaudiMapComponent {
         },
         emphasis: {
           itemStyle: { areaColor: emphasisColor },
-          label: { show: true, color: textColor },
+          label: { show: true, color: themeColors.tooltipText },
         },
         select: {
           itemStyle: { areaColor: selectColor },
@@ -111,9 +110,9 @@ export class SaudiMapComponent {
       },
       tooltip: {
         trigger: 'item',
-        backgroundColor: tooltipBg,
-        borderColor: tooltipBorder,
-        textStyle: { color: textColor },
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
+        textStyle: { color: themeColors.tooltipText },
         formatter: (params: unknown) => {
           const p = params as { seriesType?: string; data?: MapTooltipData };
           const d = p?.data;
@@ -140,7 +139,7 @@ export class SaudiMapComponent {
         min: 0,
         max: maxStudents,
         text: ['High', 'Low'],
-        textStyle: { color: subtextColor },
+        textStyle: { color: themeColors.axisLabel },
         inRange: { color: [lowColor, highColor] },
         calculable: true,
         left: 'left',

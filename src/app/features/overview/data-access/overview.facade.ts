@@ -4,7 +4,7 @@ import { EducationDataService } from '../../../core/services/education-data.serv
 import { GlobalFilterService } from '../../../core/services/global-filter.service';
 import { PreferencesService } from '../../../core/services/preferences.service';
 import { TranslocoService } from '@jsverse/transloco';
-import { EducationMasterData } from '../../../core/models/education-data.model';
+import { EducationMasterData, DATASET_BASELINE_YEAR, DATASET_FALLBACK_LATEST_YEAR } from '../../../core/models/education-data.model';
 import { ViewState, ViewStateHelpers } from '../../../shared/models/view-state.model';
 import {
   OverviewViewModel,
@@ -53,7 +53,7 @@ export class OverviewFacade {
   // Find the latest year in the dataset
   private readonly latestYear = computed(() => {
     const data = this.allData();
-    if (!data || data.length === 0) return 2024; // Fallback to 2024 if no data
+    if (!data || data.length === 0) return DATASET_FALLBACK_LATEST_YEAR; // Fallback if no data
     return Math.max(...data.map((r) => r.year));
   });
 
@@ -93,11 +93,11 @@ export class OverviewFacade {
     return applyDataFilters(data, { ...state, gender: null, year: effectiveYear });
   });
 
-  // Exact matching subset from 2016 (ignores current year filter, locks to 2016)
-  private readonly baselineData2016 = computed(() => {
+  // Exact matching subset from baseline year (ignores current year filter)
+  private readonly primaryBaselineData = computed(() => {
     const data = this.allData();
     if (!data) return [];
-    return applyDataFilters(data, { ...this.filterState(), year: 2016 });
+    return applyDataFilters(data, { ...this.filterState(), year: DATASET_BASELINE_YEAR });
   });
 
   // YoY series computed from yoyIsolatedData to show all years for current subset
@@ -173,7 +173,7 @@ export class OverviewFacade {
     const strictData = this.strictFilteredData();
     const regionData = this.regionIsolatedData();
     const genderData = this.genderIsolatedData();
-    const baselineData = this.baselineData2016();
+    const baselineData = this.primaryBaselineData();
     const allData = this.allData();
 
     if (!allData) {
@@ -243,7 +243,7 @@ export class OverviewFacade {
         labelKey: 'overview.kpi.growth-rate',
         value: 'N/A',
         sublabelKey: 'overview.kpi.growth-rate-sub',
-        sublabelParams: { baseYear: 2016 },
+        sublabelParams: { baseYear: DATASET_BASELINE_YEAR },
         iconName: 'trending-up',
       };
     }
@@ -253,7 +253,7 @@ export class OverviewFacade {
       labelKey: 'overview.kpi.growth-rate',
       value: formatPercent(growthRate),
       sublabelKey: 'overview.kpi.growth-rate-sub',
-      sublabelParams: { baseYear: 2016 },
+      sublabelParams: { baseYear: DATASET_BASELINE_YEAR },
       trend,
       iconName: 'trending-up',
     };

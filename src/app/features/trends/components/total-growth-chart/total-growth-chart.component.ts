@@ -7,7 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { TrendPoint } from '../../data/trends.model';
-import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
+import { formatChartValue, getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 import * as echarts from 'echarts';
 
@@ -30,6 +30,7 @@ export class TotalGrowthChartComponent {
     const data = this.series();
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
+    const themeColors = getChartThemeColors(currentTheme);
 
     const chartColor = getCssVariable('--color-primary', currentTheme);
 
@@ -47,11 +48,11 @@ export class TotalGrowthChartComponent {
         boundaryGap: false,
         data: data.map((d) => String(d.year)),
         axisLabel: {
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         axisLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -60,11 +61,11 @@ export class TotalGrowthChartComponent {
         min: 'dataMin',
         axisLabel: {
           formatter: (val: number) => formatChartValue(val),
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -97,10 +98,10 @@ export class TotalGrowthChartComponent {
           const point = params[0];
           return `${point.axisValue}: ${point.value.toLocaleString('en-US')}`;
         },
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
         textStyle: {
-          color: currentTheme === 'dark' ? '#fafafa' : '#18181b',
+          color: themeColors.tooltipText,
         },
       },
     };

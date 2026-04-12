@@ -7,7 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { InfrastructurePoint } from '../../data/trends.model';
-import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
+import { formatChartValue, getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-infrastructure-trend-chart',
@@ -30,6 +30,7 @@ export class InfrastructureTrendChartComponent {
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
     const lang = this.prefs.language();
+    const themeColors = getChartThemeColors(currentTheme);
 
     const primaryColor = getCssVariable('--color-primary', currentTheme);
     const secondaryColor = getCssVariable('--color-secondary', currentTheme);
@@ -41,7 +42,7 @@ export class InfrastructureTrendChartComponent {
           this.translocoService.translate('trends.charts.schools'),
           this.translocoService.translate('trends.charts.teachers'),
         ],
-        textStyle: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
+        textStyle: { color: themeColors.axisLabel },
         top: 0
       },
       grid: {
@@ -54,8 +55,8 @@ export class InfrastructureTrendChartComponent {
       xAxis: {
         type: 'category',
         data: data.map((d) => String(d.year)),
-        axisLabel: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
-        axisLine: { lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' } },
+        axisLabel: { color: themeColors.axisLabel },
+        axisLine: { lineStyle: { color: themeColors.gridLine } },
       },
       yAxis: [
         {
@@ -64,7 +65,7 @@ export class InfrastructureTrendChartComponent {
           position: isRtl ? 'right' : 'left',
           axisLine: { show: true, lineStyle: { color: primaryColor } },
           axisLabel: { formatter: (val: number) => formatChartValue(val) },
-          splitLine: { lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' } },
+          splitLine: { lineStyle: { color: themeColors.gridLine } },
         },
         {
           type: 'value',
@@ -95,9 +96,9 @@ export class InfrastructureTrendChartComponent {
       ],
       tooltip: {
         trigger: 'axis',
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
-        textStyle: { color: currentTheme === 'dark' ? '#fafafa' : '#18181b' },
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
+        textStyle: { color: themeColors.tooltipText },
       },
     };
   });

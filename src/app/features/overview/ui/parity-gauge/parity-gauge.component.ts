@@ -1,12 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { LucideAngularModule, User } from 'lucide-angular';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
+import { getChartThemeColors } from '../../../../shared/utils/formatters.util';
 import type { EChartsOption } from 'echarts';
 import { ParityIndexViewModel } from '../../models/overview.model';
+import { GPI_THRESHOLD_MALE, GPI_THRESHOLD_FEMALE } from '../../../../core/models/education-data.model';
 
 @Component({
   selector: 'app-parity-gauge',
@@ -19,6 +22,8 @@ export class ParityGaugeComponent {
   theme = input.required<'light' | 'dark'>();
   
   private readonly platform = inject(PlatformService);
+  private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
   protected readonly isBrowser = this.platform.isBrowser;
 
   // Icon reference for template
@@ -28,34 +33,30 @@ export class ParityGaugeComponent {
     const data = this.vm();
     const currentTheme = this.theme();
     const gpiValue = data.ratio;
-    const labelTranslation = data.labelKey; // The transloco key
-    // We can fetch the actual title text via the labelKey in component if we want, or just let transloco format it in template,
-    // Since we are inside the chart, we might just pass a generalized status or leave the detail text without the raw transloco key.
-    // The previous implementation inferred it from logic here, so let's preserve the display logic here for the chart.
+    const themeColors = getChartThemeColors(currentTheme);
 
     // Range definitions
-    const maleRangeMax = 0.95;
-    const nearParityRangeMax = 1.05;
+    const maleRangeMax = GPI_THRESHOLD_MALE;
+    const nearParityRangeMax = GPI_THRESHOLD_FEMALE;
 
-    // Colors
-    const maleColor = '#6CC2BD';     // Teal
-    const nearParityColor = '#5F5B68'; // Grey
-    const femaleColor = '#B17D23';   // Bronze
+    // Colors - Named for the Gauge
+    const colorMale = '#6CC2BD';       // Teal
+    const colorNearParity = '#5F5B68'; // Grey
+    const colorFemale = '#B17D23';     // Bronze
 
-    // Determine dynamic label (logic preserved, but can be managed by Transloco via DOM if needed)
+    // Determine dynamic label and color
     let dynamicLabel = '';
-    let labelColor = currentTheme === 'dark' ? '#94a3b8' : '#64748b'; // slate-400 / slate-500
+    let labelColor = themeColors.axisLabel;
     
-    // Notice the difference vs maleRangeMax logic. Using 0.95 and 1.05 as breakpoints now
     if (gpiValue < maleRangeMax) {
-      dynamicLabel = 'Male Advantage';
-      labelColor = maleColor;
+      dynamicLabel = this.translocoService.translate('overview.analytics.parity-male');
+      labelColor = colorMale;
     } else if (gpiValue >= maleRangeMax && gpiValue <= nearParityRangeMax) {
-      dynamicLabel = 'Near Parity';
-      labelColor = nearParityColor;
+      dynamicLabel = this.translocoService.translate('overview.analytics.parity-near');
+      labelColor = colorNearParity;
     } else {
-      dynamicLabel = 'Female Advantage';
-      labelColor = femaleColor;
+      dynamicLabel = this.translocoService.translate('overview.analytics.parity-female');
+      labelColor = colorFemale;
     }
 
     return {
@@ -88,9 +89,9 @@ export class ParityGaugeComponent {
             lineStyle: {
               width: 15,
               color: [
-                [0.475, maleColor],       // 0 to 0.95 (0.95 / 2 = 0.475)
-                [0.525, nearParityColor], // 0.95 to 1.05 (1.05 / 2 = 0.525)
-                [1, femaleColor]        // 1.05 to 2.0 (2 / 2 = 1.0)
+                [0.475, colorMale],       // 0 to 0.95 (0.95 / 2 = 0.475)
+                [0.525, colorNearParity], // 0.95 to 1.05 (1.05 / 2 = 0.525)
+                [1, colorFemale]          // 1.05 to 2.0 (2 / 2 = 1.0)
               ]
             }
           },
@@ -109,7 +110,7 @@ export class ParityGaugeComponent {
             }
           },
           axisLabel: {
-            color: currentTheme === 'dark' ? '#cbd5e1' : '#475569',
+            color: themeColors.axisLabel,
             distance: 25,
             fontSize: 12
           },
@@ -123,10 +124,8 @@ export class ParityGaugeComponent {
             fontSize: 34,
             offsetCenter: [0, '0%'],
             valueAnimation: true,
-            formatter: function (value: number) {
-              return value.toFixed(2);
-            },
-            color: currentTheme === 'dark' ? '#f8fafc' : '#1e293b',
+            formatter: (value: number) => value.toFixed(2),
+            color: themeColors.tooltipText,
             fontWeight: 'bold'
           },
           data: [

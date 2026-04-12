@@ -1,27 +1,20 @@
-import { EducationRecordData } from '../../../core/models/education-data.model';
+import { 
+  EducationRecordData, 
+  DatasetRegion, 
+  DATASET_FALLBACK_LATEST_YEAR,
+  REGION_CENTERS,
+  LITERACY_THRESHOLD_LARGE,
+  LITERACY_THRESHOLD_MEDIUM,
+  LITERACY_BASE_RATE
+} from '../../../core/models/education-data.model';
 import { GeoJsonFeatureCollection } from '../../../core/models/geojson.model';
 import { RegionDataPoint, RegionProfile, RegionScatterDataItem } from './regional.model';
 import { splitByGender } from '../../../shared/utils/data-aggregation.util';
 
 /** Default year when global Year filter is null (All). */
-export const DEFAULT_YEAR = 2024;
+export const DEFAULT_YEAR = DATASET_FALLBACK_LATEST_YEAR;
 
-/** Approximate geographic center coordinates for each Saudi region. */
-export const REGION_CENTERS: Record<string, [number, number]> = {
-  'الرياض': [46.7, 24.7],
-  'مكة المكرمة': [39.8, 21.4],
-  'المدينة المنورة': [39.6, 24.5],
-  'الشرقية': [49.6, 25.4],
-  'عسير': [42.5, 18.2],
-  'القصيم': [43.8, 26.3],
-  'تبوك': [36.6, 28.4],
-  'حائل': [41.7, 27.5],
-  'الحدود الشمالية': [42.5, 30.9],
-  'جازان': [42.6, 17.0],
-  'نجران': [44.2, 17.5],
-  'الباحة': [41.5, 20.0],
-  'الجوف': [40.0, 29.8],
-};
+// Note: REGION_CENTERS removed from here as it it is now in the core model.
 
 /**
  * Normalizes GeoJSON feature names to Arabic so ECharts can match
@@ -135,11 +128,10 @@ export function computeRegionProfile(
   // false positive if there is no previous year data at all.
   const newSchools = prevYearRecords.length > 0 ? Math.max(0, schoolsCount - prevSchoolsCount) : 0;
 
-  // Derived mock values for fields not natively in the dataset
-  const literacyBase = 95;
+  // Derived mock values for literacy rates based on student population size
   const literacyRate = Math.min(
     99.8,
-    literacyBase + (totalStudents > 500000 ? 3.4 : totalStudents > 200000 ? 2.1 : 0.8),
+    LITERACY_BASE_RATE + (totalStudents > LITERACY_THRESHOLD_LARGE ? 3.4 : totalStudents > LITERACY_THRESHOLD_MEDIUM ? 2.1 : 0.8),
   );
 
   return {

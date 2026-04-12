@@ -7,7 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { RatioPoint } from '../../data/trends.model';
-import { getCssVariable } from '../../../../shared/utils/formatters.util';
+import { getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 // Use echarts for gradient
 import * as echarts from 'echarts';
@@ -33,6 +33,7 @@ export class TeacherRatioChartComponent {
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
     const lang = this.prefs.language();
+    const themeColors = getChartThemeColors(currentTheme);
 
     const chartColor = getCssVariable('--color-tertiary', currentTheme);
 
@@ -48,17 +49,17 @@ export class TeacherRatioChartComponent {
       xAxis: {
         type: 'category',
         data: data.map((d) => String(d.year)),
-        axisLabel: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
-        axisLine: { lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' } },
+        axisLabel: { color: themeColors.axisLabel },
+        axisLine: { lineStyle: { color: themeColors.gridLine } },
       },
       yAxis: {
         type: 'value',
         min: 'dataMin', // To show minor fluctuations clearly
         axisLabel: {
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
-          lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' },
+          lineStyle: { color: themeColors.gridLine },
         },
       },
       series: [
@@ -85,9 +86,9 @@ export class TeacherRatioChartComponent {
           const point = params[0];
           return `${point.axisValue}: 1 / ${point.value.toFixed(1)}`; 
         },
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
-        textStyle: { color: currentTheme === 'dark' ? '#fafafa' : '#18181b' },
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
+        textStyle: { color: themeColors.tooltipText },
       },
     };
   });

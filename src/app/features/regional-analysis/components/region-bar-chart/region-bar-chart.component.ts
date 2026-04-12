@@ -8,6 +8,7 @@ import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-ful
 import type { EChartsOption } from 'echarts';
 import { RegionDataPoint } from '../../data/regional.model';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { getChartThemeColors, getCssVariable } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-region-bar-chart',
@@ -33,8 +34,9 @@ export class RegionBarChartComponent {
     const currentActive = this.activeRegion();
     const lang = this.prefs.language();
 
-    const chartColor = currentTheme === 'dark' ? '#0f766e' : '#0d9488';
-    const fallbackColor = currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7';
+    const themeColors = getChartThemeColors(currentTheme);
+    const chartColor = getCssVariable('--color-primary', currentTheme);
+    const fallbackColor = themeColors.gridLine;
 
     return {
       grid: {
@@ -49,13 +51,13 @@ export class RegionBarChartComponent {
         data: rawData.map((d) => d.regionName),
         axisLabel: {
           formatter: (value: string) => this.translocoService.translate(getTranslationKey(value)),
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
           interval: 0,
           rotate: 30,
         },
         axisLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -64,11 +66,11 @@ export class RegionBarChartComponent {
         axisLabel: {
           formatter: (value: number) =>
             value >= 1000000 ? (value / 1000000).toFixed(1) + 'M' : (value / 1000).toFixed(0) + 'k',
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -103,10 +105,10 @@ export class RegionBarChartComponent {
           }
           return '';
         },
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
         textStyle: {
-          color: currentTheme === 'dark' ? '#fafafa' : '#18181b',
+          color: themeColors.tooltipText,
         },
       },
     };

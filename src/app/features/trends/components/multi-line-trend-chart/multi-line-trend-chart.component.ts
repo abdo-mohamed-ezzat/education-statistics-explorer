@@ -8,7 +8,7 @@ import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-ful
 import type { EChartsOption } from 'echarts';
 import { MultiSeriesTrend } from '../../data/trends.model';
 import { getTranslationKey } from '../../../../shared/utils/data-translation.util';
-import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
+import { formatChartValue, getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-multi-line-trend-chart',
@@ -32,6 +32,7 @@ export class MultiLineTrendChartComponent {
     const data = this.multiSeriesData();
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
+    const themeColors = getChartThemeColors(currentTheme);
 
     const colors = [
       getCssVariable('--chart-1', currentTheme),
@@ -49,7 +50,7 @@ export class MultiLineTrendChartComponent {
       color: colors,
       legend: {
         data: data.map(d => this.translocoService.translate(getTranslationKey(d.name))),
-        textStyle: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
+        textStyle: { color: themeColors.axisLabel },
         top: 0,
         type: 'scroll'
       },
@@ -63,17 +64,17 @@ export class MultiLineTrendChartComponent {
       xAxis: {
         type: 'category',
         data: allYears.map(String),
-        axisLabel: { color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b' },
-        axisLine: { lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' } },
+        axisLabel: { color: themeColors.axisLabel },
+        axisLine: { lineStyle: { color: themeColors.gridLine } },
       },
       yAxis: {
         type: 'value',
         axisLabel: {
           formatter: (val: number) => formatChartValue(val),
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
-          lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' },
+          lineStyle: { color: themeColors.gridLine },
         },
       },
       series: data.map((series) => {
@@ -93,9 +94,9 @@ export class MultiLineTrendChartComponent {
       }),
       tooltip: {
         trigger: 'axis',
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
-        textStyle: { color: currentTheme === 'dark' ? '#fafafa' : '#18181b' },
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
+        textStyle: { color: themeColors.tooltipText },
       },
     };
   });

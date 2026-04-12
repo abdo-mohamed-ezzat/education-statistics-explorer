@@ -37,6 +37,9 @@ export function formatChartValue(value: number): string {
   return String(value);
 }
 
+const SSR_FALLBACK_DARK = '#6366f1';
+const SSR_FALLBACK_LIGHT = '#4f46e5';
+
 /**
  * Read a CSS custom property from document root at runtime.
  * SSR-safe: returns a fallback indigo color when document is not available.
@@ -46,10 +49,25 @@ export function formatChartValue(value: number): string {
  */
 export function getCssVariable(name: string, theme: 'light' | 'dark'): string {
   if (typeof document === 'undefined') {
-    return theme === 'dark' ? '#6366f1' : '#4f46e5';
+    return theme === 'dark' ? SSR_FALLBACK_DARK : SSR_FALLBACK_LIGHT;
   }
   return (
     getComputedStyle(document.documentElement).getPropertyValue(name).trim() ||
-    (theme === 'dark' ? '#6366f1' : '#4f46e5')
+    (theme === 'dark' ? SSR_FALLBACK_DARK : SSR_FALLBACK_LIGHT)
   );
+}
+
+/**
+ * Resolves shared ECharts hex codes for text, grid lines, and tooltips
+ * to keep charts visually aligned and DRY.
+ */
+export function getChartThemeColors(theme: 'light' | 'dark') {
+  const dark = theme === 'dark';
+  return {
+    axisLabel: dark ? '#a1a1aa' : '#52525b',
+    gridLine: dark ? '#3f3f46' : '#e4e4e7',
+    tooltipBackground: dark ? '#27272a' : '#ffffff',
+    tooltipBorder: dark ? '#3f3f46' : '#e4e4e7',
+    tooltipText: dark ? '#fafafa' : '#18181b',
+  };
 }

@@ -42,7 +42,7 @@ export class RegionalFacade {
    * always shows every region. It only applies Year & Stage.
    *
    * **Default Year Rule:** when the global Year filter is null ("All"),
-   * the dashboard defaults to year 2024 (latest dataset year).
+   * the dashboard defaults to DATASET_FALLBACK_LATEST_YEAR.
    */
   public readonly nationalData = computed(() => {
     const raw = this.records();

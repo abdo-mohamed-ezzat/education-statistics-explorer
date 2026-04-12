@@ -7,7 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { YoyGrowthPoint } from '../../models/overview.model';
-import { getCssVariable } from '../../../../shared/utils/formatters.util';
+import { getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-yoy-bar-chart',
@@ -28,6 +28,7 @@ export class YoyBarChartComponent {
     const data = this.series();
     const currentTheme = this.theme();
     const lang = this.prefs.language();
+    const themeColors = getChartThemeColors(currentTheme);
 
     // Get chart color from CSS variable at runtime
     const chartColor = getCssVariable('--chart-1', currentTheme);
@@ -44,11 +45,11 @@ export class YoyBarChartComponent {
         type: 'category',
         data: data.map((d) => String(d.year)),
         axisLabel: {
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         axisLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -56,11 +57,11 @@ export class YoyBarChartComponent {
         type: 'value',
         axisLabel: {
           formatter: '{value}%',
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -99,10 +100,10 @@ export class YoyBarChartComponent {
           }
           return '';
         },
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
         textStyle: {
-          color: currentTheme === 'dark' ? '#fafafa' : '#18181b',
+          color: themeColors.tooltipText,
         },
       },
     };

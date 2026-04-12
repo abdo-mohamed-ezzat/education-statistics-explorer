@@ -1,4 +1,4 @@
-import { EducationMasterData } from '../../../core/models/education-data.model';
+import { EducationMasterData, DatasetStage, DATASET_BASELINE_YEAR } from '../../../core/models/education-data.model';
 import {
   YoyGrowthPoint,
   LeaderboardRow,
@@ -185,9 +185,9 @@ export function buildInsightItems(
     });
   }
 
-  // 2. Growth - Growth rate compared to 2016
-  // baselineData MUST come from allData since latestYearData only contains ~2024
-  const baselineData = allData.filter((r) => r.year === 2016);
+  // 2. Growth - Growth rate compared to baseline
+  // baselineData MUST come from allData since latestYearData only contains latest year subset
+  const baselineData = allData.filter((r) => r.year === DATASET_BASELINE_YEAR);
   const growthRate = computeGrowthRate(latestYearData, baselineData);
   if (growthRate !== null) {
     const direction = growthRate >= 0 ? translateFn('overview.insights.increased') : translateFn('overview.insights.decreased');
@@ -212,10 +212,7 @@ export function buildInsightItems(
   });
 
   // 4. Education Stage - Primary education share
-  const primaryData = latestYearData.filter((r) => {
-    const s = r.stage.toLowerCase();
-    return s.includes('ابتدائي') || s.includes('إبتدائي') || s.includes('primary');
-  });
+  const primaryData = latestYearData.filter((r) => r.stage === DatasetStage.Primary);
   const primaryTotal = sumMetric(primaryData, 'studentCount');
   const primaryPercent =
     total > 0 ? ((primaryTotal / total) * 100).toFixed(1) : '0';

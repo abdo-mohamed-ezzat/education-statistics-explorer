@@ -7,6 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { TrendPoint } from '../../data/trends.model';
+import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
 
 import * as echarts from 'echarts';
 
@@ -30,7 +31,7 @@ export class TotalGrowthChartComponent {
     const currentTheme = this.theme();
     const isRtl = this.prefs.direction() === 'rtl';
 
-    const chartColor = this.getCssVariable('--color-primary', currentTheme);
+    const chartColor = getCssVariable('--color-primary', currentTheme);
 
     return {
       rtl: isRtl,
@@ -58,7 +59,7 @@ export class TotalGrowthChartComponent {
         type: 'value',
         min: 'dataMin',
         axisLabel: {
-          formatter: (val: number) => this.formatValue(val),
+          formatter: (val: number) => formatChartValue(val),
           color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
         },
         splitLine: {
@@ -104,15 +105,4 @@ export class TotalGrowthChartComponent {
       },
     };
   });
-
-  private formatValue(value: number): string {
-    if (value >= 1_000_000) return (value / 1_000_000).toFixed(1) + 'M';
-    if (value >= 1_000) return (value / 1_000).toFixed(1) + 'K';
-    return String(value);
-  }
-
-  private getCssVariable(name: string, theme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') return theme === 'dark' ? '#6366f1' : '#4f46e5';
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || (theme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

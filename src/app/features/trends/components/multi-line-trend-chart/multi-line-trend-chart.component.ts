@@ -8,6 +8,7 @@ import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-ful
 import type { EChartsOption } from 'echarts';
 import { MultiSeriesTrend } from '../../data/trends.model';
 import { getTranslationKey } from '../../../../shared/utils/data-translation.util';
+import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-multi-line-trend-chart',
@@ -33,11 +34,11 @@ export class MultiLineTrendChartComponent {
     const isRtl = this.prefs.direction() === 'rtl';
 
     const colors = [
-      this.getCssVariable('--chart-1', currentTheme),
-      this.getCssVariable('--chart-2', currentTheme),
-      this.getCssVariable('--chart-3', currentTheme),
-      this.getCssVariable('--chart-4', currentTheme),
-      this.getCssVariable('--chart-5', currentTheme)
+      getCssVariable('--chart-1', currentTheme),
+      getCssVariable('--chart-2', currentTheme),
+      getCssVariable('--chart-3', currentTheme),
+      getCssVariable('--chart-4', currentTheme),
+      getCssVariable('--chart-5', currentTheme)
     ];
 
     const allYears = Array.from(new Set(data.flatMap(s => s.data.map(d => d.year)))).sort();
@@ -68,7 +69,7 @@ export class MultiLineTrendChartComponent {
       yAxis: {
         type: 'value',
         axisLabel: {
-          formatter: (val: number) => this.formatValue(val),
+          formatter: (val: number) => formatChartValue(val),
           color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
         },
         splitLine: {
@@ -99,14 +100,4 @@ export class MultiLineTrendChartComponent {
     };
   });
 
-  private formatValue(value: number): string {
-    if (value >= 1_000_000) return (value / 1_000_000).toFixed(1) + 'M';
-    if (value >= 1_000) return (value / 1_000).toFixed(1) + 'K';
-    return String(value);
-  }
-
-  private getCssVariable(name: string, fallbackTheme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') return fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5';
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || (fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

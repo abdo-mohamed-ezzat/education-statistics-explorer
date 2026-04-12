@@ -7,6 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { YoyGrowthPoint } from '../../models/overview.model';
+import { getCssVariable } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-yoy-bar-chart',
@@ -29,7 +30,7 @@ export class YoyBarChartComponent {
     const lang = this.prefs.language();
 
     // Get chart color from CSS variable at runtime
-    const chartColor = this.getCssVariable('--chart-1', currentTheme);
+    const chartColor = getCssVariable('--chart-1', currentTheme);
 
     return {
       grid: {
@@ -107,13 +108,4 @@ export class YoyBarChartComponent {
     };
   });
 
-  private getCssVariable(name: string, theme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') {
-      // SSR fallback
-      return theme === 'dark' ? '#6366f1' : '#4f46e5';
-    }
-    const root = document.documentElement;
-    const value = getComputedStyle(root).getPropertyValue(name).trim();
-    return value || (theme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

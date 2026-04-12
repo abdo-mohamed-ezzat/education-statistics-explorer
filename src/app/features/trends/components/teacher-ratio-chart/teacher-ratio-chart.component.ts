@@ -7,6 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { RatioPoint } from '../../data/trends.model';
+import { getCssVariable } from '../../../../shared/utils/formatters.util';
 
 // Use echarts for gradient
 import * as echarts from 'echarts';
@@ -33,7 +34,7 @@ export class TeacherRatioChartComponent {
     const isRtl = this.prefs.direction() === 'rtl';
     const lang = this.prefs.language();
 
-    const chartColor = this.getCssVariable('--color-tertiary', currentTheme);
+    const chartColor = getCssVariable('--color-tertiary', currentTheme);
 
     return {
       rtl: isRtl,
@@ -91,8 +92,4 @@ export class TeacherRatioChartComponent {
     };
   });
 
-  private getCssVariable(name: string, fallbackTheme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') return fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5';
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || (fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

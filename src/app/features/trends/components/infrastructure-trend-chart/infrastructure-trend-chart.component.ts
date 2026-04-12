@@ -7,6 +7,7 @@ import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loadi
 import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { InfrastructurePoint } from '../../data/trends.model';
+import { formatChartValue, getCssVariable } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-infrastructure-trend-chart',
@@ -30,8 +31,8 @@ export class InfrastructureTrendChartComponent {
     const isRtl = this.prefs.direction() === 'rtl';
     const lang = this.prefs.language();
 
-    const primaryColor = this.getCssVariable('--color-primary', currentTheme);
-    const secondaryColor = this.getCssVariable('--color-secondary', currentTheme);
+    const primaryColor = getCssVariable('--color-primary', currentTheme);
+    const secondaryColor = getCssVariable('--color-secondary', currentTheme);
 
     return {
       rtl: isRtl,
@@ -62,7 +63,7 @@ export class InfrastructureTrendChartComponent {
           name: this.translocoService.translate('trends.charts.schools'),
           position: isRtl ? 'right' : 'left',
           axisLine: { show: true, lineStyle: { color: primaryColor } },
-          axisLabel: { formatter: (val: number) => this.formatValue(val) },
+          axisLabel: { formatter: (val: number) => formatChartValue(val) },
           splitLine: { lineStyle: { color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7' } },
         },
         {
@@ -70,7 +71,7 @@ export class InfrastructureTrendChartComponent {
           name: this.translocoService.translate('trends.charts.teachers'),
           position: isRtl ? 'left' : 'right',
           axisLine: { show: true, lineStyle: { color: secondaryColor } },
-          axisLabel: { formatter: (val: number) => this.formatValue(val) },
+          axisLabel: { formatter: (val: number) => formatChartValue(val) },
           splitLine: { show: false },
         }
       ],
@@ -101,14 +102,5 @@ export class InfrastructureTrendChartComponent {
     };
   });
 
-  private formatValue(value: number): string {
-    if (value >= 1_000_000) return (value / 1_000_000).toFixed(1) + 'M';
-    if (value >= 1_000) return (value / 1_000).toFixed(1) + 'K';
-    return String(value);
-  }
 
-  private getCssVariable(name: string, fallbackTheme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') return fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5';
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || (fallbackTheme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

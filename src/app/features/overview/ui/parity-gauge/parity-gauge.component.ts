@@ -140,18 +140,5 @@ export class ParityGaugeComponent {
     };
   });
 
-  private getCssVariable(name: string, theme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') {
-      // SSR fallback colors
-      const fallbacks: Record<string, string> = {
-        '--chart-2': theme === 'dark' ? '#22c55e' : '#16a34a',
-        '--chart-3': theme === 'dark' ? '#f472b6' : '#ec4899',
-        '--chart-4': theme === 'dark' ? '#6366f1' : '#4f46e5',
-      };
-      return fallbacks[name] || '#6366f1';
-    }
-    const root = document.documentElement;
-    const value = getComputedStyle(root).getPropertyValue(name).trim();
-    return value || '#6366f1';
-  }
 }
+

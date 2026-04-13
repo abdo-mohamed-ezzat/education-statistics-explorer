@@ -1,4 +1,4 @@
-import { EducationMasterData } from '../../../core/models/education-data.model';
+import { EducationMasterData, DatasetStage, DATASET_BASELINE_YEAR } from '../../../core/models/education-data.model';
 import {
   YoyGrowthPoint,
   LeaderboardRow,
@@ -7,12 +7,9 @@ import {
   InsightCategory,
 } from '../models/overview.model';
 
-/**
- * Sum all studentCount values in the data array.
- */
-export function sumStudents(data: EducationMasterData[]): number {
-  return data.reduce((sum, row) => sum + row.studentCount, 0);
-}
+import { sumMetric, splitByGender } from '../../../shared/utils/data-aggregation.util';
+import { formatNumber } from '../../../shared/utils/formatters.util';
+
 
 /**
  * Compute growth rate percentage vs. unfiltered baseline year.
@@ -22,8 +19,8 @@ export function computeGrowthRate(
   filteredData: EducationMasterData[],
   baselineData: EducationMasterData[]
 ): number | null {
-  const baselineTotal = sumStudents(baselineData);
-  const filteredTotal = sumStudents(filteredData);
+  const baselineTotal = sumMetric(baselineData, 'studentCount');
+  const filteredTotal = sumMetric(filteredData, 'studentCount');
 
   if (baselineTotal === 0) {
     return null;
@@ -77,12 +74,6 @@ export function computeYoySeries(data: EducationMasterData[]): YoyGrowthPoint[] 
   return series;
 }
 
-/**
- * Format a number with locale-aware separators.
- */
-function formatNumber(value: number): string {
-  return value.toLocaleString('en-US');
-}
 
 /**
  * Build top-N leaderboard rows from filtered data.
@@ -127,27 +118,6 @@ export function buildLeaderboardRows(
   });
 }
 
-/**
- * Split student count by gender label.
- * Handles both Arabic ('ذكور'/'إناث') and English ('male'/'female') labels.
- */
-export function splitByGender(
-  data: EducationMasterData[]
-): { maleCount: number; femaleCount: number } {
-  let maleCount = 0;
-  let femaleCount = 0;
-
-  for (const row of data) {
-    const gender = row.gender.toLowerCase();
-    if (gender === 'بنين' || gender === 'male') {
-      maleCount += row.studentCount;
-    } else if (gender === 'بنات' || gender === 'female') {
-      femaleCount += row.studentCount;
-    }
-  }
-
-  return { maleCount, femaleCount };
-}
 
 /**
  * Compute parity index from gender split counts.
@@ -195,10 +165,11 @@ export function computeParityIndex(
 export function buildInsightItems(
   latestYearData: EducationMasterData[],
   yoySeries: YoyGrowthPoint[],
-  allData: EducationMasterData[]
+  allData: EducationMasterData[],
+  translateFn: (key: string) => string
 ): InsightItem[] {
   const insights: InsightItem[] = [];
-  const total = sumStudents(latestYearData);
+  const total = sumMetric(latestYearData, 'studentCount');
 
   // 1. Regional - Largest region
   const leaderboard = buildLeaderboardRows(latestYearData, 1);
@@ -210,16 +181,16 @@ export function buildInsightItems(
       badgeLabelKey: 'overview.insights.badge-regional',
       category: 'regional',
       textKey: 'overview.insights.insight-largest-region',
-      textParams: { region: topRegion.region, value: regionPercent },
+      textParams: { region: translateFn(topRegion.region), value: regionPercent },
     });
   }
 
-  // 2. Growth - Growth rate compared to 2016
-  // baselineData MUST come from allData since latestYearData only contains ~2024
-  const baselineData = allData.filter((r) => r.year === 2016);
+  // 2. Growth - Growth rate compared to baseline
+  // baselineData MUST come from allData since latestYearData only contains latest year subset
+  const baselineData = allData.filter((r) => r.year === DATASET_BASELINE_YEAR);
   const growthRate = computeGrowthRate(latestYearData, baselineData);
   if (growthRate !== null) {
-    const direction = growthRate >= 0 ? 'increased' : 'decreased';
+    const direction = growthRate >= 0 ? translateFn('overview.insights.increased') : translateFn('overview.insights.decreased');
     const absGrowth = Math.abs(growthRate).toFixed(1);
     insights.push({
       badgeLabelKey: 'overview.insights.badge-growth',
@@ -241,11 +212,8 @@ export function buildInsightItems(
   });
 
   // 4. Education Stage - Primary education share
-  const primaryData = latestYearData.filter((r) => {
-    const s = r.stage.toLowerCase();
-    return s.includes('ابتدائي') || s.includes('إبتدائي') || s.includes('primary');
-  });
-  const primaryTotal = sumStudents(primaryData);
+  const primaryData = latestYearData.filter((r) => r.stage === DatasetStage.Primary);
+  const primaryTotal = sumMetric(primaryData, 'studentCount');
   const primaryPercent =
     total > 0 ? ((primaryTotal / total) * 100).toFixed(1) : '0';
   insights.push({

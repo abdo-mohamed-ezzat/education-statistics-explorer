@@ -1,0 +1,37 @@
+@switch (viewState().status) {
+  @case ('loading') {
+    <app-loading-state />
+  }
+  @case ('error') {
+    <app-error-state [error]="asError(viewState()).error" (retry)="loadData()" />
+  }
+  @case ('empty') {
+    <app-empty-state />
+  }
+  @case ('content') {
+    @let vm = asContent(viewState()).data;
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 ds-stack-6">
+      <div class="lg:col-span-2">
+        <app-total-growth-chart [series]="vm.timeSeriesData" [theme]="theme()" />
+      </div>
+      <div class="lg:col-span-1">
+        <app-infrastructure-trend-chart [series]="vm.infrastructureData" [theme]="theme()" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <app-multi-line-trend-chart
+        titleKey="trends.charts.stage-growth"
+        [multiSeriesData]="vm.stageTrendData"
+        [theme]="theme()"
+      />
+      <app-multi-line-trend-chart
+        titleKey="trends.charts.region-growth"
+        [multiSeriesData]="vm.regionTrendData"
+        [theme]="theme()"
+      />
+      <app-teacher-ratio-chart [series]="vm.teacherRatioData" [theme]="theme()" />
+    </div>
+  }
+}

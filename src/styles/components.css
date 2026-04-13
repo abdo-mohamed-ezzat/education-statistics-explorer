@@ -18,7 +18,7 @@
 
   .ds-section {
     @apply rounded-[var(--radius-xl)] p-4 md:p-6;
-    background-color: var(--color-surface-low);
+    background-color: var(--color-surface-high);
   }
 
   .ds-card {
@@ -401,10 +401,154 @@
   }
 
   .ds-kpi-card {
-    @apply rounded-[var(--radius-xl)] p-4 md:p-5;
-    min-height: var(--card-min-height);
-    background-color: var(--color-surface-lowest);
+    @apply flex items-center justify-between p-6 w-full h-full;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-outline-soft);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-soft);
+    min-height: 8.75rem;
+  }
+
+  .ds-kpi-card-content {
+    @apply flex flex-col justify-between h-full gap-4;
+  }
+
+  .ds-kpi-card-label {
+    @apply text-label-md font-medium mb-1;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-kpi-card-value {
+    @apply text-display-md leading-none font-bold tracking-tight;
+    color: var(--color-on-surface);
+  }
+
+  .ds-kpi-card-value-up {
+    color: var(--color-success-alt);
+  }
+
+  .ds-kpi-card-value-down {
+    color: var(--color-error);
+  }
+
+  .ds-kpi-card-sublabel {
+    @apply text-body-sm font-medium;
+    color: var(--color-on-surface-muted);
+  }
+
+  .ds-kpi-card-icon-container {
+    @apply flex-shrink-0 ml-4 flex items-center justify-center;
+  }
+
+  .ds-kpi-map-svg-link {
+    display: block;
+    cursor: pointer;
+    animation: kpi-map-pulse 2.8s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    will-change: transform, filter, opacity;
+  }
+
+  .ds-kpi-map-svg-link img {
+    width: 5.5rem;
+    height: 5.5rem;
+    object-fit: contain;
+    display: block;
+  }
+
+  .ds-kpi-map-svg-link:hover {
+    transform: translateY(-4px) scale(1.1);
+    animation: kpi-map-hover-in 0.35s ease forwards;
+  }
+
+  .ds-kpi-map-svg-link:active {
+    transform: translateY(-1px) scale(1.03);
+  }
+
+  @keyframes kpi-map-pulse {
+    0%, 100% {
+      opacity: 0.45;
+      filter: drop-shadow(0 0 1px color-mix(in srgb, var(--color-primary) 20%, transparent));
+    }
+    50% {
+      opacity: 0.82;
+      filter:
+        drop-shadow(0 0 4px color-mix(in srgb, var(--color-primary) 55%, transparent))
+        drop-shadow(0 0 10px color-mix(in srgb, var(--color-primary) 25%, transparent));
+    }
+  }
+
+  @keyframes kpi-map-hover-in {
+    to {
+      opacity: 1;
+      filter:
+        drop-shadow(0 0 1px var(--color-primary))
+        drop-shadow(0 0 4px var(--color-primary))
+        drop-shadow(0 0 12px color-mix(in srgb, var(--color-primary) 65%, transparent))
+        drop-shadow(0 8px 20px color-mix(in srgb, var(--color-primary) 35%, transparent));
+    }
+  }
+
+  .ds-kpi-card-icon {
+    @apply opacity-30;
+    color: var(--color-success-alt);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  }
+
+  .ds-kpi-card-icon-up {
+    @apply opacity-50;
+    color: var(--color-success-alt);
+  }
+
+  .ds-kpi-card-icon-down {
+    @apply opacity-50;
+    color: var(--color-error-soft);
+  }
+
+  /* Gender KPI Card */
+  .ds-gender-kpi-card {
+    @apply flex flex-col p-6 w-full h-full;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-outline-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    min-height: 8.75rem;
+  }
+
+  .ds-gender-kpi-card-label {
+    @apply text-label-md font-medium mb-5;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-gender-kpi-card-grid {
+    @apply grid grid-cols-2;
+  }
+
+  .ds-gender-kpi-card-col {
+    @apply flex flex-col gap-1;
+  }
+
+  .ds-gender-kpi-card-col-left {
+    @apply pr-4;
+  }
+
+  .ds-gender-kpi-card-col-right {
+    @apply pl-6 border-l;
+    border-color: var(--color-outline-soft);
+  }
+
+  .ds-gender-kpi-card-stat-label {
+    @apply text-label-sm font-medium;
+    color: var(--color-on-surface-soft);
+  }
+
+  .ds-gender-kpi-card-value {
+    @apply text-title-lg font-bold leading-none mt-1;
+    color: var(--color-on-surface);
+  }
+
+  .ds-gender-kpi-card-percent {
+    @apply text-sm;
+    color: var(--color-on-surface-muted);
   }
 
   .ds-stat-card {
@@ -452,5 +596,86 @@
     border-radius: var(--radius-pill);
     background-color: var(--color-info-soft);
     color: var(--color-info);
+  }
+
+  .ds-insight-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold;
+    border-radius: var(--radius-pill);
+  }
+
+  .ds-insight-badge-growth {
+    background-color: var(--color-success-soft);
+    color: var(--color-success);
+  }
+
+  .ds-insight-badge-demographics {
+    background-color: var(--color-info-soft);
+    color: var(--color-info);
+  }
+
+  .ds-insight-badge-regional {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary);
+  }
+
+  .ds-insight-badge-stage {
+    background-color: var(--color-secondary-soft);
+    color: var(--color-secondary);
+  }
+
+  /* --- Fullscreen Chart Wrapper --- */
+  .ds-chart-fullscreen-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ds-chart-fullscreen-active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    padding: var(--spacing-4);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  /* Force all children (except the button) to fill space in fullscreen */
+  .ds-chart-fullscreen-active > :not(.ds-chart-fullscreen-btn) {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .ds-chart-fullscreen-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; /* Fallback */
+    inset-inline-end: 0.5rem;
+    inset-inline-start: auto;
+    z-index: 10;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background-color: var(--color-surface-lowest);
+    color: var(--color-on-surface-soft);
+    border: none;
+    cursor: pointer;
+    opacity: 0.25;
+    transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .ds-chart-fullscreen-wrapper:hover .ds-chart-fullscreen-btn,
+  .ds-chart-fullscreen-active .ds-chart-fullscreen-btn {
+    opacity: 1;
+  }
+
+  .ds-chart-fullscreen-btn:hover {
+    background-color: var(--color-surface-highest);
+    transform: scale(1.1);
+    color: var(--color-primary);
   }
 }

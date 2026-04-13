@@ -4,7 +4,7 @@
     @for (row of rows(); track row.rank) {
       <li class="flex items-center gap-3 py-2 px-2 rounded-lg {{ $even ? 'bg-surface-low' : '' }}">
         <span class="ds-label-md w-6 text-center">{{ row.rank }}</span>
-        <span class="ds-body-sm flex-1 truncate">{{ row.region }}</span>
+        <span class="ds-body-sm flex-1 truncate">{{ getTranslationKey(row.region) | transloco }}</span>
         <div class="flex-1 h-1 rounded-full bg-surface-high overflow-hidden">
           <div
             class="h-full rounded-full"

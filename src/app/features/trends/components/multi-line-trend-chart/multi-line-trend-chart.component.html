@@ -1,0 +1,21 @@
+<app-chart-fullscreen-wrapper>
+  <div class="ds-card h-full flex flex-col">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="ds-title-sm">{{ titleKey() | transloco }}</h3>
+    </div>
+
+    <div class="flex-1 w-full min-h-[320px] relative">
+      @if (isBrowser()) {
+        <div 
+          echarts 
+          [options]="chartOptions()" 
+          class="absolute inset-0 w-full h-full"
+        ></div>
+      } @else {
+        <div class="absolute inset-0 w-full h-full">
+          <app-loading-state />
+        </div>
+      }
+    </div>
+  </div>
+</app-chart-fullscreen-wrapper>

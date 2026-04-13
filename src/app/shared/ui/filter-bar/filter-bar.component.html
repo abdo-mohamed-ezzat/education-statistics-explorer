@@ -1,79 +1,57 @@
 @if (activeConfig().allowedDimensions.length > 0) {
-  <div class="flex items-center gap-2 lg:gap-4 w-[max-content]">
-    <div class="flex items-center gap-2 lg:gap-3">
+  <div class="flex items-center w-full min-w-0">
+    <div class="flex flex-nowrap md:flex-wrap items-center gap-2 lg:gap-3 w-full overflow-x-auto pb-2 -mb-2 pt-1 scrollbar-none snap-x focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none;">
       @if (hasDimension('year')) {
-        <label class="ds-filter-group h-10 px-2 lg:px-3">
-          <span class="ds-filter-label">{{ 'filter.year' | transloco }}</span>
-          <select
-            class="ds-filter-select"
-            [value]="state().year"
-            (change)="onChange('year', $event)"
-          >
-            <option [value]="'null'">{{ 'filter.all' | transloco }}</option>
-            @for (y of availableYears(); track y) {
-              <option [value]="y">{{ y }}</option>
-            }
-          </select>
-        </label>
+        <app-filter-select
+          class="shrink-0 snap-start"
+          [label]="'filter.year' | transloco"
+          [options]="yearOptions()"
+          [value]="state().year"
+          (valueChange)="onChangeFilter('year', $event)"
+        ></app-filter-select>
       }
 
       @if (hasDimension('region')) {
-        <label class="ds-filter-group h-10 px-2 lg:px-3">
-          <span class="ds-filter-label">{{ 'filter.region' | transloco }}</span>
-          <select
-            class="ds-filter-select"
-            [value]="state().region"
-            (change)="onChange('region', $event)"
-          >
-            <option [value]="'null'">{{ 'filter.all' | transloco }}</option>
-            @for (r of availableRegions(); track r) {
-              <option [value]="r">{{ r }}</option>
-            }
-          </select>
-        </label>
+        <app-filter-select
+          class="shrink-0 snap-start"
+          [label]="'filter.region' | transloco"
+          [options]="regionOptions()"
+          [value]="state().region"
+          (valueChange)="onChangeFilter('region', $event)"
+        ></app-filter-select>
       }
 
       @if (hasDimension('stage')) {
-        <label class="ds-filter-group h-10 px-2 lg:px-3">
-          <span class="ds-filter-label">{{ 'filter.stage' | transloco }}</span>
-          <select
-            class="ds-filter-select"
-            [value]="state().stage"
-            (change)="onChange('stage', $event)"
-          >
-            <option [value]="'null'">{{ 'filter.all' | transloco }}</option>
-            @for (s of availableStages(); track s) {
-              <option [value]="s">{{ s }}</option>
-            }
-          </select>
-        </label>
+        <app-filter-select
+          class="shrink-0 snap-start"
+          [label]="'filter.stage' | transloco"
+          [options]="stageOptions()"
+          [value]="state().stage"
+          (valueChange)="onChangeFilter('stage', $event)"
+        ></app-filter-select>
       }
 
       @if (hasDimension('gender')) {
-        <label class="ds-filter-group h-10 px-2 lg:px-3">
-          <span class="ds-filter-label">{{ 'filter.gender' | transloco }}</span>
-          <select
-            class="ds-filter-select"
-            [value]="state().gender"
-            (change)="onChange('gender', $event)"
-          >
-            <option [value]="'null'">{{ 'filter.all' | transloco }}</option>
-            @for (g of availableGenders(); track g) {
-              <option [value]="g">{{ g }}</option>
-            }
-          </select>
-        </label>
+        <app-filter-select
+          class="shrink-0 snap-start"
+          [label]="'filter.gender' | transloco"
+          [options]="genderOptions()"
+          [value]="state().gender"
+          (valueChange)="onChangeFilter('gender', $event)"
+        ></app-filter-select>
+      }
+
+      @if (!isDefaultState()) {
+        <button
+          class="ds-icon-btn shrink-0 snap-start ms-1"
+          (click)="onReset()"
+          [title]="'filter.reset' | transloco"
+        >
+          <lucide-icon [img]="ResetIcon" size="18"></lucide-icon>
+        </button>
       }
     </div>
-
-    @if (!isDefaultState()) {
-      <button
-        class="ds-icon-btn shrink-0"
-        (click)="onReset()"
-        [title]="'filter.reset' | transloco"
-      >
-        <lucide-icon [img]="ResetIcon" size="18"></lucide-icon>
-      </button>
-    }
   </div>
 }
+
+<!-- Trigger HMR rebuild to sync the new model() signal output from FilterSelectComponent -->

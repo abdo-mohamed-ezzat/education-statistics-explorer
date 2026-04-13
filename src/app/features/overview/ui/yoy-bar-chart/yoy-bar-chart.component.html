@@ -1,16 +1,18 @@
-<div class="ds-chart-card h-full flex flex-col">
-  <h3 class="ds-title-sm mb-1">{{ 'overview.analytics.yoy-title' | transloco }}</h3>
-  <p class="ds-caption mb-4">{{ 'overview.analytics.yoy-subtitle' | transloco }}</p>
-  @if (isBrowser()) {
-    <div
-      echarts
-      [options]="chartOptions()"
-      [theme]="theme()"
-      role="img"
-      [attr.aria-label]="'overview.analytics.yoy-title' | transloco"
-      style="height: 280px"
-    ></div>
-  } @else {
-    <app-loading-state style="height: 280px; min-height: 280px;" />
-  }
-</div>
+<app-chart-fullscreen-wrapper>
+  <div class="ds-chart-card h-full flex flex-col">
+    <h3 class="ds-title-sm mb-1">{{ 'overview.analytics.yoy-title' | transloco }}</h3>
+    <p class="ds-caption mb-4">{{ 'overview.analytics.yoy-subtitle' | transloco }}</p>
+    @if (isBrowser()) {
+      <div
+        echarts
+        [options]="chartOptions()"
+        [theme]="theme()"
+        role="img"
+        [attr.aria-label]="'overview.analytics.yoy-title' | transloco"
+        style="height: 280px"
+      ></div>
+    } @else {
+      <app-loading-state style="height: 280px; min-height: 280px;" />
+    }
+  </div>
+</app-chart-fullscreen-wrapper>

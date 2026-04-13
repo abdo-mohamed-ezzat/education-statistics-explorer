@@ -8,12 +8,16 @@
     >
       <!-- Language Toggle -->
       <button
-        class="ds-icon-btn shadow-ambient bg-surface-highest transition-transform hover:scale-110"
+        class="ds-icon-btn shadow-ambient bg-surface-highest transition-transform hover:scale-110 font-bold"
         [title]="'topbar.toggle-lang' | transloco"
         (click)="toggleLang.emit()"
         [attr.aria-label]="'topbar.toggle-lang' | transloco"
       >
-        <lucide-icon [img]="LanguagesIcon" size="20"></lucide-icon>
+        @if (currentLang() === 'ar') {
+          <span class="text-sm">EN</span>
+        } @else {
+          <span class="text-lg leading-none" style="margin-top: -3px;">ع</span>
+        }
       </button>
 
       <!-- Theme Toggle -->

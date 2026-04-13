@@ -1,14 +1,17 @@
 import { ChangeDetectionStrategy, Component, computed, input, inject } from '@angular/core';
 import { PlatformService } from '../../../../core/services/platform.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { PreferencesService } from '../../../../core/services/preferences.service';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { LoadingStateComponent } from '../../../../shared/ui/loading-state/loading-state.component';
+import { ChartFullscreenWrapperComponent } from '../../../../shared/ui/chart-fullscreen-wrapper/chart-fullscreen-wrapper.component';
 import type { EChartsOption } from 'echarts';
 import { YoyGrowthPoint } from '../../models/overview.model';
+import { getCssVariable, getChartThemeColors } from '../../../../shared/utils/formatters.util';
 
 @Component({
   selector: 'app-yoy-bar-chart',
-  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent],
+  imports: [TranslocoPipe, NgxEchartsDirective, LoadingStateComponent, ChartFullscreenWrapperComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './yoy-bar-chart.component.html',
 })
@@ -17,14 +20,18 @@ export class YoyBarChartComponent {
   theme = input.required<'light' | 'dark'>();
   
   private readonly platform = inject(PlatformService);
+  private readonly prefs = inject(PreferencesService);
+  private readonly translocoService = inject(TranslocoService);
   protected readonly isBrowser = this.platform.isBrowser;
 
   protected readonly chartOptions = computed<EChartsOption>(() => {
     const data = this.series();
     const currentTheme = this.theme();
+    const lang = this.prefs.language();
+    const themeColors = getChartThemeColors(currentTheme);
 
     // Get chart color from CSS variable at runtime
-    const chartColor = this.getCssVariable('--chart-1', currentTheme);
+    const chartColor = getCssVariable('--chart-1', currentTheme);
 
     return {
       grid: {
@@ -38,11 +45,11 @@ export class YoyBarChartComponent {
         type: 'category',
         data: data.map((d) => String(d.year)),
         axisLabel: {
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         axisLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -50,11 +57,11 @@ export class YoyBarChartComponent {
         type: 'value',
         axisLabel: {
           formatter: '{value}%',
-          color: currentTheme === 'dark' ? '#a1a1aa' : '#52525b',
+          color: themeColors.axisLabel,
         },
         splitLine: {
           lineStyle: {
-            color: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+            color: themeColors.gridLine,
           },
         },
       },
@@ -86,28 +93,20 @@ export class YoyBarChartComponent {
             const idx = point[0].dataIndex;
             const d = data[idx];
             if (d.growthPercent === 0 && idx === 0) {
-              return `Baseline Year (${d.year})`;
+              const baseLang = this.translocoService.translate('trends.charts.baseline-year');
+              return `${baseLang} (${d.year})`;
             }
             return `${d.year}: ${d.growthPercent.toFixed(1)}%`;
           }
           return '';
         },
-        backgroundColor: currentTheme === 'dark' ? '#27272a' : '#ffffff',
-        borderColor: currentTheme === 'dark' ? '#3f3f46' : '#e4e4e7',
+        backgroundColor: themeColors.tooltipBackground,
+        borderColor: themeColors.tooltipBorder,
         textStyle: {
-          color: currentTheme === 'dark' ? '#fafafa' : '#18181b',
+          color: themeColors.tooltipText,
         },
       },
     };
   });
 
-  private getCssVariable(name: string, theme: 'light' | 'dark'): string {
-    if (typeof document === 'undefined') {
-      // SSR fallback
-      return theme === 'dark' ? '#6366f1' : '#4f46e5';
-    }
-    const root = document.documentElement;
-    const value = getComputedStyle(root).getPropertyValue(name).trim();
-    return value || (theme === 'dark' ? '#6366f1' : '#4f46e5');
-  }
 }

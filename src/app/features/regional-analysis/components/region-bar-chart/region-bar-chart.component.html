@@ -1,0 +1,14 @@
+<app-chart-fullscreen-wrapper>
+  <div class="h-full w-full min-h-[300px]">
+    @if (isBrowser()) {
+      <div
+        echarts
+        [options]="chartOptions()"
+        class="h-full w-full"
+        (chartClick)="onChartClick($event)"
+      ></div>
+    } @else {
+      <app-loading-state />
+    }
+  </div>
+</app-chart-fullscreen-wrapper>

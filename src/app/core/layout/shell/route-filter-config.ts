@@ -6,7 +6,7 @@ import { FilterDimension } from '../../../shared/models/global-filter.model';
  */
 export const ROUTE_FILTER_CONFIG: Record<string, FilterDimension[]> = {
   'overview': ['year', 'region', 'stage', 'gender'],
-  'trends': ['year', 'region', 'stage'], 
+  'trends': ['region', 'stage', 'gender'], 
   'regional-analysis': ['year', 'stage', 'gender'],
   'gender-analysis': ['year', 'region', 'stage'],
   'stage-analysis': ['year', 'region', 'gender']

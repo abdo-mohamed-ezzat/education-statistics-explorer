@@ -1,0 +1,85 @@
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  
+  /* Brand Overrides for Dark Mode */
+  --color-primary: #80d4d2;
+  --color-primary-hover: #a0e8e6;
+  --color-primary-soft: rgba(0, 106, 106, 0.25);
+  --color-primary-container: #005051;
+  --color-on-primary: #003737;
+
+  --color-secondary: #d8c2db;
+  --color-secondary-hover: #e5d3e7;
+  --color-secondary-soft: rgba(111, 94, 113, 0.25);
+  --color-secondary-container: #564759;
+  --color-on-secondary: #3e3041;
+
+  --color-tertiary: #ffddb5;
+  --color-tertiary-hover: #ffe9cf;
+  --color-tertiary-soft: rgba(135, 81, 0, 0.25);
+  --color-tertiary-container: #633b00;
+  --color-on-tertiary: #462800;
+
+  /* Surfaces Overrides */
+  --color-background: #0f171c;
+  --color-surface: #1a242b;
+  --color-surface-lowest: #0b1115;
+  --color-surface-low: #1e2931;
+  --color-surface-high: #24313b;
+  --color-surface-highest: #2b3a46;
+  --color-surface-inverted: #f1f6fa;
+  --color-on-surface-inverted: #223038;
+
+  /* Text Overrides */
+  --color-on-surface: #e1e7eb;
+  --color-on-surface-soft: #b0bfc9;
+  --color-on-surface-muted: #8d9da8;
+  --color-outline: #384650;
+  --color-outline-soft: rgba(255, 255, 255, 0.08);
+
+  /* Glass Overrides */
+  --glass-bg: rgba(26, 36, 43, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  /* Shadows Overrides */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-ambient: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  transition: background-color var(--duration-base) var(--ease-standard), color var(--duration-base) var(--ease-standard);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  text-align: left;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(128, 212, 210, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(216, 194, 219, 0.06), transparent 22%),
+    var(--color-background);
+  transition: background var(--duration-base) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EducationStatistics</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- FOUC Prevention Script -->
+  <script>
+    try {
+      const stored = localStorage.getItem('edu_stats_preferences');
+      let prefs = null;
+      if (stored) {
+        prefs = JSON.parse(stored);
+      } else {
+        const browserLang = navigator.language.split('-')[0];
+        if (browserLang === 'en') {
+          prefs = { language: 'en', direction: 'ltr', theme: 'light' };
+        }
+      }
+      
+      if (prefs) {
+        document.documentElement.lang = prefs.language || 'ar';
+        document.documentElement.dir = prefs.direction || 'rtl';
+        if (prefs.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } else {
+        // Default to Arabic/RTL
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

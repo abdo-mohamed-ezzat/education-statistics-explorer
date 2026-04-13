@@ -1,0 +1,36 @@
+<app-topbar
+  class="flex-none z-10 relative shadow-sm"
+  [currentLang]="prefService.language()"
+  [currentTheme]="prefService.theme()"
+  [activeConfig]="filterService.activeConfig()"
+  [state]="filterService.state()"
+  [availableYears]="filterService.availableYears()"
+  [availableRegions]="filterService.availableRegions()"
+  [availableStages]="filterService.availableStages()"
+  [availableGenders]="filterService.availableGenders()"
+  (toggleLang)="toggleLanguage()"
+  (toggleTheme)="prefService.toggleTheme()"
+  (filterChange)="filterService.setFilter($event.dimension, $event.value)"
+  (resetFilters)="filterService.resetAll()"
+/>
+
+<div class="flex-1 min-h-0 flex flex-col md:flex-row relative">
+  <app-nav
+    class="flex-none z-20 order-last w-full h-16 md:order-first md:w-20 lg:w-24 md:h-full bg-surface-lowest border-t md:border-t-0 md:border-r border-soft shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] md:shadow-[4px_0_6px_-1px_rgba(0,0,0,0.05)] ltr:md:shadow-[4px_0_6px_-1px_rgba(0,0,0,0.05)] rtl:md:shadow-[-4px_0_6px_-1px_rgba(0,0,0,0.05)]"
+  />
+
+  <main
+    class="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6 lg:p-10 bg-surface-lowest md:bg-page flex flex-col gap-6"
+  >
+    <!-- The RouterOutlet hosts the feature pages -->
+    <router-outlet />
+  </main>
+</div>
+
+<!-- Floating Settings FAB -->
+<app-floating-settings
+  [currentLang]="prefService.language()"
+  [currentTheme]="prefService.theme()"
+  (toggleLang)="toggleLanguage()"
+  (toggleTheme)="prefService.toggleTheme()"
+/>

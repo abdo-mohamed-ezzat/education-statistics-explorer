@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "overview": "نظرة عامة",
+    "trends": "الاتجاهات الزمانية",
+    "regional-analysis": "التحليل المناطقي",
+    "gender-analysis": "تحليل الجنسين",
+    "stage-analysis": "تحليل المراحل",
+    "moe-portal": "بوابة الوزارة"
+  },
+  "topbar": {
+    "app-title": "مستكشف إحصاءات التعليم",
+    "subtitle": "تحليلات التعليم العام في المملكة (2016 – 2024)",
+    "toggle-lang": "تغيير اللغة",
+    "toggle-theme": "تغيير المظهر"
+  },
+  "state": {
+    "loading": "جاري التحميل...",
+    "empty": "لا توجد بيانات",
+    "empty-detail": "لا توجد بيانات مطابقة لخياراتك.",
+    "error": "حدث خطأ",
+    "error-detail": "تعذر تحميل البيانات. يرجى المحاولة مرة أخرى.",
+    "retry": "إعادة المحاولة"
+  },
+  "filter": {
+    "year": "العام",
+    "region": "المنطقة",
+    "stage": "المرحلة",
+    "gender": "الجنس",
+    "all": "الكل",
+    "reset": "إعادة تعيين الفلاتر"
+  },
+  "overview": {
+    "page-title": "نظرة عامة",
+    "kpi": {
+      "total-students": "إجمالي الطلاب",
+      "total-students-sub": "{{ startYear }} – {{ endYear }} | جميع السنوات",
+      "growth-rate": "معدل النمو",
+      "growth-rate-sub": "منذ {{ baseYear }}",
+      "gender-distribution": "التوزيع حسب الجنس",
+      "male-students": "الطلاب الذكور",
+      "female-students": "الطالبات الإناث",
+      "largest-region": "أكبر منطقة",
+      "largest-region-sub": "{{ count }} طالب"
+    },
+    "analytics": {
+      "section-title": "الرؤى المتقدمة والتحليلات",
+      "yoy-title": "مقارنة النمو السنوي",
+      "yoy-subtitle": "نسبة النمو حسب العام",
+      "leaderboard-title": "لوحة ترتيب الأداء الإقليمي",
+      "parity-title": "مؤشر التكافؤ بين الجنسين",
+      "parity-near": "تكافؤ قريب",
+      "parity-female": "تفوق إناث",
+      "parity-male": "تفوق ذكور",
+      "parity-max": "اختلال كبير"
+    },
+    "insights": {
+      "section-title": "الرؤى والأبرز",
+      "section-subtitle": "ملاحظات مبنية على البيانات",
+      "badge-growth": "النمو",
+      "badge-demographics": "الديموغرافيا",
+      "badge-regional": "إقليمي",
+      "badge-stage": "المرحلة التعليمية",
+      "insight-largest-region": "سجلت منطقة {{ region }} أعلى عدد من الطلاب.",
+      "insight-growth-rate": "{{ direction }} تسجيل الطلاب بنسبة {{ value }}% مقارنة بعام 2016.",
+      "insight-female-share": "تشكل الطالبات الإناث {{ value }}% من إجمالي المسجلين.",
+      "insight-primary-share": "تمثل المرحلة الابتدائية {{ value }}% من إجمالي الطلاب.",
+      "insight-peak-year": "سجل عام {{ year }} أعلى معدل نمو سنوي بنسبة {{ value }}%."
+    }
+  }
+}

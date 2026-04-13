@@ -1,0 +1,19 @@
+<div class="ds-gender-kpi-card">
+  <span class="ds-gender-kpi-card-label">
+    {{ vm().labelKey | transloco }}
+  </span>
+
+  <div class="ds-gender-kpi-card-grid">
+    <div class="ds-gender-kpi-card-col ds-gender-kpi-card-col-left">
+      <span class="ds-gender-kpi-card-stat-label">{{ 'overview.kpi.male-students' | transloco }}</span>
+      <span class="ds-gender-kpi-card-value">{{ vm().male.count }}</span>
+      <span class="ds-gender-kpi-card-percent">{{ vm().male.percent }}</span>
+    </div>
+
+    <div class="ds-gender-kpi-card-col ds-gender-kpi-card-col-right">
+      <span class="ds-gender-kpi-card-stat-label">{{ 'overview.kpi.female-students' | transloco }}</span>
+      <span class="ds-gender-kpi-card-value">{{ vm().female.count }}</span>
+      <span class="ds-gender-kpi-card-percent">{{ vm().female.percent }}</span>
+    </div>
+  </div>
+</div>

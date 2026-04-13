@@ -1,0 +1,42 @@
+<header
+  class="flex flex-wrap items-center justify-between px-4 lg:px-8 py-3 bg-surface-lowest border-b border-soft gap-y-3 gap-x-4"
+>
+  <!-- Branding Area -->
+  <div class="ds-topbar-branding order-1 shrink min-w-0 flex items-center gap-[0.75rem] sm:gap-[1rem]">
+    <div
+      class="flex-none flex items-center justify-center w-[2.25rem] h-[2.25rem] sm:w-[2.5rem] sm:h-[2.5rem] rounded-xl bg-primary/10 text-primary"
+    >
+      <lucide-icon [img]="LogoIcon" class="logo-icon"></lucide-icon>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <h1
+        class="text-[0.85rem] sm:text-[1rem] font-bold text-main font-display m-0 leading-tight truncate"
+      >
+        {{ 'topbar.app-title' | transloco }}
+      </h1>
+      <span class="ds-topbar-subtitle text-[0.65rem] sm:text-[0.75rem] truncate opacity-80">
+        {{ 'topbar.subtitle' | transloco }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Filters Area -->
+  <div
+    class="w-full xl:w-auto xl:flex-1 order-3 xl:order-2 flex justify-start xl:justify-center overflow-x-auto scrollbar-thin-soft pb-1 xl:pb-0"
+  >
+    @if (activeConfig().allowedDimensions.length > 0) {
+      <app-filter-bar
+        [activeConfig]="activeConfig()"
+        [state]="state()"
+        [availableYears]="availableYears()"
+        [availableRegions]="availableRegions()"
+        [availableStages]="availableStages()"
+        [availableGenders]="availableGenders()"
+        (filterChange)="filterChange.emit($event)"
+        (resetFilters)="resetFilters.emit()"
+      />
+    }
+  </div>
+
+
+</header>

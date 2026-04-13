@@ -1,0 +1,21 @@
+<div class="p-4 bg-surface-low rounded-full">
+  <lucide-icon [img]="EmptyIcon" class="text-muted" size="40" strokeWidth="1.5"></lucide-icon>
+</div>
+
+<div class="max-w-md">
+  <h3 class="ds-title-sm text-main mb-2 tracking-tight">
+    @if (title()) {
+      {{ title() }}
+    } @else {
+      {{ 'state.empty' | transloco }}
+    }
+  </h3>
+  
+  <p class="ds-body-md text-soft m-0">
+    @if (message()) {
+      {{ message() }}
+    } @else {
+      {{ 'state.empty-detail' | transloco }}
+    }
+  </p>
+</div>

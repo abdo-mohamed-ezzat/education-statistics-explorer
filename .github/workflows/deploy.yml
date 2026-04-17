@@ -1,0 +1,50 @@
+name: Deploy Angular SSR to Namecheap
+
+# This triggers the automation every time you push to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular Application
+        run: npm run build
+
+      - name: Prepare Deployment Artifacts
+        # This groups only the necessary files into a clean folder to upload
+        run: |
+          mkdir deploy-ready
+          cp -r dist deploy-ready/
+          cp package.json deploy-ready/
+          cp server-entry.mjs deploy-ready/
+          
+          # This is the magic trick! We create the restart.txt file 
+          # to force Namecheap's Node server to reboot and read the new code.
+          mkdir -p deploy-ready/tmp
+          touch deploy-ready/tmp/restart.txt
+
+      - name: Sync Files to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Upload everything inside our prepared folder
+          local-dir: ./deploy-ready/
+          # Upload it to the root of the FTP user's directory we created in Step 1
+          server-dir: /

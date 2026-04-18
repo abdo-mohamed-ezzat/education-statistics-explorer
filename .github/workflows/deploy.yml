@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular Application
-        run: npm run build
+        run: npm run build -- --base-href /demo/education-statistics-explorer/
 
       - name: Prepare Deployment Artifacts
         # This groups only the necessary files into a clean folder to upload

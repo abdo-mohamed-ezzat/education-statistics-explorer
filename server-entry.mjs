@@ -2,11 +2,8 @@ import { fileURLToPath } from 'node:url';
 import http from 'node:http';
 
 // 1. Path Calculation & Process Spoofing
-// This points to the compiled server file that GitHub Actions will upload
 const serverUrl = new URL('./dist/education-statistics/server/server.mjs', import.meta.url);
 const absoluteFilePath = fileURLToPath(serverUrl);
-
-// Trick Angular's internal isMainModule check into starting the native server
 process.argv[1] = absoluteFilePath;
 
 // 2. Initialize Angular Application
@@ -14,17 +11,38 @@ import(serverUrl.href).then(module => {
     const angularApp = module.app();
     const port = process.env.PORT || 4000;
 
-    // 3. Construct Pre-Filter Server to protect memory from bot attacks
+    // 3. Construct Pre-Filter & Routing Server
     const server = http.createServer((req, res) => {
-        const url = req.url.toLowerCase();
+        let url = req.url;
+        const lowerUrl = url.toLowerCase();
         
-        // Immediately drop common WordPress/AWS bot traffic to prevent 503 crashes
-        if (url.includes('.php') || url.includes('.xml') || url.includes('config') || url.includes('.bak')) {
+        // Anti-Bot Filter: Drop malicious requests to save RAM
+        if (lowerUrl.includes('.php') || lowerUrl.includes('.xml') || lowerUrl.includes('config') || lowerUrl.includes('.bak')) {
             res.writeHead(403, { 'Content-Type': 'text/plain' });
             return res.end('Forbidden Request');
         }
         
-        // Pass valid web traffic to the Angular SSR engine
+        // ---------------------------------------------------------
+        // STATIC ASSET ROUTING FIX (MIME Type Error Fix)
+        // ---------------------------------------------------------
+        const baseHref = '/demo/education-statistics-explorer';
+        
+        if (url.startsWith(baseHref)) {
+            // Strip the base-href from the URL
+            const strippedUrl = url.substring(baseHref.length) || '/';
+            
+            // Check if the request is for a physical file (e.g., contains a '.')
+            const pathWithoutQuery = strippedUrl.split('?')[0];
+            if (pathWithoutQuery.includes('.')) {
+                // It's a static file (.js, .css, .json). Pass the stripped URL to Angular
+                // so express.static can find it in the root of the 'browser' folder.
+                req.url = strippedUrl; 
+            }
+            // If it does NOT contain a dot, it's a normal page route (like /overview).
+            // We leave req.url untouched so the Angular Router knows where we are.
+        }
+
+        // Pass the request to the Angular SSR engine
         angularApp(req, res);
     });
 

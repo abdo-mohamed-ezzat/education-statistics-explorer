@@ -4,7 +4,11 @@ import { EducationDataService } from '../../../core/services/education-data.serv
 import { GlobalFilterService } from '../../../core/services/global-filter.service';
 import { PreferencesService } from '../../../core/services/preferences.service';
 import { TranslocoService } from '@jsverse/transloco';
-import { EducationMasterData, DATASET_BASELINE_YEAR, DATASET_FALLBACK_LATEST_YEAR } from '../../../core/models/education-data.model';
+import {
+  EducationMasterData,
+  DATASET_BASELINE_YEAR,
+  DATASET_FALLBACK_LATEST_YEAR,
+} from '../../../core/models/education-data.model';
 import { ViewState, ViewStateHelpers } from '../../../shared/models/view-state.model';
 import {
   OverviewViewModel,
@@ -25,7 +29,6 @@ import { applyDataFilters } from '../../../shared/utils/data-filters.util';
 import { getTranslationKey } from '../../../shared/utils/data-translation.util';
 import { formatCompactNumber, formatPercent } from '../../../shared/utils/formatters.util';
 import { sumMetric, splitByGender } from '../../../shared/utils/data-aggregation.util';
-
 
 @Injectable({
   providedIn: 'root',
@@ -56,7 +59,6 @@ export class OverviewFacade {
     if (!data || data.length === 0) return DATASET_FALLBACK_LATEST_YEAR; // Fallback if no data
     return Math.max(...data.map((r) => r.year));
   });
-
 
   // Strictly filtered data (Total Students, Growth Rate)
   // If year is "All" (null), default to latestYear()
@@ -112,7 +114,7 @@ export class OverviewFacade {
     const data = this.allData();
     if (!data) return [];
     const targetYear = this.latestYear();
-    return data.filter(r => r.year === targetYear);
+    return data.filter((r) => r.year === targetYear);
   });
 
   // Insights Data: Unfiltered YoY Series (To calculate true National Peak Year)
@@ -177,7 +179,7 @@ export class OverviewFacade {
     const allData = this.allData();
 
     if (!allData) {
-        throw new Error('Expected allData to be defined');
+      throw new Error('Expected allData to be defined');
     }
 
     const total = sumMetric(strictData, 'studentCount');
@@ -187,13 +189,13 @@ export class OverviewFacade {
     const unfilteredLeaderboard = buildLeaderboardRows(regionData, 1);
     const parityIndex = computeParityIndex(maleCount, femaleCount);
     const yoy = this.yoySeries();
-    
+
     // Insights must use explicitly unfiltered point-in-time data to avoid mathematically invalid historical sums
     const insights = buildInsightItems(
       this.unfilteredLatestYearData(),
       this.unfilteredYoySeries(),
       allData,
-      (key: string) => this.translocoService.translate(getTranslationKey(key))
+      (key: string) => this.translocoService.translate(getTranslationKey(key)),
     );
 
     // Get year range for sub-label
@@ -218,22 +220,16 @@ export class OverviewFacade {
     };
   }
 
-  private buildTotalStudentsKpi(
-    total: number,
-    minYear: number,
-    maxYear: number
-  ): KpiCardViewModel {
+  private buildTotalStudentsKpi(total: number, minYear: number, maxYear: number): KpiCardViewModel {
     const filters = this.filterState();
     const trans = (key: string) => this.translocoService.translate(key);
 
     // 1. Year Scope
-    const yearPart = filters.year 
-      ? `${filters.year}` 
-      : `${minYear} – ${maxYear}`;
+    const yearPart = filters.year ? `${filters.year}` : `${minYear} – ${maxYear}`;
 
     // 2. Filter Scope (Region, Stage, Gender)
     const contextParts: string[] = [];
-    
+
     if (filters.region) {
       contextParts.push(trans(getTranslationKey(filters.region)));
     }
@@ -244,9 +240,7 @@ export class OverviewFacade {
       contextParts.push(trans(getTranslationKey(filters.gender)));
     }
 
-    const contextPart = contextParts.length > 0 
-      ? contextParts.join(' | ') 
-      : trans('filter.all');
+    const contextPart = contextParts.length > 0 ? contextParts.join(' | ') : trans('filter.all');
 
     return {
       labelKey: 'overview.kpi.total-students',
@@ -259,7 +253,7 @@ export class OverviewFacade {
 
   private buildGrowthRateKpi(
     strictData: EducationMasterData[],
-    baselineData: EducationMasterData[]
+    baselineData: EducationMasterData[],
   ): KpiCardViewModel {
     const growthRate = computeGrowthRate(strictData, baselineData);
 
@@ -287,7 +281,7 @@ export class OverviewFacade {
   private buildGenderKpi(
     maleCount: number,
     femaleCount: number,
-    total: number
+    total: number,
   ): GenderKpiViewModel {
     const malePercent = total > 0 ? (maleCount / total) * 100 : 0;
     const femalePercent = total > 0 ? (femaleCount / total) * 100 : 0;
@@ -313,7 +307,9 @@ export class OverviewFacade {
     };
   }
 
-  private buildLargestRegionKpi(leaderboard: ReturnType<typeof buildLeaderboardRows>): KpiCardViewModel {
+  private buildLargestRegionKpi(
+    leaderboard: ReturnType<typeof buildLeaderboardRows>,
+  ): KpiCardViewModel {
     if (leaderboard.length === 0) {
       return {
         labelKey: 'overview.kpi.largest-region',
@@ -328,7 +324,7 @@ export class OverviewFacade {
       value: translatedRegion,
       sublabelKey: 'overview.kpi.largest-region-sub',
       sublabelParams: { count: formatCompactNumber(top.studentCount) },
-      customSvgUrl: '/images/map.svg',
+      customSvgUrl: 'images/map.svg',
       actionUrl: '/regional-analysis',
     };
   }

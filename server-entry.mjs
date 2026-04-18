@@ -1,6 +1,8 @@
 import { fileURLToPath } from 'node:url';
 import http from 'node:http';
 
+
+
 // 1. Path Calculation & Process Spoofing
 const serverUrl = new URL('./dist/education-statistics/server/server.mjs', import.meta.url);
 const absoluteFilePath = fileURLToPath(serverUrl);
@@ -25,7 +27,10 @@ import(serverUrl.href).then(module => {
         // ---------------------------------------------------------
         // STATIC ASSET ROUTING FIX (MIME Type Error Fix)
         // ---------------------------------------------------------
-        const baseHref = '/demo/education-statistics-explorer';
+       // Passenger in cPanel usually injects specific environment variables.
+        // If missing, we assume it's your local machine.
+        const isCpanel = !!process.env.PASSENGER_APP_ENV || !!process.env.USER; 
+        const baseHref = isCpanel ? '/demo/education-statistics-explorer' : '/';
         
         if (url.startsWith(baseHref)) {
             // Strip the base-href from the URL

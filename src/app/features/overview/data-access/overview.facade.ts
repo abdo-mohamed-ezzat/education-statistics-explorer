@@ -318,10 +318,9 @@ export class OverviewFacade {
     }
 
     const top = leaderboard[0];
-    const translatedRegion = this.translocoService.translate(getTranslationKey(top.region));
     return {
       labelKey: 'overview.kpi.largest-region',
-      value: translatedRegion,
+      valueKey: getTranslationKey(top.region),
       sublabelKey: 'overview.kpi.largest-region-sub',
       sublabelParams: { count: formatCompactNumber(top.studentCount) },
       customSvgUrl: 'images/map.svg',

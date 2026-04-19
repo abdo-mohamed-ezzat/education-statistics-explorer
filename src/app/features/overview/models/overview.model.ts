@@ -29,7 +29,10 @@ export interface KpiGridViewModel {
  */
 export interface KpiCardViewModel {
   labelKey: string;
-  value: string;
+  /** Use `value` for already-formatted strings (numbers, percents). */
+  value?: string;
+  /** Use `valueKey` when the value itself is a translation key (e.g., a region name). */
+  valueKey?: string;
   sublabelKey?: string;
   sublabelParams?: Record<string, string | number>;
   trend?: 'up' | 'down' | 'neutral';

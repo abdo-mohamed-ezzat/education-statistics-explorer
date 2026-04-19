@@ -10,7 +10,11 @@
         [class.ds-kpi-card-value-up]="vm().trend === 'up'"
         [class.ds-kpi-card-value-down]="vm().trend === 'down'"
       >
+      @if (vm().valueKey) {
+        {{ vm().valueKey | transloco }}
+      } @else {
         {{ vm().value }}
+      }
       </span>
     </div>
 
